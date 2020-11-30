@@ -11,6 +11,6 @@ public class MainNoClassDefFoundError {
 
 	public static void main(String[] args) {
 
-		MyClass2 class2 = new MyClass2();
+		//MyClass2 class2 = new MyClass2();
 	}
 }

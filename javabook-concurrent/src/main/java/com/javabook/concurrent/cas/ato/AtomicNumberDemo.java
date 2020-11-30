@@ -89,6 +89,6 @@ public final class AtomicNumberDemo {
 	private AtomicLong      al = new AtomicLong();
 	
 	// value
-	private AtomicReference ar = new AtomicReference<>();
+	private AtomicReference ar = new AtomicReference();
 
 }

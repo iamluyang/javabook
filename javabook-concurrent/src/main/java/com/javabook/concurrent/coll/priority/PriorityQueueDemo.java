@@ -624,7 +624,7 @@ private final class Itr implements Iterator<E> {
                 cursor--;
             else {
                 if (forgetMeNot == null)
-                    forgetMeNot = new ArrayDeque<>();
+                    forgetMeNot = new ArrayDeque();
                 forgetMeNot.add(moved);
             }
         } else if (lastRetElt != null) {

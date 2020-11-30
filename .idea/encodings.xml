@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/javabook-a/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-b/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-c/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-classinit/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-classloader/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-collections/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-concurrent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-exception/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-io-bio/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-io-socket/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-oom/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-pattern-gof/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-pattern-thread/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-reference/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-thread/src/main/java" charset="UTF-8" />
+  </component>
+</project>

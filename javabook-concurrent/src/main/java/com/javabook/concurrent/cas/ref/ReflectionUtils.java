@@ -24,25 +24,25 @@ public class ReflectionUtils {
 		
 		// putValue
 		if(fieldValue.getClass()==boolean.class){
-			MyUnsafe.getUnsafe().putBoolean(object, fieldOffset, (boolean) fieldValue);
+			MyUnsafe.getUnsafe().putBoolean(object, fieldOffset, (Boolean) fieldValue);
 			
 		}else if(fieldValue.getClass()==byte.class){
-			MyUnsafe.getUnsafe().putByte(object, fieldOffset, (byte) fieldValue);
+			MyUnsafe.getUnsafe().putByte(object, fieldOffset, (Byte) fieldValue);
 			
 		}else if(fieldValue.getClass()==short.class){
-			MyUnsafe.getUnsafe().putShort(object, fieldOffset, (short) fieldValue);
+			MyUnsafe.getUnsafe().putShort(object, fieldOffset, (Short) fieldValue);
 			
 		}else if(fieldValue.getClass()==int.class){			
-			MyUnsafe.getUnsafe().putInt(object, fieldOffset, (int) fieldValue);
+			MyUnsafe.getUnsafe().putInt(object, fieldOffset, (Integer) fieldValue);
 			
 		}else if(fieldValue.getClass()==long.class){
-			MyUnsafe.getUnsafe().putLong(object, fieldOffset, (long) fieldValue);
+			MyUnsafe.getUnsafe().putLong(object, fieldOffset, (Long) fieldValue);
 			
 		}else if(fieldValue.getClass()==float.class){
-			MyUnsafe.getUnsafe().putFloat(object, fieldOffset, (float) fieldValue);
+			MyUnsafe.getUnsafe().putFloat(object, fieldOffset, (Float) fieldValue);
 			
 		}else if(fieldValue.getClass()==double.class){
-			MyUnsafe.getUnsafe().putDouble(object, fieldOffset, (double) fieldValue);
+			MyUnsafe.getUnsafe().putDouble(object, fieldOffset, (Double) fieldValue);
 			
 		}else {
 			Object value = MyUnsafe.getUnsafe().getObject(object, fieldOffset);
@@ -116,25 +116,25 @@ public class ReflectionUtils {
 
 		// putValue
 		if(fieldValue.getClass()==boolean.class){
-			field.setBoolean(object, (boolean) fieldValue);
+			field.setBoolean(object, (Boolean) fieldValue);
 			
 		}else if(fieldValue.getClass()==byte.class){
-			field.setByte(object, (byte) fieldValue);
+			field.setByte(object, (Byte) fieldValue);
 			
 		}else if(fieldValue.getClass()==short.class){
-			field.setShort(object, (short) fieldValue);
+			field.setShort(object, (Short) fieldValue);
 			
 		}else if(fieldValue.getClass()==int.class){			
-			field.setInt(object, (int) fieldValue);
+			field.setInt(object, (Integer) fieldValue);
 			
 		}else if(fieldValue.getClass()==long.class){
-			field.setLong(object, (long) fieldValue);
+			field.setLong(object, (Long) fieldValue);
 			
 		}else if(fieldValue.getClass()==float.class){
-			field.setFloat(object, (float) fieldValue);
+			field.setFloat(object, (Float) fieldValue);
 			
 		}else if(fieldValue.getClass()==double.class){
-			field.setDouble(object, (double) fieldValue);
+			field.setDouble(object, (Double) fieldValue);
 			
 		}else {
 			field.set(object, fieldValue);
