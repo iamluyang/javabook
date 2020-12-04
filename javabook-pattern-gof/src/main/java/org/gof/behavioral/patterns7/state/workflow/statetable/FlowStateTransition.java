@@ -4,7 +4,7 @@ import org.gof.behavioral.patterns7.state.workflow.command.ICommand;
 import org.gof.behavioral.patterns7.state.workflow.flow.state.ActivityState;
 import org.gof.behavioral.patterns7.state.workflow.flow.state.FlowState;
 
-public class WorkflowStateRow {
+public class FlowStateTransition {
 
     private FlowState currentFlowState;
 

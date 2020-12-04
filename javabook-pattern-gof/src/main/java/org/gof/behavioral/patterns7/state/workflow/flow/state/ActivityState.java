@@ -5,7 +5,6 @@ public enum  ActivityState {
     Committing,
     Committed,
     Canceled,
-    Reviewing,
-    Waiting,
     Approved,
+    Reviewing
 }
