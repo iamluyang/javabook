@@ -1,23 +1,42 @@
 package org.gof.behavioral.patterns7.state.player.state;
 
 import org.gof.behavioral.patterns7.state.player.context.IPod;
-import org.gof.behavioral.patterns7.state.trafficlight.state.YellowState;
 
 import java.util.concurrent.TimeUnit;
 
 public class On implements IPodState {
     @Override
     public void change(IPod pod) {
-        try {
+        System.out.print("On ipod -> ");
+        pod.setState(this);
+
+        new Thread(() -> {
             while (true) {
-                for (int musicIndex = pod.getMusicIndex(); musicIndex < pod.getMusics().size(); musicIndex++) {
-                    System.out.println(pod.getMusics().get(musicIndex));
-                    TimeUnit.SECONDS.sleep(10);
+                int musicIndex = pod.getMusicIndex();
+
+                // play music
+                System.out.println(pod.getMusics().get(musicIndex));
+                try {
+                    TimeUnit.SECONDS.sleep(5);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-                pod.setMusicIndex(0);
+
+                // check off/pause
+                if(pod.getState() instanceof Off ||
+                   pod.getState() instanceof Pause) {
+                    return;
+                }
+
+                // check prev
+                if(pod.getState() instanceof Prev) {
+                    pod.setState(new Next());
+                    continue;
+                }
+
+                pod.setState(new Next());
+                pod.change();
             }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        }).start();
     }
 }

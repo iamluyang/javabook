@@ -7,15 +7,7 @@ import java.util.concurrent.TimeUnit;
 public class Off implements IPodState {
     @Override
     public void change(IPod pod) {
-        try {
-            for (String music : pod.getMusics()) {
-                System.out.println(music);
-                TimeUnit.SECONDS.sleep(10);
-            }
-
-            pod.setState(new Pause());
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        System.out.println("Off ipod");
+        pod.setState(this);
     }
 }
