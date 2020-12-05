@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface IConnector {
 
-    List queryData();
+    List<String> queryData();
 
     boolean isExist(Object object);
 

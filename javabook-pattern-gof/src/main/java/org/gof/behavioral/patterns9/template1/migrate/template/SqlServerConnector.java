@@ -5,7 +5,7 @@ import java.util.List;
 
 public class SqlServerConnector implements IConnector {
     @Override
-    public List queryData() {
+    public List<String> queryData() {
         System.out.println("query mysql data......");
         List data = new ArrayList();
         data.add("SqlServer data1");

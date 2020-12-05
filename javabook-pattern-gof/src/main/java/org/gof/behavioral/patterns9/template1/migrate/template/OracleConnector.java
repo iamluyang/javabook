@@ -5,7 +5,7 @@ import java.util.List;
 
 public class OracleConnector implements IConnector {
     @Override
-    public List queryData() {
+    public List<String> queryData() {
         System.out.println("query oracle data......");
         List data = new ArrayList();
         data.add("oracle data1");

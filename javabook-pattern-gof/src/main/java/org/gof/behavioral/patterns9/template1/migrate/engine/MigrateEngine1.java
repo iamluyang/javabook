@@ -4,7 +4,7 @@ import org.gof.behavioral.patterns9.template1.migrate.template.IConnector;
 
 import java.util.List;
 
-public class MigrateEngine {
+public class MigrateEngine1 {
 
     public static void migrate(IConnector sourceConnector, IConnector targetConnector) {
 
