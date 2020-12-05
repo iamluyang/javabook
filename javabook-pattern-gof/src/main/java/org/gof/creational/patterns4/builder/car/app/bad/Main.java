@@ -1,13 +1,8 @@
 package org.gof.creational.patterns4.builder.car.app.bad;
 
-import org.gof.creational.patterns4.builder.car.builder.api.ICarBuilder;
-import org.gof.creational.patterns4.builder.car.builder.impl.CityCarBuilder;
-import org.gof.creational.patterns4.builder.car.builder.impl.SportCarBuilder;
-import org.gof.creational.patterns4.builder.car.builder.impl.SuvCarBuilder;
-import org.gof.creational.patterns4.builder.car.director.api.CarDirector;
 import org.gof.creational.patterns4.builder.car.product.Car;
-import org.gof.creational.patterns4.builder.car.product.components.*;
 import org.gof.creational.patterns4.builder.car.product.components.Frame;
+import org.gof.creational.patterns4.builder.car.product.components.*;
 
 import java.awt.*;
 

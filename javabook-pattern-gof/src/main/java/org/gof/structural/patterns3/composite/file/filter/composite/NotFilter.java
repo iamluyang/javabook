@@ -3,8 +3,6 @@ package org.gof.structural.patterns3.composite.file.filter.composite;
 import org.gof.structural.patterns3.composite.file.filter.IFilter;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 
 public class NotFilter implements IFilter {
 

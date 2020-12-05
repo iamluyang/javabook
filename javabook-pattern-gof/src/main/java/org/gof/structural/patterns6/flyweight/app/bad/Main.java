@@ -1,7 +1,6 @@
 package org.gof.structural.patterns6.flyweight.app.bad;
 
 import org.gof.structural.patterns6.flyweight.font.Font;
-import org.gof.structural.patterns6.flyweight.font.FontFactory;
 import org.gof.structural.patterns6.flyweight.font.Style;
 
 public class Main {
