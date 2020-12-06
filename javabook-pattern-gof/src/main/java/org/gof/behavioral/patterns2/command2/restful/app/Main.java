@@ -1,9 +1,9 @@
 package org.gof.behavioral.patterns2.command2.restful.app;
 
-import org.gof.behavioral.patterns2.command2.restful.register.RestfulRegister;
 import org.gof.behavioral.patterns2.command2.restful.commands.HttpMethod;
 import org.gof.behavioral.patterns2.command2.restful.controller.GroupController;
 import org.gof.behavioral.patterns2.command2.restful.controller.UserController;
+import org.gof.behavioral.patterns2.command2.restful.register.RestfulRegister;
 
 import java.lang.reflect.InvocationTargetException;
 

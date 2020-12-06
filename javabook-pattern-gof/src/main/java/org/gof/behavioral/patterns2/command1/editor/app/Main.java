@@ -1,7 +1,7 @@
 package org.gof.behavioral.patterns2.command1.editor.app;
 
-import org.gof.behavioral.patterns2.command1.editor.context.Editor;
 import org.gof.behavioral.patterns2.command1.editor.commands.*;
+import org.gof.behavioral.patterns2.command1.editor.context.Editor;
 public class Main {
     public static void main(String[] args) throws InstantiationException, IllegalAccessException {
         Editor editor = new Editor();

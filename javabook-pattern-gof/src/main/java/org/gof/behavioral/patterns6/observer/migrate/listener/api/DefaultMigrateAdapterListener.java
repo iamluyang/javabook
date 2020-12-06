@@ -1,7 +1,6 @@
 package org.gof.behavioral.patterns6.observer.migrate.listener.api;
 
 import org.gof.behavioral.patterns6.observer.migrate.event.MigrateEvent;
-import org.gof.behavioral.patterns6.observer.migrate.listener.api.IMigrateListener;
 
 public class DefaultMigrateAdapterListener implements IMigrateListener {
 

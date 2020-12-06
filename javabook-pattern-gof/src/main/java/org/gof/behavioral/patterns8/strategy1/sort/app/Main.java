@@ -1,6 +1,8 @@
 package org.gof.behavioral.patterns8.strategy1.sort.app;
 
-import org.gof.behavioral.patterns8.strategy1.sort.strategy.*;
+import org.gof.behavioral.patterns8.strategy1.sort.strategy.ParallelSort;
+import org.gof.behavioral.patterns8.strategy1.sort.strategy.QuickSort;
+import org.gof.behavioral.patterns8.strategy1.sort.strategy.Table;
 
 public class Main {
     public static void main(String[] args) {
