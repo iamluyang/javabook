@@ -1,6 +1,6 @@
-package org.gof.behavioral.patterns11.interpreter.characters.app;
+package org.gof.behavioral.patterns3.iterator.characters.app;
 
-import org.gof.behavioral.patterns11.interpreter.characters.IterableCharacters;
+import org.gof.behavioral.patterns3.iterator.characters.IterableCharacters;
 
 import java.util.Iterator;
 

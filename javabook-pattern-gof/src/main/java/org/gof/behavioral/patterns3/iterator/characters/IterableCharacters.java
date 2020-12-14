@@ -1,4 +1,4 @@
-package org.gof.behavioral.patterns11.interpreter.characters;
+package org.gof.behavioral.patterns3.iterator.characters;
 
 import java.util.Iterator;
 

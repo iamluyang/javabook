@@ -9,7 +9,9 @@ import java.util.Map;
 
 public class ValidatorRegister {
 
-    public ValidatorRegister() {
+    private static Map<Class<? extends Annotation>, IValidator> validatorMap = new HashMap<>();
+
+    static  {
         registerValidator(IsFalse.class, new IsFalseValidator());
         registerValidator(IsTrue.class, new IsTrueValidator());
         registerValidator(IsNotEmpty.class, new IsNotEmptyValidator());
@@ -18,8 +20,6 @@ public class ValidatorRegister {
         registerValidator(IsInetAddress.class, new IsInetAddressValidator());
         registerValidator(IsNumber.class, new IsNumberValidator());
     }
-
-    private static Map<Class<? extends Annotation>, IValidator> validatorMap = new HashMap<>();
 
     public static void registerValidator(Class<? extends Annotation> annotation, IValidator validator) {
         validatorMap.put(annotation, validator);
