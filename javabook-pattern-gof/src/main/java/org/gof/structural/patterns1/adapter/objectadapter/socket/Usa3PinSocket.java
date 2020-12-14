@@ -1,6 +1,5 @@
 package org.gof.structural.patterns1.adapter.objectadapter.socket;
 
-import org.gof.structural.patterns1.adapter.objectadapter.plug.api.IChina2PinPlug;
 import org.gof.structural.patterns1.adapter.objectadapter.plug.api.IUsa3PinPlug;
 
 public class Usa3PinSocket {

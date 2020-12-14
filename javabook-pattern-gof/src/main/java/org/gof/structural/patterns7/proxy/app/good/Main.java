@@ -1,8 +1,8 @@
 package org.gof.structural.patterns7.proxy.app.good;
 
 import org.gof.structural.patterns7.proxy.logger.BusinessService;
-import org.gof.structural.patterns7.proxy.logger.IBusinessService;
 import org.gof.structural.patterns7.proxy.logger.BusinessServiceLoggerProxy;
+import org.gof.structural.patterns7.proxy.logger.IBusinessService;
 
 public class Main {
     public static void main(String[] args) {

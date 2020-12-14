@@ -1,9 +1,7 @@
 package org.gof.structural.patterns1.adapter.classadapter.app.good;
 
 import org.gof.structural.patterns1.adapter.classadapter.plug.adapter.China2PinPlugToUsa3PinPlugAdapter;
-import org.gof.structural.patterns1.adapter.classadapter.plug.api.IChina2PinPlug;
 import org.gof.structural.patterns1.adapter.classadapter.plug.api.IUsa3PinPlug;
-import org.gof.structural.patterns1.adapter.classadapter.plug.impl.China2PinPlug;
 import org.gof.structural.patterns1.adapter.classadapter.plug.impl.Usa3PinPlug;
 import org.gof.structural.patterns1.adapter.classadapter.socket.Usa3PinSocket;
 
