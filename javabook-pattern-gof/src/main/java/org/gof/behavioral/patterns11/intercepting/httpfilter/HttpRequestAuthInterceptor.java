@@ -8,7 +8,7 @@ public class HttpRequestAuthInterceptor implements IHttpRequestInterceptor {
     @Override
     public void execute(HttpRequest request) throws HttpException {
         String hasAuthorization = request.getFirstHeader("Authorization").getValue();
-        if (StringUtils.isAllEmpty(hasAuthorization)) {
+        if (StringUtils.isEmpty(hasAuthorization)) {
             throw new HttpException("Authorization is Null");
         }
     }

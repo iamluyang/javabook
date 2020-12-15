@@ -6,21 +6,21 @@ import org.gof.behavioral.patterns11.intercepting.httpfilter.IHttpRequestInterce
 import java.util.ArrayList;
 import java.util.List;
 
-public class HttpFilterChain {
+public class HttpInterceptorChain {
 
-    private List<IHttpRequestInterceptor> filters = new ArrayList<IHttpRequestInterceptor>();
+    private List<IHttpRequestInterceptor> interceptors = new ArrayList<IHttpRequestInterceptor>();
 
     public void addFilter(IHttpRequestInterceptor filter){
-        filters.add(filter);
+        interceptors.add(filter);
     }
 
     public void removeFilter(IHttpRequestInterceptor filter){
-        filters.remove(filter);
+        interceptors.remove(filter);
     }
 
     public void execute(HttpRequest request) throws Exception {
-        for (IHttpRequestInterceptor filter : filters) {
-            filter.execute(request);
+        for (IHttpRequestInterceptor interceptor : interceptors) {
+            interceptor.execute(request);
         }
     }
 }
