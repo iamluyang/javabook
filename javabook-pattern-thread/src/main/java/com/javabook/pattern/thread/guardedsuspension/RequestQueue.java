@@ -1,5 +1,7 @@
 package com.javabook.pattern.thread.guardedsuspension;
 
+import org.omg.CORBA.UShortSeqHelper;
+
 import java.util.LinkedList;
 
 

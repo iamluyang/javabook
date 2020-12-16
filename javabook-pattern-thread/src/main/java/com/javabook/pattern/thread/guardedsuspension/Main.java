@@ -10,11 +10,11 @@ package com.javabook.pattern.thread.guardedsuspension;
  */
 public class Main {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		// myaddress
 		RequestQueue requestQueue = new RequestQueue();
-		
+
 		new ClientThread(requestQueue, "Alice", 3141592L).start();
 		new ServerThread(requestQueue, "Bobby", 6535897L).start();
 	}

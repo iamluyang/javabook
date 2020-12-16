@@ -9,7 +9,7 @@ package com.javabook.pattern.thread.immutable;
  *
  */
 public final class Person {
-	
+
 	/**
 	 * name
 	 */

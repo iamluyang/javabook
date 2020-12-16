@@ -1,17 +1,14 @@
-package org.gof.creational.patterns6.singleton.app;
-
-import org.gof.creational.patterns6.singleton.LazyButNotThreadSafeSingleton1;
+package com.javabook.pattern.thread.app;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        Apple apple1 = new Apple();
-        Apple apple2 = new Apple();
+        ThreadSample apple1 = new ThreadSample();
         new Thread("T1"){
             @Override
             public void run() {
                 while (true) {
                     try {
-                        apple1.syncStaticMethod1();
+                        apple1.syncMethod1();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -24,7 +21,7 @@ public class Main {
             public void run() {
                 while (true) {
                     try {
-                        apple1.notSyncStaticMethod();
+                        apple1.syncMethod1();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
