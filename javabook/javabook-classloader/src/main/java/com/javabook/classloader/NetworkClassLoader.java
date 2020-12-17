@@ -11,7 +11,7 @@ import com.javabook.classloader.service.api.ISimpleService;
 
 /**
  * @author Summer Lu
- * @email summer.lu@software.dell.com
+ * @email gmluyang@gmail.com
  * @date 2014-8-25
  *
  */

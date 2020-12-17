@@ -2,16 +2,15 @@ package com.javabook.classloader.found;
 
 /**
  * @author Summer Lu
- * @email summer.lu@software.dell.com
+ * @email gmluyang@gmail.com
  * @date 2014-10-30
  *
  */
-public class MainClassFound {
+public class ClassNotFoundExceptionDemo {
 
 	public static void main(String[] args) {
 		try {
-			Class.forName("com.javabook.classloader.found.MyClass1");
-			System.out.println("MainClassFound: is OK");
+			Class.forName("com.javabook.classloader.found.NotExistingClass");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}

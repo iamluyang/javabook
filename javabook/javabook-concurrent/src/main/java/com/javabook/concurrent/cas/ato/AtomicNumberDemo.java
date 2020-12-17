@@ -74,7 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
     }
     
  * @author Summer Lu
- * @email summer.lu@software.dell.com
+ * @email gmluyang@gmail.com
  * @date Jul 6, 2015
  */
 public final class AtomicNumberDemo {

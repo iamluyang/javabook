@@ -4,7 +4,7 @@ package com.javabook.pattern.thread.twophasetermination4;
 /**
  * 
  * @author Summer Lu
- * @email summer.lu@software.dell.com
+ * @email gmluyang@gmail.com
  * @date 2015年7月19日
  *
  */

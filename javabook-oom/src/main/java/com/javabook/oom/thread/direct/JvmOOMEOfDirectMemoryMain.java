@@ -17,7 +17,7 @@ import com.javabook.oom.MyUnsafe;
  *	at com.javabook.jvm.oom.thread.direct.JvmOOMEOfDirectMemoryMain.main(JvmOOMEOfDirectMemoryMain.java:33)
  * 
  * @author Summer Lu
- * @email summer.lu@software.dell.com
+ * @email gmluyang@gmail.com
  * @date 2014-8-25
  *
  */

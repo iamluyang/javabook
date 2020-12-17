@@ -10,7 +10,7 @@ import java.util.List;
  * 	at com.javabook.jvm.oom.heap.JvmOOMEOfJavaHeapSpaceMain.main(JvmOOMEOfJavaHeapSpaceMain.java:26)
  * 
  * @author Summer Lu
- * @email summer.lu@software.dell.com
+ * @email gmluyang@gmail.com
  * @date 2014-8-25
  *
  */

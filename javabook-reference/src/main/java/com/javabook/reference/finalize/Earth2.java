@@ -2,7 +2,7 @@ package com.javabook.reference.finalize;
 
 /**
  * @author Summer Lu
- * @email summer.lu@software.dell.com
+ * @email gmluyang@gmail.com
  * @date 2014-9-25
  * 
  */

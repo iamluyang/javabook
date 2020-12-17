@@ -13,7 +13,7 @@ import com.javabook.jvm.io.by.InputOutputWithOutBuffer;
 
 /**
  * @author Summer Lu
- * @email summer.lu@software.dell.com
+ * @email gmluyang@gmail.com
  * @date 2014-9-25
  *
  */

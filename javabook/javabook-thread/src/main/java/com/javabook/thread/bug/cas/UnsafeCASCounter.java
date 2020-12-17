@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * CAS 的价值是它可以在硬件中实现，并且是极轻量级的（在大多数处理器中）：
  * 
  * @author Summer Lu
- * @email summer.lu@software.dell.com
+ * @email gmluyang@gmail.com
  * @date 2014-8-22
  * 
  */

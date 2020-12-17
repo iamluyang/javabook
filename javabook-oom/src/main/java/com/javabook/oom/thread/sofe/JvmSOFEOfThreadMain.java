@@ -26,7 +26,7 @@ package com.javabook.oom.thread.sofe;
  * Java线程栈溢出，线程栈在堆以外的内存创建，不会影响堆内存的变化
  * 
  * @author Summer Lu
- * @email summer.lu@software.dell.com
+ * @email gmluyang@gmail.com
  * @date 2014-8-25
  *
  */

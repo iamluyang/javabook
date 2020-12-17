@@ -4,7 +4,7 @@ package com.javabook.pattern.thread.workerthread;
 /**
  * 
  * @author Summer Lu
- * @email summer.lu@software.dell.com
+ * @email gmluyang@gmail.com
  * @date 2015年7月19日
  *
  */

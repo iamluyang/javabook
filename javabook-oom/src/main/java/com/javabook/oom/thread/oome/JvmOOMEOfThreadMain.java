@@ -9,7 +9,7 @@ package com.javabook.oom.thread.oome;
  * 线程在堆以外的内存创建，因此受到内存限制不能创建更多线程，不会影响堆内存的变化
  * 
  * @author Summer Lu
- * @email summer.lu@software.dell.com
+ * @email gmluyang@gmail.com
  * @date 2014-8-22
  *
  */

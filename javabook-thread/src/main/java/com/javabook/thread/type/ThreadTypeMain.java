@@ -13,7 +13,7 @@ import com.javabook.thread.type.waiting.WaitingThread;
  * Java VisualVM 1-使用时间线视图根据图形来观察线程的执行状态 2-使用表视图来排序所感兴趣的线程 3-使用详细信息视图来显示具体线程
  * 
  * @author Summer Lu
- * @email summer.lu@software.dell.com
+ * @email gmluyang@gmail.com
  * @date 2014-8-22
  *
  */

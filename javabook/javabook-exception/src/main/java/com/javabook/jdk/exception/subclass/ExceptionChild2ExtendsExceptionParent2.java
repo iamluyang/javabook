@@ -5,7 +5,7 @@ package com.javabook.jdk.exception.subclass;
 
 /**
  * @author Summer Lu
- * @email summer.lu@software.dell.com
+ * @email gmluyang@gmail.com
  * @date 2015-1-28
  *
  */

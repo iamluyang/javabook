@@ -9,7 +9,7 @@ import com.javabook.io.bio.profile.Profile;
 
 /**
  * @author Summer Lu
- * @email summer.lu@software.dell.com
+ * @email gmluyang@gmail.com
  * @date 2014-8-26
  *
  */

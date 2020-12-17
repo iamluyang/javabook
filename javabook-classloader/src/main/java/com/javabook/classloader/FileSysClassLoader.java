@@ -12,7 +12,7 @@ import com.javabook.classloader.service.api.ISimpleService;
 
 /**
  * @author Summer Lu
- * @email summer.lu@software.dell.com
+ * @email gmluyang@gmail.com
  * @date 2014-8-25
  *
  */
@@ -94,7 +94,7 @@ public class FileSysClassLoader extends ClassLoader {
 		try {
 			
 			// File
-			String file = "E:\\workshop\\J2EE\\workshop_book\\book_classloader\\mybin";
+			String file = "C:\\mybin";
 
 			// fileSystemClassLoader
 			FileSysClassLoader fileSysClassLoader = new FileSysClassLoader(file);

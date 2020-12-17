@@ -8,7 +8,7 @@ package com.javabook.thread.sync;
  * </ul>
  * 
  * @author Summer Lu
- * @email summer.lu@software.dell.com
+ * @email gmluyang@gmail.com
  * @date 2015-1-27
  *
  */

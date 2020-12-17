@@ -5,11 +5,11 @@ import com.javabook.classloader.NetworkClassLoader;
 
 /**
  * @author Summer Lu
- * @email summer.lu@software.dell.com
+ * @email gmluyang@gmail.com
  * @date 2014-8-25
  *
  */
-public class NameSpaceOfTheClassLoaderMain {
+public class NameSpaceOfTheClassLoaderDemo {
 
 	/**
 	 * @param args
@@ -23,10 +23,10 @@ public class NameSpaceOfTheClassLoaderMain {
 			// --------------------------------------------------
 			
 			// URL
-			String urls = "file:\\E:\\workshop\\J2EE\\workshop_book\\book_classloader\\mybin";
+			String urls = "file:\\C:\\Github\\study\\javabook\\javabook-classloader\\mybin\\";
 			
 			// File
-			String file = "E:\\workshop\\J2EE\\workshop_book\\book_classloader\\mybin";
+			String file = "C:\\Github\\study\\javabook\\javabook-classloader\\mybin\\";
 
 			// --------------------------------------------------
 			// FileSysClassLoader/NetworkClassLoader			
@@ -51,13 +51,18 @@ public class NameSpaceOfTheClassLoaderMain {
 			// simpleServiceLowerCaseImplClass2
 			Class<?> simpleServiceLowerCaseImplClass2 = fileSysClassLoader.loadClass(simpleServiceLowerCaseImpl);
 
+			// simpleServiceLowerCaseImplClass3
+			Class<?> simpleServiceLowerCaseImplClass3 = Class.forName(simpleServiceLowerCaseImpl);
+
 			System.out.println("SimpleServiceLowerCaseImpl:");
 			
 			System.out.println(	simpleServiceLowerCaseImplClass1.getName()+":"+simpleServiceLowerCaseImplClass1.getClassLoader() );
 	
 			System.out.println(	simpleServiceLowerCaseImplClass2.getName()+":"+simpleServiceLowerCaseImplClass2.getClassLoader() );
-			
-			System.out.println( "ClassLoader of the SimpleServiceLowerCaseImpl:" + (simpleServiceLowerCaseImplClass1==simpleServiceLowerCaseImplClass2) );
+
+			System.out.println(	simpleServiceLowerCaseImplClass3.getName()+":"+simpleServiceLowerCaseImplClass3.getClassLoader() );
+
+			System.out.println( "simpleServiceLowerCaseImplClass1 == simpleServiceLowerCaseImplClass2" + (simpleServiceLowerCaseImplClass1==simpleServiceLowerCaseImplClass2) );
 
 			// --------------------------------------------------
 			// SimpleServiceUpperCaseImpl		
@@ -72,13 +77,18 @@ public class NameSpaceOfTheClassLoaderMain {
 			// simpleServiceUpperCaseImplClass2
 			Class<?> simpleServiceUpperCaseImplClass2 = fileSysClassLoader.loadClass(simpleServiceUpperCaseImpl);
 
+			// simpleServiceLowerCaseImplClass3
+			Class<?> simpleServiceUpperCaseImplClass3 = Class.forName(simpleServiceUpperCaseImpl);
+
 			System.out.println("\nSimpleServiceUpperCaseImpl:");
 			
 			System.out.println(	simpleServiceUpperCaseImplClass1.getName()+":"+simpleServiceUpperCaseImplClass1.getClassLoader() );
 			
 			System.out.println(	simpleServiceUpperCaseImplClass2.getName()+":"+simpleServiceUpperCaseImplClass2.getClassLoader() );
-			
-			System.out.println( "ClassLoader of the SimpleServiceUpperCaseImpl:" + (simpleServiceUpperCaseImplClass1==simpleServiceUpperCaseImplClass2) );
+
+			System.out.println(	simpleServiceUpperCaseImplClass3.getName()+":"+simpleServiceUpperCaseImplClass3.getClassLoader() );
+
+			System.out.println( "simpleServiceUpperCaseImplClass1 == simpleServiceUpperCaseImplClass2" + (simpleServiceUpperCaseImplClass1==simpleServiceUpperCaseImplClass2) );
 			
 		} catch (Exception e) {
 			e.printStackTrace();
