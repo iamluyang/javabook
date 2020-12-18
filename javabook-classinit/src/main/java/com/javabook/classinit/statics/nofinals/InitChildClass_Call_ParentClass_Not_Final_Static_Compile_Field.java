@@ -1,6 +1,6 @@
 package com.javabook.classinit.statics.nofinals;
 
-import com.javabook.classinit.ClassInitChild;
+import com.javabook.classinit.ChildClass;
 
 /**
  * <ul>访问类型的final static编译期字段
@@ -10,14 +10,14 @@ import com.javabook.classinit.ClassInitChild;
  * @author LuYang
  *
  */
-public class InitClassByStatic1Demo3 {
+public class InitChildClass_Call_ParentClass_Not_Final_Static_Compile_Field {
 
 	public static void main(String[] args) {	
 		
 		System.out.println("第1次访问类型的static字段(编译时)");
-		System.out.println( ClassInitChild.staticfield_Compile_inChild);
+		System.out.println( ChildClass.ParentClass_Not_Final_Static_Compile_Field);
 		
 		System.out.println("第2次访问类型的static字段(编译时)");
-		System.out.println( ClassInitChild.staticfield_Compile_inChild );
+		System.out.println( ChildClass.ParentClass_Not_Final_Static_Compile_Field);
 	}
 }

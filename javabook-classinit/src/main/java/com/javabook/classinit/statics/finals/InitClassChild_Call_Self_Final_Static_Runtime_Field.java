@@ -1,6 +1,6 @@
 package com.javabook.classinit.statics.finals;
 
-import com.javabook.classinit.ClassInitChild;
+import com.javabook.classinit.ChildClass;
 
 /**
  * <ul>访问类型的final static运行期字段
@@ -10,14 +10,13 @@ import com.javabook.classinit.ClassInitChild;
  * @author LuYang
  *
  */
-public class InitClassByStaticFinal2Demo2 {
+public class InitClassChild_Call_Self_Final_Static_Runtime_Field {
 
 	public static void main(String[] args) {
-
 		System.out.println("第1次访问类型的final static字段(运行时)");
-		System.out.println( ClassInitChild.finalstaticfield_Runtime_inParent );
+		System.out.println( ChildClass.ChildClass_Final_Static_Runtime_Field);
 		
-		System.out.println("第1次访问类型的final static字段(运行时)");
-		System.out.println( ClassInitChild.finalstaticfield_Runtime_inParent );
+		System.out.println("第2次访问类型的final static字段(运行时)");
+		System.out.println( ChildClass.ChildClass_Final_Static_Runtime_Field);
 	}
 }

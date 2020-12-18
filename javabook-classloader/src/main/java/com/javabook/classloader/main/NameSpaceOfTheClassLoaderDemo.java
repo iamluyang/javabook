@@ -23,10 +23,10 @@ public class NameSpaceOfTheClassLoaderDemo {
 			// --------------------------------------------------
 			
 			// URL
-			String urls = "file:\\C:\\Github\\study\\javabook\\javabook-classloader\\mybin\\";
+			String urls = "file:\\C:\\mybin\\";
 			
 			// File
-			String file = "C:\\Github\\study\\javabook\\javabook-classloader\\mybin\\";
+			String file = "C:\\mybin\\";
 
 			// --------------------------------------------------
 			// FileSysClassLoader/NetworkClassLoader			

@@ -10,8 +10,7 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.javabook.classinit.ClassInitChild;
-import com.javabook.classinit.ClassInitParent;
+import com.javabook.classinit.ParentClass;
 
 /**
  * <ul>以反序列化的方式获取对象
@@ -22,13 +21,13 @@ import com.javabook.classinit.ClassInitParent;
  * @author LuYang
  *
  */
-public class InitClassBySerializDemo2 {
+public class InitClassBySerializParentClass {
 
 	/**
 	 * @param objects
 	 * @param filename
-	 * @throws IOException 
-	 * @throws FileNotFoundException 
+	 * @throws IOException
+	 * @throws FileNotFoundException
 	 */
 	public static void writeObjectsToFile(Object[] objects, String filename) 
 		throws FileNotFoundException, IOException {
@@ -55,7 +54,7 @@ public class InitClassBySerializDemo2 {
 		FileInputStream   fis  = new FileInputStream(file);
 		ObjectInputStream ois  = new ObjectInputStream(fis);
 
-		List<Object> list = new ArrayList<Object>();
+		List<Object> list = new ArrayList<>();
 		while (fis.available() > 0) {
 			list.add(ois.readObject());
 		}
@@ -65,15 +64,15 @@ public class InitClassBySerializDemo2 {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 
-		//ClassInitChild[] classInits = { new ClassInitChild(), new ClassInitChild() };
-		//InitClassBySerializDemo2.writeObjectsToFile(classInits, "data2.dat");
+		//ParentClass[] classInits = { new ParentClass(), new ParentClass() };
+		//InitClassBySerializDemo1.writeObjectsToFile(classInits, "data1.dat");
 		try {
 			
-			System.out.println("第1次加载反序列化ClassInit");
-			ClassInitChild classInit1 = (ClassInitChild) InitClassBySerializDemo2.readObjectsFromFile("data2.dat")[0];
+			System.out.println("第1次加载反序列化ParentClass");
+			ParentClass classInit1 = (ParentClass) InitClassBySerializParentClass.readObjectsFromFile("data1.dat")[0];
 			
-			System.out.println("第2次加载反序列化ClassInit");
-			ClassInitChild classInit2 = (ClassInitChild) InitClassBySerializDemo2.readObjectsFromFile("data2.dat")[0];
+			System.out.println("第2次加载反序列化ParentClass");
+			ParentClass classInit2 = (ParentClass) InitClassBySerializParentClass.readObjectsFromFile("data1.dat")[0];
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

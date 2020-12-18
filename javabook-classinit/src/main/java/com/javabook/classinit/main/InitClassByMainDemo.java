@@ -11,7 +11,7 @@ package com.javabook.classinit.main;
 public class InitClassByMainDemo {
 	
 	static{
-		System.out.println("I am InitClassByMainDemo static.");
+		System.out.println("I am static block of the InitClassByMainDemo");
 	}
 	
 	public InitClassByMainDemo() {

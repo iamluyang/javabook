@@ -94,7 +94,7 @@ public class FileSysClassLoader extends ClassLoader {
 		try {
 			
 			// File
-			String file = "C:\\mybin";
+			String file = "C:\\mybin\\service.jar!";
 
 			// fileSystemClassLoader
 			FileSysClassLoader fileSysClassLoader = new FileSysClassLoader(file);

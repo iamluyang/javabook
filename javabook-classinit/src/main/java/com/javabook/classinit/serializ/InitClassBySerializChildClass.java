@@ -10,7 +10,7 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.javabook.classinit.ClassInitParent;
+import com.javabook.classinit.ChildClass;
 
 /**
  * <ul>以反序列化的方式获取对象
@@ -21,7 +21,7 @@ import com.javabook.classinit.ClassInitParent;
  * @author LuYang
  *
  */
-public class InitClassBySerializDemo1 {
+public class InitClassBySerializChildClass {
 
 	/**
 	 * @param objects
@@ -64,15 +64,15 @@ public class InitClassBySerializDemo1 {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 
-		//ClassInitParent[] classInits = { new ClassInitParent(), new ClassInitParent() };
-		//InitClassBySerializDemo.writeObjectsToFile(classInits, "data1.dat");
+		//ChildClass[] classInits = { new ChildClass(), new ChildClass() };
+		//InitClassBySerializDemo2.writeObjectsToFile(classInits, "data2.dat");
 		try {
 			
-			System.out.println("第1次加载反序列化ClassInit");
-			ClassInitParent classInit1 = (ClassInitParent) InitClassBySerializDemo1.readObjectsFromFile("data1.dat")[0];
+			System.out.println("第1次加载反序列化ChildClass");
+			ChildClass classInit1 = (ChildClass) InitClassBySerializChildClass.readObjectsFromFile("data2.dat")[0];
 			
-			System.out.println("第2次加载反序列化ClassInit");
-			ClassInitParent classInit2 = (ClassInitParent) InitClassBySerializDemo1.readObjectsFromFile("data1.dat")[0];
+			System.out.println("第2次加载反序列化ChildClass");
+			ChildClass classInit2 = (ChildClass) InitClassBySerializChildClass.readObjectsFromFile("data2.dat")[0];
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
