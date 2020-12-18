@@ -93,6 +93,10 @@ public class NetworkClassLoader extends ClassLoader {
 			// URL
 			String urls = "file:\\C:\\mybin";
 
+			// ----------------------------------------------------------------------------------------------------
+			// SimpleServiceLowerCaseImpl
+			// ----------------------------------------------------------------------------------------------------
+
 			// networkClassLoader
 			NetworkClassLoader networkClassLoader = new NetworkClassLoader(urls);
 
@@ -101,18 +105,25 @@ public class NetworkClassLoader extends ClassLoader {
 
 			// simpleServiceLowerCaseImplClass1
 			Class<?> simpleServiceLowerCaseImplClass1 = networkClassLoader.loadClass(simpleServiceLowerCaseImpl);
-			ISimpleService simpleService1 = (ISimpleService) simpleServiceLowerCaseImplClass1.newInstance();
+			ISimpleService simpleServiceLowerCaseImpl1 = (ISimpleService) simpleServiceLowerCaseImplClass1.newInstance();
 			
 			System.out.println(	simpleServiceLowerCaseImplClass1.getName()+":"+simpleServiceLowerCaseImplClass1.getClassLoader() );
+			System.out.println(simpleServiceLowerCaseImpl1.calculate("Abc"));
 
-			// simpleServiceUpperCaseImpl
+			// ----------------------------------------------------------------------------------------------------
+			// SimpleServiceUpperCaseImpl
+			// ----------------------------------------------------------------------------------------------------
+			System.out.println();
+
 			String simpleServiceUpperCaseImpl = "com.javabook.classloader.service.impl.SimpleServiceUpperCaseImpl";		
 			
 			// simpleServiceUpperCaseImplClass1
 			Class<?> simpleServiceUpperCaseImplClass1 = networkClassLoader.loadClass(simpleServiceUpperCaseImpl);
 			ISimpleService simpleServiceUpperCaseImpl1 = (ISimpleService) simpleServiceUpperCaseImplClass1.newInstance();
-			
+
 			System.out.println(	simpleServiceUpperCaseImplClass1.getName()+":"+simpleServiceUpperCaseImplClass1.getClassLoader() );
+			System.out.println(simpleServiceUpperCaseImpl1.calculate("Abc"));
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

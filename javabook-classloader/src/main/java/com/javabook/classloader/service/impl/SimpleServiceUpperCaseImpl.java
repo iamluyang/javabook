@@ -8,11 +8,10 @@ import com.javabook.classloader.service.api.ISimpleService;
  * @date 2014-8-25
  *
  */
-/*
-public class SimpleServiceLowerCaseImpl implements ISimpleService {
+/*public class SimpleServiceUpperCaseImpl implements ISimpleService {
 
 	@Override
 	public String calculate(String expression) {
-		return this.getClass().getName() + ":" + expression.toLowerCase();
+		return this.getClass().getName() + ":" + expression.toUpperCase();
 	}
 }*/

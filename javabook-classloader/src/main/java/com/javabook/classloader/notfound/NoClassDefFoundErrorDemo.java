@@ -1,4 +1,4 @@
-package com.javabook.classloader.found;
+package com.javabook.classloader.notfound;
 
 
 /**

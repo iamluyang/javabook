@@ -94,7 +94,7 @@ public class FileSysClassLoader extends ClassLoader {
 		try {
 			
 			// File
-			String file = "C:\\mybin\\service.jar!";
+			String file = "C:\\mybin\\";
 
 			// fileSystemClassLoader
 			FileSysClassLoader fileSysClassLoader = new FileSysClassLoader(file);
@@ -108,22 +108,24 @@ public class FileSysClassLoader extends ClassLoader {
 
 			// simpleServiceLowerCaseImplClass2
 			Class<?> simpleServiceLowerCaseImplClass2 = fileSysClassLoader.loadClass(simpleServiceLowerCaseImpl);
+			System.out.println(	simpleServiceLowerCaseImplClass2.getClassLoader() + " -> " + simpleServiceLowerCaseImplClass2.getName());
+
 			ISimpleService simpleServiceLowerCaseImpl2 = (ISimpleService) simpleServiceLowerCaseImplClass2.newInstance();
-			
-			System.out.println(	simpleServiceLowerCaseImplClass2.getName()+":"+simpleServiceLowerCaseImplClass2.getClassLoader() );
+			System.out.println(simpleServiceLowerCaseImpl2.calculate("Abc"));
 
 			// ----------------------------------------------------------------------------------------------------
 			// SimpleServiceUpperCaseImpl		
 			// ----------------------------------------------------------------------------------------------------
-	
+			System.out.println();
+
 			// simpleServiceUpperCaseImpl
 			String simpleServiceUpperCaseImpl = "com.javabook.classloader.service.impl.SimpleServiceUpperCaseImpl";		
 
 			Class<?> simpleServiceUpperCaseImplClass2 = fileSysClassLoader.loadClass(simpleServiceUpperCaseImpl);
+			System.out.println(	simpleServiceUpperCaseImplClass2.getClassLoader() + " -> " + simpleServiceUpperCaseImplClass2.getName());
+
 			ISimpleService simpleServiceUpperCaseImpl2 = (ISimpleService) simpleServiceUpperCaseImplClass2.newInstance();
-			
-			System.out.println(	simpleServiceUpperCaseImplClass2.getName()+":"+simpleServiceUpperCaseImplClass2.getClassLoader() );
-			
+			System.out.println(simpleServiceUpperCaseImpl2.calculate("Abc"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

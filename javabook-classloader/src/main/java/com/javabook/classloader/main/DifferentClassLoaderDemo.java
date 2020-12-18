@@ -9,7 +9,7 @@ import com.javabook.classloader.NetworkClassLoader;
  * @date 2014-8-25
  *
  */
-public class NameSpaceOfTheClassLoaderDemo {
+public class DifferentClassLoaderDemo {
 
 	/**
 	 * @param args
@@ -23,7 +23,7 @@ public class NameSpaceOfTheClassLoaderDemo {
 			// --------------------------------------------------
 			
 			// URL
-			String urls = "file:\\C:\\mybin\\";
+			String urls = "file:\\C:\\mybin";
 			
 			// File
 			String file = "C:\\mybin\\";
@@ -52,25 +52,25 @@ public class NameSpaceOfTheClassLoaderDemo {
 			Class<?> simpleServiceLowerCaseImplClass2 = fileSysClassLoader.loadClass(simpleServiceLowerCaseImpl);
 
 			// simpleServiceLowerCaseImplClass3
-			Class<?> simpleServiceLowerCaseImplClass3 = Class.forName(simpleServiceLowerCaseImpl);
+			//Class<?> simpleServiceLowerCaseImplClass3 = Class.forName(simpleServiceLowerCaseImpl);
 
 			System.out.println("SimpleServiceLowerCaseImpl:");
-			
-			System.out.println(	simpleServiceLowerCaseImplClass1.getName()+":"+simpleServiceLowerCaseImplClass1.getClassLoader() );
-	
-			System.out.println(	simpleServiceLowerCaseImplClass2.getName()+":"+simpleServiceLowerCaseImplClass2.getClassLoader() );
 
-			System.out.println(	simpleServiceLowerCaseImplClass3.getName()+":"+simpleServiceLowerCaseImplClass3.getClassLoader() );
+			System.out.println(	simpleServiceLowerCaseImplClass1.getClassLoader() + " -> " + simpleServiceLowerCaseImplClass1.getName() );
 
-			System.out.println( "simpleServiceLowerCaseImplClass1 == simpleServiceLowerCaseImplClass2" + (simpleServiceLowerCaseImplClass1==simpleServiceLowerCaseImplClass2) );
+			System.out.println(	simpleServiceLowerCaseImplClass2.getClassLoader() + " -> " + simpleServiceLowerCaseImplClass2.getName() );
+
+			//System.out.println(	simpleServiceLowerCaseImplClass3.getClassLoader() + " -> " + simpleServiceLowerCaseImplClass3.getName() );
+
+			System.out.println( "simpleServiceLowerCaseImplClass1 == simpleServiceLowerCaseImplClass2 ? " + (simpleServiceLowerCaseImplClass1==simpleServiceLowerCaseImplClass2) );
 
 			// --------------------------------------------------
-			// SimpleServiceUpperCaseImpl		
+			// SimpleServiceUpperCaseImpl
 			// --------------------------------------------------
 
 			// simpleServiceUpperCaseImpl
-			String simpleServiceUpperCaseImpl = "com.javabook.classloader.service.impl.SimpleServiceUpperCaseImpl";		
-			
+			String simpleServiceUpperCaseImpl = "com.javabook.classloader.service.impl.SimpleServiceUpperCaseImpl";
+
 			// simpleServiceUpperCaseImplClass1
 			Class<?> simpleServiceUpperCaseImplClass1 = networkClassLoader.loadClass(simpleServiceUpperCaseImpl);
 
@@ -78,18 +78,18 @@ public class NameSpaceOfTheClassLoaderDemo {
 			Class<?> simpleServiceUpperCaseImplClass2 = fileSysClassLoader.loadClass(simpleServiceUpperCaseImpl);
 
 			// simpleServiceLowerCaseImplClass3
-			Class<?> simpleServiceUpperCaseImplClass3 = Class.forName(simpleServiceUpperCaseImpl);
+			//Class<?> simpleServiceUpperCaseImplClass3 = Class.forName(simpleServiceUpperCaseImpl);
 
 			System.out.println("\nSimpleServiceUpperCaseImpl:");
-			
-			System.out.println(	simpleServiceUpperCaseImplClass1.getName()+":"+simpleServiceUpperCaseImplClass1.getClassLoader() );
-			
-			System.out.println(	simpleServiceUpperCaseImplClass2.getName()+":"+simpleServiceUpperCaseImplClass2.getClassLoader() );
 
-			System.out.println(	simpleServiceUpperCaseImplClass3.getName()+":"+simpleServiceUpperCaseImplClass3.getClassLoader() );
+			System.out.println(	simpleServiceUpperCaseImplClass1.getClassLoader() + " -> " + simpleServiceUpperCaseImplClass1.getName() );
 
-			System.out.println( "simpleServiceUpperCaseImplClass1 == simpleServiceUpperCaseImplClass2" + (simpleServiceUpperCaseImplClass1==simpleServiceUpperCaseImplClass2) );
-			
+			System.out.println(	simpleServiceUpperCaseImplClass2.getClassLoader() + " -> " + simpleServiceUpperCaseImplClass2.getName() );
+
+			//System.out.println(	simpleServiceUpperCaseImplClass3.getClassLoader() + " -> " + simpleServiceUpperCaseImplClass3.getName() );
+
+			System.out.println( "simpleServiceUpperCaseImplClass1 == simpleServiceUpperCaseImplClass2 ? " + (simpleServiceUpperCaseImplClass1==simpleServiceUpperCaseImplClass2) );
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
