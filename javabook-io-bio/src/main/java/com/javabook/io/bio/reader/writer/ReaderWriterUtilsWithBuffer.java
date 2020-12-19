@@ -1,10 +1,6 @@
-package com.javabook.io.bio.rw;
+package com.javabook.io.bio.reader.writer;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * @author Summer Lu
@@ -12,7 +8,7 @@ import java.io.IOException;
  * @date 2014-8-26
  *
  */
-public class ReaderWriterWithBuffer extends ReaderWriterProxy {
+public class ReaderWriterUtilsWithBuffer implements ReaderWriterUtils {
 
 	// --------------------------------------------------
 	// BufferedReader
@@ -23,7 +19,17 @@ public class ReaderWriterWithBuffer extends ReaderWriterProxy {
 		BufferedReader reader = new BufferedReader(new FileReader(file));		
 		return reader;
 	}
-	
+
+	@Override
+	public int read(Reader reader)throws IOException {
+		return reader.read();
+	}
+
+	@Override
+	public void closeInputStream(Reader reader) throws IOException {
+		reader.close();
+	}
+
 	// --------------------------------------------------
 	// BufferedWriter
 	// --------------------------------------------------
@@ -32,6 +38,16 @@ public class ReaderWriterWithBuffer extends ReaderWriterProxy {
 	public BufferedWriter openOutputStream(String file) throws IOException {
 		BufferedWriter writer = new BufferedWriter(new FileWriter(file));		
 		return writer;
+	}
+
+	@Override
+	public void write(Writer writer, String value) throws IOException {
+		writer.write(value);
+	}
+
+	@Override
+	public void closeOutputStream(Writer writer) throws IOException {
+		writer.close();
 	}
 
 }

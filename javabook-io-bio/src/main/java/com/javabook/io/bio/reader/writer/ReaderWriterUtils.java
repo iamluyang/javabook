@@ -1,4 +1,4 @@
-package com.javabook.io.bio.rw;
+package com.javabook.io.bio.reader.writer;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -11,7 +11,7 @@ import java.io.Writer;
  * @date 2014-8-26
  *
  */
-public interface ReaderWriter {
+public interface ReaderWriterUtils {
 
 	// --------------------------------------------------
 	// Reader

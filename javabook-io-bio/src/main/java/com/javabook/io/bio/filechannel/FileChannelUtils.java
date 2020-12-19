@@ -1,4 +1,4 @@
-package com.javabook.io.bio.bb;
+package com.javabook.io.bio.filechannel;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -10,7 +10,7 @@ import java.nio.channels.FileChannel;
  * @date 2014-8-26
  *
  */
-public interface ByteBuff {
+public interface FileChannelUtils {
 
 	// --------------------------------------------------
 	// open/close
@@ -30,7 +30,7 @@ public interface ByteBuff {
 	public void closeFileChannel(FileChannel fc)throws IOException;
 
 	// --------------------------------------------------
-	// read
+	// read/write
 	// --------------------------------------------------
 
 	/**
@@ -40,10 +40,6 @@ public interface ByteBuff {
 	 * @throws IOException
 	 */
 	public int read(FileChannel fileChannel, ByteBuffer bb) throws IOException;
-
-	// --------------------------------------------------
-	// write
-	// --------------------------------------------------
 
 	/**
 	 * @param fileChannel

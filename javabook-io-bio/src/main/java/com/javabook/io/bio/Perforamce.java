@@ -1,4 +1,4 @@
-package com.javabook.io.bio.profile;
+package com.javabook.io.bio;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -9,7 +9,7 @@ import java.util.Date;
  * @date 2014-8-21
  *
  */
-public class Profile {
+public class Perforamce {
 
 	/**
 	 * start
@@ -42,13 +42,11 @@ public class Profile {
 	/**
 	 * @return the start
 	 */
-	public long stop(String name, long total) {
+	public long stop(String name) {
 		finish = System.currentTimeMillis();
 		time = finish-start;
-		start = finish;
-		
-		long avg = time / total;
-		System.out.println( name + ":" + sdf.format(new Date(time)).toString() + "-avg:" + sdf.format(new Date(avg)).toString() );
+
+		System.out.println( name + "total time: " + sdf.format(new Date(time)) );
 		return time;
 	}
 
