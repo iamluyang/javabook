@@ -1,6 +1,5 @@
 package com.javabook.pattern.thread.readwritelock2;
 
-
 /**
  * 
  * @author Summer Lu

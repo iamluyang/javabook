@@ -8,7 +8,7 @@ package com.javabook.pattern.thread.future;
  * @date 2015年7月19日
  *
  */
-public class FutureResult implements Result {
+public class FutureResult extends ResultWithListener {
 	
 	/**
 	 * realResult

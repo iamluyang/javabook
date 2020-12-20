@@ -21,7 +21,7 @@ public class Main {
 			Thread.sleep(10000);
 
 			System.out.println("main: shutdown");
-			//workerThread.shutdown();
+			workerThread.shutdown();
 
 			System.out.println("main: join");
 			workerThread.join();

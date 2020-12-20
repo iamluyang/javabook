@@ -15,8 +15,8 @@ public class FileChannelUtilsWithDirect implements FileChannelUtils {
 
 	@Override
 	public ByteBuffer openByteBuffer(int buffer) throws IOException {
-		ByteBuffer bb = ByteBuffer.allocateDirect(buffer);
-		return bb;
+		ByteBuffer byteBuffer = ByteBuffer.allocateDirect(buffer);
+		return byteBuffer;
 	}
 
 	// --------------------------------------------------
@@ -25,14 +25,14 @@ public class FileChannelUtilsWithDirect implements FileChannelUtils {
 
 	@Override
 	public FileChannel openFileChannel(String file) throws IOException {
-		RandomAccessFile os = new RandomAccessFile(file, "rw");
-		FileChannel fc = os.getChannel();
-		return fc;
+		RandomAccessFile randomAccessFile = new RandomAccessFile(file, "rw");
+		FileChannel fileChannel = randomAccessFile.getChannel();
+		return fileChannel;
 	}
 
 	@Override
-	public void closeFileChannel(FileChannel fc) throws IOException {
-		fc.close();
+	public void closeFileChannel(FileChannel fileChannel) throws IOException {
+		fileChannel.close();
 	}
 
 	// --------------------------------------------------
@@ -40,24 +40,24 @@ public class FileChannelUtilsWithDirect implements FileChannelUtils {
 	// --------------------------------------------------
 
 	@Override
-	public int read(FileChannel fc, ByteBuffer bb)throws IOException {
-		return fc.read(bb);
+	public int read(FileChannel fileChannel, ByteBuffer byteBuffer)throws IOException {
+		return fileChannel.read(byteBuffer);
 	}
 
 	@Override
-	public void write(FileChannel fc, ByteBuffer bb, String value) throws IOException {
+	public void write(FileChannel fileChannel, ByteBuffer byteBuffer, String value) throws IOException {
 
 		byte[] bytes = value.getBytes();
-		if(bb.remaining()>bytes.length) {
+		if(byteBuffer.remaining()>bytes.length) {
 		}else{
-			bb.flip();
-			fc.write(bb);
-			bb.clear();
+			byteBuffer.flip();
+			fileChannel.write(byteBuffer);
+			byteBuffer.clear();
 		}
-		bb.put( bytes );
+		byteBuffer.put( bytes );
 
-		bb.flip();
-		fc.write(bb);
-		bb.clear();
+		byteBuffer.flip();
+		fileChannel.write(byteBuffer);
+		byteBuffer.clear();
 	}
 }

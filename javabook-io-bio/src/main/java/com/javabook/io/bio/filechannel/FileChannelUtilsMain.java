@@ -21,9 +21,9 @@ public class FileChannelUtilsMain {
 	 */
 	public static void main(String[] args) throws IOException {
 		int count = 1000000;
-		test(count, new FileChannelUtilsWithDirect(), "D:\\FileChannelUtilsWithDirect.txt");
+		test(count, new FileChannelUtilsWithDirect(), "C:\\FileChannelUtilsWithDirect.txt");
 		System.out.println();
-		test(count, new FileChannelUtilsWithOutDirect(), "D:\\FileChannelUtilsWithOutDirect.txt");
+		test(count, new FileChannelUtilsWithOutDirect(), "C:\\FileChannelUtilsWithOutDirect.txt");
 	}
 
 	private static void test(int count, FileChannelUtils fileChannelUtils, String fileName) throws IOException {
@@ -34,8 +34,8 @@ public class FileChannelUtilsMain {
 		// delete
 		// --------------------------------------------------
 
-		File file1 = new File(fileName);
-		if(file1.exists()) file1.delete();
+		File file = new File(fileName);
+		if(file.exists()) file.delete();
 
 		// --------------------------------------------------
 		// write

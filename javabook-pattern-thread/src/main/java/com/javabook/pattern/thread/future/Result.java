@@ -12,5 +12,13 @@ public interface Result {
 	/**
 	 * @return
 	 */
-	public abstract String getContent();
+	public String getContent();
+
+	public void addListener(IListener listener);
+
+	public void removeListener(IListener listener);
+
+	public void doOnResult(String result);
+
+	public void doOnException(Exception exception);
 }

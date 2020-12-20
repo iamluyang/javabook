@@ -9,26 +9,23 @@ package com.javabook.pattern.thread.future;
  *
  */
 public class Host {
-	
-	/**
-	 * @param count
-	 * @param c
-	 * @return
-	 */
-	public Result request(final int count, final char c) {
-		
-		System.out.println("    request(" + count + ", " + c + ") BEGIN");
+
+	public Result requestAsync(final String string) {
+
+		System.out.println("request(" + string + ") BEGIN");
 
 		final FutureResult future = new FutureResult();
 
 		new Thread() {
 			public void run() {
-				RealResult realdata = new RealResult(count, c);
+				RealResult realdata = new RealResult(string);
 				future.setRealResult(realdata);
+
+				future.doOnResult(realdata.getContent());
 			}
 		}.start();
 
-		System.out.println("    request(" + count + ", " + c + ") END");
+		System.out.println("request(" + string + ") END");
 
 		return future;
 	}
