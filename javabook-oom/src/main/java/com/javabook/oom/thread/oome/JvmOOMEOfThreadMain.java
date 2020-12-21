@@ -2,6 +2,8 @@ package com.javabook.oom.thread.oome;
 
 
 /**
+ * https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html
+ *
  * Exception in thread "main" java.lang.OutOfMemoryError: unable to create new native thread
  *	at java.lang.Thread.start0(Native Method)
  *	at java.lang.Thread.start(Thread.java:691)

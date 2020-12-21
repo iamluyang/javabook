@@ -1,9 +1,12 @@
 package com.javabook.oom.germ;
 
 import java.util.Random;
+import java.util.UUID;
 
 
 /**
+ * https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html
+ *
  * -XX:PermSize=4M -XX:MaxPermSize=4M
  * 
  * java.lang.OutOfMemoryError: PermGen space
@@ -29,7 +32,7 @@ public class JvmOOMEOfJavaGermSpaceMain {
 
 		Random random = new Random();
 		for(;;){			
-			random.toString().intern();
+			UUID.randomUUID().toString().intern();
 		}
 	}
 }

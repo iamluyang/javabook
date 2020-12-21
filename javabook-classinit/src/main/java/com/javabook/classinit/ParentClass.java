@@ -8,7 +8,7 @@ import java.io.Serializable;
  * @date 2014-8-26
  *
  */
-public class ParentClass implements Cloneable,Serializable {
+public class ParentClass implements Cloneable, Serializable {
 
     /**
      * serialVersionUID
@@ -42,5 +42,10 @@ public class ParentClass implements Cloneable,Serializable {
 
     public ParentClass() {
         System.out.println("I am constructor of the ParentClass.");
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }

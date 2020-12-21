@@ -2,6 +2,8 @@ package com.javabook.oom.thread.sofe;
 
 
 /**
+ * https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html
+ *
  * -Xms1024m -Xmx1024m -Xss108k
  * 
  * Exception in thread "main" java.lang.StackOverflowError

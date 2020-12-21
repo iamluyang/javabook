@@ -8,6 +8,8 @@ import com.javabook.oom.MyUnsafe;
 
 
 /**
+ * https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html
+ *
  * -XX:MaxDirectMemorySize=1024m
  * 
  *Exception in thread "main" java.lang.OutOfMemoryError: Direct buffer memory

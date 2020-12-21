@@ -9,10 +9,10 @@ import com.javabook.classloader.service.api.ISimpleService;
  *
  */
 
-/*public class SimpleServiceLowerCaseImpl implements ISimpleService {
+public class SimpleServiceLowerCaseImpl implements ISimpleService {
 
 	@Override
 	public String calculate(String expression) {
 		return this.getClass().getName() + ":" + expression.toLowerCase();
 	}
-}*/
+}

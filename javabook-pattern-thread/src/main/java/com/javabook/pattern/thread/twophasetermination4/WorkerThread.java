@@ -56,7 +56,7 @@ public class WorkerThread extends Thread {
 				doWork();
 			}
 		} catch (InterruptedException e) {
-			
+			System.out.println("InterruptedException:" + e);
 		} finally {
 			doShutdown();
 		}

@@ -34,6 +34,7 @@ public class DifferentClassLoaderDemo {
 			
 			// networkClassLoader
 			NetworkClassLoader networkClassLoader = new NetworkClassLoader(urls);
+			System.out.println(networkClassLoader.getParent());
 			
 			// fileSystemClassLoader
 			FileSysClassLoader fileSysClassLoader = new FileSysClassLoader(file);

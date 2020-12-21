@@ -42,4 +42,9 @@ public class ChildClass extends ParentClass {
 	public ChildClass() {
 		System.out.println("I am constructor of the ChildClass.");
 	}
+
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		return super.clone();
+	}
 }

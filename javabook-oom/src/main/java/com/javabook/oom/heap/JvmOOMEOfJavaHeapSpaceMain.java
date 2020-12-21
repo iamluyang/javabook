@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
+ * https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html
+ *
  * -Xms1024m -Xmx1024m -XX:+PrintGCDetails
  * 
  * Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
