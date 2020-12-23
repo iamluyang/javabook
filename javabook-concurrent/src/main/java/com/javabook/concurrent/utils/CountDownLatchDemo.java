@@ -4,75 +4,75 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * °¸Àı£ºCountDownLatch
- * 
+ * æ¡ˆä¾‹ï¼šCountDownLatch
+ *
  * @author LuYang
- * 
+ *
  */
 public class CountDownLatchDemo {
 
-	/**
-	 * @param args
-	 * @throws InterruptedException
-	 */
-	public static void main(String[] args) throws InterruptedException {
+    /**
+     * @param args
+     * @throws InterruptedException
+     */
+    public static void main(String[] args) throws InterruptedException {
 
-		int runnerCount = 9;
-		
-		// Ğû²¼±ÈÈü¿ªÊ¼µÄ¿ÚÁî£¬µ±ËùÓĞÔË¶¯Ô±¶¼À´µ½ÆğÅÜÏß²ÅÔÊĞí±ÈÈü¿ªÊ¼
-		CountDownLatch startCountDown = new CountDownLatch(1);
-		
-		// Ğû²¼±ÈÈü½áÊøµÄ¿ÚÁî
-		// ÓĞ runnerCount ¸öÔË¶¯Ô±²ÎÈü£¬Ö±µ½ËùÓĞÈË¶¼ÅÜµ½ÁËÖÕµã±ÈÈü²ÅËãÕıÊ½½áÊø
-		CountDownLatch endCountDown = new CountDownLatch(runnerCount);
+        int runnerCount = 9;
 
-		// runnerCount¸öÔË¶¯Ô±Â½ĞøÀ´µ½
-		for (int i = 1; i <= runnerCount; i++) {
-			Thread runner = new Thread(new Running(i, startCountDown, endCountDown));
-			runner.start();
-		}
-				
-		// Ğû²¼±ÈÈü¿ªÊ¼
-		Thread.sleep(2000);
-		System.out.println("±ÈÈü¿ªÊ¼");
-		startCountDown.countDown();
+        // å®£å¸ƒæ¯”èµ›å¼€å§‹çš„å£ä»¤ï¼Œå½“æ‰€æœ‰è¿åŠ¨å‘˜éƒ½æ¥åˆ°èµ·è·‘çº¿æ‰å…è®¸æ¯”èµ›å¼€å§‹
+        CountDownLatch startCountDown = new CountDownLatch(1);
 
-		// Ğû²¼±ÈÈü½áÊø
-		endCountDown.await();		
-		System.out.println("±ÈÈü½áÊø");
-	}
+        // å®£å¸ƒæ¯”èµ›ç»“æŸçš„å£ä»¤
+        // æœ‰ runnerCount ä¸ªè¿åŠ¨å‘˜å‚èµ›ï¼Œç›´åˆ°æ‰€æœ‰äººéƒ½è·‘åˆ°äº†ç»ˆç‚¹æ¯”èµ›æ‰ç®—æ­£å¼ç»“æŸ
+        CountDownLatch endCountDown = new CountDownLatch(runnerCount);
 
-	static class Running implements Runnable {
-		
-		private int id;
-		private CountDownLatch startCountDown;
-		private CountDownLatch endCountDown;		
+        // runnerCountä¸ªè¿åŠ¨å‘˜é™†ç»­æ¥åˆ°
+        for (int i = 1; i <= runnerCount; i++) {
+            Thread runner = new Thread(new Running(i, startCountDown, endCountDown));
+            runner.start();
+        }
 
-		public Running(int id, CountDownLatch startCountDown, CountDownLatch endCountDown) {
-			this.id = id;
-			this.startCountDown = startCountDown;
-			this.endCountDown   = endCountDown;			
-		}
+        // å®£å¸ƒæ¯”èµ›å¼€å§‹
+        Thread.sleep(2000);
+        System.out.println("æ¯”èµ›å¼€å§‹");
+        startCountDown.countDown();
 
-		@Override
-		public void run() {
-			try {
-				System.out.println(id + "£ºÀ´µ½ÆğÅÜÏß£¬²¢µÈ´ıÆäËûÔË¶¯Ô±µÄµ½À´¡£");
-				startCountDown.await();
-				
-				try {
-					// µ±Ç°ÔË¶¯Ô±ÕıÔÚÅÜ²½±ÈÈü£¨ºÄÊ±9Ãëµ½12Ãë£©
-					Thread.sleep( ThreadLocalRandom.current().nextInt(9000, 12000));
-					
-					// µ±Ç°ÔË¶¯Ô±½áÊøÅÜ²½±ÈÈü	
-					System.out.println(id + "£ºÍê³É±ÈÈü");				
-				} finally {
-					// µ±Ç°ÔË¶¯Ô±±¨¸æÍê³É±ÈÈü
-					endCountDown.countDown();
-				}
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
-	}
+        // å®£å¸ƒæ¯”èµ›ç»“æŸ
+        endCountDown.await();
+        System.out.println("æ¯”èµ›ç»“æŸ");
+    }
+
+    static class Running implements Runnable {
+
+        private int id;
+        private CountDownLatch startCountDown;
+        private CountDownLatch endCountDown;
+
+        public Running(int id, CountDownLatch startCountDown, CountDownLatch endCountDown) {
+            this.id = id;
+            this.startCountDown = startCountDown;
+            this.endCountDown   = endCountDown;
+        }
+
+        @Override
+        public void run() {
+            try {
+                System.out.println(id + "ï¼šæ¥åˆ°èµ·è·‘çº¿ï¼Œå¹¶ç­‰å¾…å…¶ä»–è¿åŠ¨å‘˜çš„åˆ°æ¥ã€‚");
+                startCountDown.await();
+
+                try {
+                    // å½“å‰è¿åŠ¨å‘˜æ­£åœ¨è·‘æ­¥æ¯”èµ›ï¼ˆè€—æ—¶9ç§’åˆ°12ç§’ï¼‰
+                    Thread.sleep( ThreadLocalRandom.current().nextInt(9000, 12000));
+
+                    // å½“å‰è¿åŠ¨å‘˜ç»“æŸè·‘æ­¥æ¯”èµ›
+                    System.out.println(id + "ï¼šå®Œæˆæ¯”èµ›");
+                } finally {
+                    // å½“å‰è¿åŠ¨å‘˜æŠ¥å‘Šå®Œæˆæ¯”èµ›
+                    endCountDown.countDown();
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }

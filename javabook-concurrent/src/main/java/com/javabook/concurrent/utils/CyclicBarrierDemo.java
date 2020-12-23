@@ -12,45 +12,45 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class CyclicBarrierDemo {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		class People extends Thread {
+        class People extends Thread {
 
-			private CyclicBarrier barrier;
+            private CyclicBarrier barrier;
 
-			public People(String name, CyclicBarrier barrier) {
-				super(name);
-				this.barrier = barrier;
-			}
+            public People(String name, CyclicBarrier barrier) {
+                super(name);
+                this.barrier = barrier;
+            }
 
-			public void run() {
-				try {
-					System.out.println(getName() + "£º´ÓAÇ°ÍùB");
-					Thread.sleep(ThreadLocalRandom.current().nextInt(2000, 3000));
-					System.out.println(getName() + "µ½ÁËB");
-					barrier.await();
+            public void run() {
+                try {
+                    System.out.println(getName() + "ï¼šä»Aå‰å¾€B");
+                    Thread.sleep(ThreadLocalRandom.current().nextInt(2000, 3000));
+                    System.out.println(getName() + "åˆ°äº†B");
+                    barrier.await();
 
-					System.out.println(getName() + "£º´ÓBÇ°ÍùC");
-					Thread.sleep(ThreadLocalRandom.current().nextInt(3000, 4000));
-					System.out.println(getName() + "µ½ÁËC");
-					barrier.await();
+                    System.out.println(getName() + "ï¼šä»Bå‰å¾€C");
+                    Thread.sleep(ThreadLocalRandom.current().nextInt(3000, 4000));
+                    System.out.println(getName() + "åˆ°äº†C");
+                    barrier.await();
 
-					System.out.println(getName() + "£º´ÓCÇ°ÍùD");
-					Thread.sleep(ThreadLocalRandom.current().nextInt(4000, 5000));
-					System.out.println(getName() + "µ½ÁËD");
-					barrier.await();										
-					
-				} catch (InterruptedException e) {
-				} catch (BrokenBarrierException e) {
-				}
-			}
-		}
+                    System.out.println(getName() + "ï¼šä»Cå‰å¾€D");
+                    Thread.sleep(ThreadLocalRandom.current().nextInt(4000, 5000));
+                    System.out.println(getName() + "åˆ°äº†D");
+                    barrier.await();
 
-		// Èı¸öÂÃĞĞÕß
-		CyclicBarrier barrier = new CyclicBarrier(2);
-		ExecutorService exec = Executors.newFixedThreadPool(2);
-		exec.submit(new People("ÂÃĞĞÕß1", barrier));
-		exec.submit(new People("ÂÃĞĞÕß2", barrier));
-		exec.shutdown();
-	}
+                } catch (InterruptedException e) {
+                } catch (BrokenBarrierException e) {
+                }
+            }
+        }
+
+        // ä¸‰ä¸ªæ—…è¡Œè€…
+        CyclicBarrier barrier = new CyclicBarrier(2);
+        ExecutorService exec = Executors.newFixedThreadPool(2);
+        exec.submit(new People("æ—…è¡Œè€…1", barrier));
+        exec.submit(new People("æ—…è¡Œè€…2", barrier));
+        exec.shutdown();
+    }
 }

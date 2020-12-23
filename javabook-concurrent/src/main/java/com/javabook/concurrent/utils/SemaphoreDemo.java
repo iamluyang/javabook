@@ -6,18 +6,18 @@ import java.util.Set;
 import java.util.concurrent.Semaphore;
 
 /**
- * ¼ÆËãÐÅºÅÁ¿ÓÃÀ´¿ØÖÆÍ¬Ê±·ÃÎÊÄ³¸öÌØ¶¨×ÊÔ´µÄ²Ù×÷ÊýÁ¿
- * 
- * ³¡¾°£º
- * 1.ÓÃÓÚ¿ØÖÆÍ¬Ê±·ÃÎÊÄ³Ð©ÌØ¶¨×ÊÔ´µÄÏß³ÌÊýÁ¿£¬ÈçÓÐ½çÈÝÆ÷
- * 2.ÓÃÓÚÏÞÖÆÍ¬Ê±Ö´ÐÐÄ³¸öÖ¸¶¨²Ù×÷µÄÏß³ÌÊýÁ¿£¬
- * 
- * ÌØÀý£º
- * ¶þÖµÐÅºÅÁ¿ Semaphore mutex = new Semaphore(1)
- * ½«ÐÅºÅÁ¿³õÊ¼»¯Îª 1£¬Ê¹µÃËüÔÚÊ¹ÓÃÊ±×î¶àÖ»ÓÐÒ»¸ö¿ÉÓÃµÄÐí¿É£¬´Ó¶ø¿ÉÓÃ×÷Ò»¸öÏà»¥ÅÅ³âµÄËø¡£
- * 
+ * è®¡ç®—ä¿¡å·é‡ç”¨æ¥æŽ§åˆ¶åŒæ—¶è®¿é—®æŸä¸ªç‰¹å®šèµ„æºçš„æ“ä½œæ•°é‡
+ *
+ * åœºæ™¯ï¼š
+ * 1.ç”¨äºŽæŽ§åˆ¶åŒæ—¶è®¿é—®æŸäº›ç‰¹å®šèµ„æºçš„çº¿ç¨‹æ•°é‡ï¼Œå¦‚æœ‰ç•Œå®¹å™¨
+ * 2.ç”¨äºŽé™åˆ¶åŒæ—¶æ‰§è¡ŒæŸä¸ªæŒ‡å®šæ“ä½œçš„çº¿ç¨‹æ•°é‡ï¼Œ
+ *
+ * ç‰¹ä¾‹ï¼š
+ * äºŒå€¼ä¿¡å·é‡ Semaphore mutex = new Semaphore(1)
+ * å°†ä¿¡å·é‡åˆå§‹åŒ–ä¸º 1ï¼Œä½¿å¾—å®ƒåœ¨ä½¿ç”¨æ—¶æœ€å¤šåªæœ‰ä¸€ä¸ªå¯ç”¨çš„è®¸å¯ï¼Œä»Žè€Œå¯ç”¨ä½œä¸€ä¸ªç›¸äº’æŽ’æ–¥çš„é”ã€‚
+ *
  * @author Administrator
- * 
+ *
  */
 public class SemaphoreDemo {
 
@@ -45,9 +45,9 @@ public class SemaphoreDemo {
 	 * @throws Exception
 	 */
 	public boolean add(Object x) throws Exception {
-		
-		// acquire½ö½ö±íÊ¾Ïû·ÑÒ»¸öÐí¿É£¬ÐÅºÅÁ¿²»»áÓëÄ³¸öÏû·ÑÐí¿ÉµÄÏß³Ì¹ØÁª
-		// Òò´Ë¿ÉÒÔÔÚÒ»¸öÏß³ÌÖÐ»ñÈ¡Ðí¿É£¬¶øÔÚÁíÍâÒ»¸öÏß³ÌÖÐÊÍ·ÅÐí¿É
+
+		// acquireä»…ä»…è¡¨ç¤ºæ¶ˆè´¹ä¸€ä¸ªè®¸å¯ï¼Œä¿¡å·é‡ä¸ä¼šä¸ŽæŸä¸ªæ¶ˆè´¹è®¸å¯çš„çº¿ç¨‹å…³è”
+		// å› æ­¤å¯ä»¥åœ¨ä¸€ä¸ªçº¿ç¨‹ä¸­èŽ·å–è®¸å¯ï¼Œè€Œåœ¨å¦å¤–ä¸€ä¸ªçº¿ç¨‹ä¸­é‡Šæ”¾è®¸å¯
 		semaphoreBound.acquire();
 		boolean added = false;
 		try {
@@ -65,9 +65,9 @@ public class SemaphoreDemo {
 	 * @throws Exception
 	 */
 	public boolean remove(Object x) throws Exception {
-		
-		// release½ö½ö±íÊ¾ÊÍ·ÅÒ»¸öÐí¿É£¬ÐÅºÅÁ¿²»»áÓëÄ³¸öÊÍ·ÅÐí¿ÉµÄÏß³Ì¹ØÁª
-		// Òò´Ë¿ÉÒÔÔÚÒ»¸öÏß³ÌÖÐÊÍ·ÅÐí¿É£¬¶øÔÚÁíÍâÒ»¸öÏß³ÌÖÐ»ñÈ¡Ðí¿É
+
+		// releaseä»…ä»…è¡¨ç¤ºé‡Šæ”¾ä¸€ä¸ªè®¸å¯ï¼Œä¿¡å·é‡ä¸ä¼šä¸ŽæŸä¸ªé‡Šæ”¾è®¸å¯çš„çº¿ç¨‹å…³è”
+		// å› æ­¤å¯ä»¥åœ¨ä¸€ä¸ªçº¿ç¨‹ä¸­é‡Šæ”¾è®¸å¯ï¼Œè€Œåœ¨å¦å¤–ä¸€ä¸ªçº¿ç¨‹ä¸­èŽ·å–è®¸å¯
 		boolean removed = set.remove(x);
 		if(removed) semaphoreBound.release();
 		return removed;
@@ -80,4 +80,3 @@ public class SemaphoreDemo {
 	}
 
 }
-

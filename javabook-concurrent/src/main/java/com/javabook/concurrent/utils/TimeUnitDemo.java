@@ -3,16 +3,16 @@ package com.javabook.concurrent.utils;
 import java.util.concurrent.TimeUnit;
 
 /**
- * ¼¼ÊõÔ­Àí-TimeUnit
- * Ê±¼ä×ª»»Ïà¹Ø£º
- * 1 Ìá¹©ÁËÄÉÃë£¬Î¢Ãë£¬ºÁÃë£¬Ãë£¬·ÖÖÓ£¬Ğ¡Ê±£¬ÌìÕâĞ©Ê±¼äµ¥Î»ÔÚÏà»¥×ª»»
- * 
- * ÓëÏß³ÌÏà¹Ø:
- * 1 Ìá¹©ÁË»ùÓÚ¶ÔÏówait¹¤¾ß·½·¨
+ * æŠ€æœ¯åŸç†-TimeUnit
+ * æ—¶é—´è½¬æ¢ç›¸å…³ï¼š
+ * 1 æä¾›äº†çº³ç§’ï¼Œå¾®ç§’ï¼Œæ¯«ç§’ï¼Œç§’ï¼Œåˆ†é’Ÿï¼Œå°æ—¶ï¼Œå¤©è¿™äº›æ—¶é—´å•ä½åœ¨ç›¸äº’è½¬æ¢
+ *
+ * ä¸çº¿ç¨‹ç›¸å…³:
+ * 1 æä¾›äº†åŸºäºå¯¹è±¡waitå·¥å…·æ–¹æ³•
  * 		public void timedWait(Object obj, long timeout)
- * 2 Ìá¹©ÁË»ùÓÚÖ¸¶¨Ïß³ÌµÄjoin¹¤¾ß·½·¨
+ * 2 æä¾›äº†åŸºäºæŒ‡å®šçº¿ç¨‹çš„joinå·¥å…·æ–¹æ³•
  * 		public void timedJoin(Thread thread, long timeout)
- * 3 Ìá¹©ÁË»ùÓÚµ±Ç°Ïß³ÌµÄsleep¹¤¾ß·½·¨
+ * 3 æä¾›äº†åŸºäºå½“å‰çº¿ç¨‹çš„sleepå·¥å…·æ–¹æ³•
  * 		public void sleep(long timeout) throws InterruptedException
  * @author LuYang
  *
@@ -23,4 +23,3 @@ public class TimeUnitDemo {
 		System.out.println( TimeUnit.SECONDS.toHours(3600) );
 	}
 }
-

@@ -3,10 +3,10 @@ package com.javabook.concurrent.utils;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * JDK1.7 ÖĞÌá¹©ÁËÒ»¸öÊÊÓÃÓÚ¶àÏß³Ì»·¾³¸ü¿ìµÄËæ»úÊıÉú³ÉÆ÷
- * 
- * ¼¼ÊõÔ­Àí-ThreadLocalRandom
- * ¼ÈÈ»Ïß³ÌÍ¬²½Ğ§ÂÊ²»¸ß£¬Ê¹ÓÃThreadLocalÄ£Ê½£¬ÈÃÏß³Ì¶ÀÏí¸÷×ÔµÄRandom¶ÔÏó
+ * JDK1.7 ä¸­æä¾›äº†ä¸€ä¸ªé€‚ç”¨äºå¤šçº¿ç¨‹ç¯å¢ƒæ›´å¿«çš„éšæœºæ•°ç”Ÿæˆå™¨
+ *
+ * æŠ€æœ¯åŸç†-ThreadLocalRandom
+ * æ—¢ç„¶çº¿ç¨‹åŒæ­¥æ•ˆç‡ä¸é«˜ï¼Œä½¿ç”¨ThreadLocalæ¨¡å¼ï¼Œè®©çº¿ç¨‹ç‹¬äº«å„è‡ªçš„Randomå¯¹è±¡
  * @author LuYang
  *
  */
@@ -16,4 +16,3 @@ public class ThreadLocalRandomDemo {
 		System.out.println(number);
 	}
 }
-

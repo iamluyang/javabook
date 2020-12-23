@@ -4,33 +4,33 @@ import java.util.concurrent.Exchanger;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * °¸Àı£º
- * ·şÎñÔ±ÏòÔ­ÓĞ¿Õ±­ÖĞ²»¶Ïµ¹Ë®£¬Ïû·ÑÕß²»¶Ï´ÓÔ­ÓĞ×°ÂúË®µÄ±­ÖĞºÈË®¡£ 
- * µ±·şÎñÔ±µ¹ÂúË®ºÍÏû·ÑÕßºÈÍêË®Ê±£¬Á½¸ö±­×Ó½øĞĞ½»»»¡£Ò»Ö±ÕâÑùÖÜ¶ø¸´Ê¼¡£
- * 
+ * æ¡ˆä¾‹ï¼š
+ * æœåŠ¡å‘˜å‘åŸæœ‰ç©ºæ¯ä¸­ä¸æ–­å€’æ°´ï¼Œæ¶ˆè´¹è€…ä¸æ–­ä»åŸæœ‰è£…æ»¡æ°´çš„æ¯ä¸­å–æ°´ã€‚
+ * å½“æœåŠ¡å‘˜å€’æ»¡æ°´å’Œæ¶ˆè´¹è€…å–å®Œæ°´æ—¶ï¼Œä¸¤ä¸ªæ¯å­è¿›è¡Œäº¤æ¢ã€‚ä¸€ç›´è¿™æ ·å‘¨è€Œå¤å§‹ã€‚
+ *
  */
 
 public class ExchangerDemo {
 
 	// exchanger
 	static Exchanger<Cup> exchanger = new Exchanger<Cup>();
-	
-	// ÂúµÄ±­×Ó
+
+	// æ»¡çš„æ¯å­
 	static Cup cupA = new Cup("cupA", 0);
-	// ¿ÕµÄ±­×Ó
+	// ç©ºçš„æ¯å­
 	static Cup cupB = new Cup("cupB", 0);
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		new Thread(new Producer(2)).start();// µ¹Ë®µÄÏß³ÌµÄËÙÂÊ¸ü¿ìÒ»Ğ©
-		new Thread(new Customer(1)).start();// ºÈË®µÄÏß³ÌµÄËÙÂÊ¸üÂıÒ»Ğ©
+		new Thread(new Producer(2)).start();// å€’æ°´çš„çº¿ç¨‹çš„é€Ÿç‡æ›´å¿«ä¸€äº›
+		new Thread(new Customer(1)).start();// å–æ°´çš„çº¿ç¨‹çš„é€Ÿç‡æ›´æ…¢ä¸€äº›
 	}
 
 	// Producer
 	static class Producer implements Runnable {
-		
+
 		/**
 		 * speed
 		 */
@@ -51,11 +51,11 @@ public class ExchangerDemo {
 			while (currentCup != null) {
 				try {
 					if (currentCup.isFull()) {
-						System.out.println("·şÎñÕß½«ÕåÂúË®µÄ±­×Ó[ " + currentCup.getName() + " ]" + currentCup + "->½»¸øÏû·ÑÕß");
-						currentCup = exchanger.exchange(currentCup);						
+						System.out.println("æœåŠ¡è€…å°†æ–Ÿæ»¡æ°´çš„æ¯å­[ " + currentCup.getName() + " ]" + currentCup + "->äº¤ç»™æ¶ˆè´¹è€…");
+						currentCup = exchanger.exchange(currentCup);
 					} else {
 						currentCup.add(speed);
-						System.out.println("·şÎñÕß½«Ë®Ìí¼Óµ½±­×Ó[ " + currentCup.getName() + " ]" + currentCup);
+						System.out.println("æœåŠ¡è€…å°†æ°´æ·»åŠ åˆ°æ¯å­[ " + currentCup.getName() + " ]" + currentCup);
 						Thread.sleep( ThreadLocalRandom.current().nextInt(2000) );
 					}
 				} catch (InterruptedException e) {
@@ -76,18 +76,18 @@ public class ExchangerDemo {
 
 		@Override
 		public void run() {
-			
+
 			Cup currentCup = cupB;
-			
+
 			while (currentCup != null) {
 
 				try {
 					if (currentCup.isEmpty()) {
-						System.out.println("Ïû·ÑÕß½«ºÈÍêË®µÄ±­×Ó[ " + currentCup.getName() + " ]" + currentCup + "->½»¸ø·şÎñÕß");
-						currentCup = exchanger.exchange(currentCup);						
+						System.out.println("æ¶ˆè´¹è€…å°†å–å®Œæ°´çš„æ¯å­[ " + currentCup.getName() + " ]" + currentCup + "->äº¤ç»™æœåŠ¡è€…");
+						currentCup = exchanger.exchange(currentCup);
 					} else {
 						currentCup.del(speed);
-						System.out.println("Ïû·ÑÕßÒûÓÃ±­×ÓÖĞµÄË®[ " + currentCup.getName() + " ]" + currentCup);
+						System.out.println("æ¶ˆè´¹è€…é¥®ç”¨æ¯å­ä¸­çš„æ°´[ " + currentCup.getName() + " ]" + currentCup);
 						Thread.sleep( ThreadLocalRandom.current().nextInt(2000) );
 					}
 				} catch (InterruptedException e) {
@@ -99,11 +99,11 @@ public class ExchangerDemo {
 	}
 
 	static class Cup {
-		
-		// ±­×ÓÃû³Æ
+
+		// æ¯å­åç§°
 		private String name;
-		
-		// ±­×ÓÈİÁ¿
+
+		// æ¯å­å®¹é‡
 		private int capacity = 0;
 
 		/**
@@ -148,6 +148,6 @@ public class ExchangerDemo {
 			}
 			processing.append("]" + capacity);
 			return processing.toString();
-		}	
+		}
 	}
 }

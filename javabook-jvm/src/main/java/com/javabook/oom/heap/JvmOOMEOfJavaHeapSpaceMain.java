@@ -24,10 +24,12 @@ public class JvmOOMEOfJavaHeapSpaceMain {
 	 */
 	public static void main(String[] args) throws InterruptedException {
 
-		List<byte[]> data = new LinkedList<byte[]>();
+		Thread.sleep(30000);
+		List<byte[]> headMemorys = new LinkedList<byte[]>();
 		for(;;){			
 			byte[] _1MB = new byte[1024*1024*1];
-			data.add(_1MB);
+			headMemorys.add(_1MB);
+			System.out.println("消耗堆内存:" + headMemorys.size() + "MB");
 			Thread.sleep(100);
 		}
 	}

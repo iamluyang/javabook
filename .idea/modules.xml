@@ -14,7 +14,6 @@
       <module fileurl="file://$PROJECT_DIR$/javabook-io-bio/javabook-io-bio.iml" filepath="$PROJECT_DIR$/javabook-io-bio/javabook-io-bio.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-io-socket/javabook-io-socket.iml" filepath="$PROJECT_DIR$/javabook-io-socket/javabook-io-socket.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-jvm/javabook-jvm.iml" filepath="$PROJECT_DIR$/javabook-jvm/javabook-jvm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/javabook-oom/javabook-oom.iml" filepath="$PROJECT_DIR$/javabook-oom/javabook-oom.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-pattern-gof/javabook-pattern-gof.iml" filepath="$PROJECT_DIR$/javabook-pattern-gof/javabook-pattern-gof.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-pattern-thread/javabook-pattern-thread.iml" filepath="$PROJECT_DIR$/javabook-pattern-thread/javabook-pattern-thread.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-reference/javabook-reference.iml" filepath="$PROJECT_DIR$/javabook-reference/javabook-reference.iml" />

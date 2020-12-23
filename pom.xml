@@ -44,7 +44,6 @@
     <module>javabook-collections</module>
     <module>javabook-thread</module>
     <module>javabook-security</module>
-    <module>javabook-oom</module>
     <module>javabook-exception</module>
     <module>javabook-concurrent</module>
     <module>javabook-io-bio</module>

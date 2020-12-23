@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="javabook-pattern-gof" />
-        <module name="javabook-oom" />
         <module name="javabook-pattern-thread" />
         <module name="javabook-c" />
         <module name="javabook-b" />
