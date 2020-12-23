@@ -1,5 +1,6 @@
 package com.javabook.oom.germ;
 
+import net.sf.cglib.beans.BeanGenerator;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 
@@ -7,6 +8,7 @@ import java.lang.management.ClassLoadingMXBean;
 import java.lang.management.ManagementFactory;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html
@@ -39,13 +41,17 @@ public class JvmOOMEOfJavaGermSpaceMain {
             List<Object> classLoaders = new ArrayList<>();
 
             while (true) {
-                HelloWorldService helloWorldService = CreateLogProxy(HelloWorldService.class);
+                /*HelloWorldService helloWorldService = CreateLogProxy(HelloWorldService.class);
                 classLoaders.add(helloWorldService);
-                helloWorldService.sayHello("abc");
+                helloWorldService.sayHello("abc");*/
+
+                BeanGenerator beanGenerator = new BeanGenerator();
+                beanGenerator.addProperty(UUID.randomUUID().toString(), String.class);
+                Object myBean = beanGenerator.create();
 
                 //显示数量信息（共加载过的类型数目，当前还有效的类型数目，已经被卸载的类型数目）
-                System.out.println("total: " + loadingBean.getTotalLoadedClassCount());
-                System.out.println("active: " + loadingBean.getLoadedClassCount());
+                System.out.println("total: "    + loadingBean.getTotalLoadedClassCount());
+                System.out.println("active: "   + loadingBean.getLoadedClassCount());
                 System.out.println("unloaded: " + loadingBean.getUnloadedClassCount());
             }
         } catch (Exception e) {
