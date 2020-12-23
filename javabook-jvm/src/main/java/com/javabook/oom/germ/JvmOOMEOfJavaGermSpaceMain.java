@@ -1,10 +1,10 @@
 package com.javabook.oom.germ;
 
-import java.io.File;
+import net.sf.cglib.proxy.Enhancer;
+import net.sf.cglib.proxy.MethodInterceptor;
+
 import java.lang.management.ClassLoadingMXBean;
 import java.lang.management.ManagementFactory;
-import java.net.URL;
-import java.net.URLClassLoader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,20 +33,15 @@ public class JvmOOMEOfJavaGermSpaceMain {
      */
     public static void main(String[] args) throws ClassNotFoundException {
         try {
-            //准备url
-            URL url = new File("D:/git/apache/javabook/javabook-oom/src/main/java/com/javabook/oom/germ").toURI().toURL();
-            URL[] urls = {url};
-
             //获取有关类型加载的JMX接口
             ClassLoadingMXBean loadingBean = ManagementFactory.getClassLoadingMXBean();
             //用于缓存类加载器
-            List<ClassLoader> classLoaders = new ArrayList<>();
+            List<Object> classLoaders = new ArrayList<>();
 
             while (true) {
-                //加载类型并缓存类加载器实例
-                ClassLoader classLoader = new URLClassLoader(urls);
-                classLoaders.add(classLoader);
-                classLoader.loadClass("com.javabook.oom.germ.LoaderClass");
+                HelloWorldService helloWorldService = CreateLogProxy(HelloWorldService.class);
+                classLoaders.add(helloWorldService);
+                helloWorldService.sayHello("abc");
 
                 //显示数量信息（共加载过的类型数目，当前还有效的类型数目，已经被卸载的类型数目）
                 System.out.println("total: " + loadingBean.getTotalLoadedClassCount());
@@ -56,5 +51,21 @@ public class JvmOOMEOfJavaGermSpaceMain {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * 加载类型并缓存类加载器实例
+     */
+    private static <T> T CreateLogProxy(Class<T> clazz) {
+        Enhancer enhancer = new Enhancer();
+        enhancer.setSuperclass(clazz);
+
+        enhancer.setCallback((MethodInterceptor) (obj, method, objects, proxy) -> {
+            System.out.println("Log begin.................");
+            Object result = proxy.invokeSuper(obj, objects);
+            System.out.println("Log finish.................");
+            return result;
+        });
+        return (T)enhancer.create();
     }
 }
