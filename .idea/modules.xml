@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/javabook.iml" filepath="$PROJECT_DIR$/javabook.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-a/javabook-a.iml" filepath="$PROJECT_DIR$/javabook-a/javabook-a.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javabook-aop/javabook-aop.iml" filepath="$PROJECT_DIR$/javabook-aop/javabook-aop.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-b/javabook-b.iml" filepath="$PROJECT_DIR$/javabook-b/javabook-b.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-c/javabook-c.iml" filepath="$PROJECT_DIR$/javabook-c/javabook-c.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-classinit/javabook-classinit.iml" filepath="$PROJECT_DIR$/javabook-classinit/javabook-classinit.iml" />
@@ -19,6 +20,7 @@
       <module fileurl="file://$PROJECT_DIR$/javabook-reference/javabook-reference.iml" filepath="$PROJECT_DIR$/javabook-reference/javabook-reference.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-security/javabook-security.iml" filepath="$PROJECT_DIR$/javabook-security/javabook-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-thread/javabook-thread.iml" filepath="$PROJECT_DIR$/javabook-thread/javabook-thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javabook-aop/javabook.aop.iml" filepath="$PROJECT_DIR$/javabook-aop/javabook.aop.iml" />
     </modules>
   </component>
 </project>

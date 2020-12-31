@@ -1,6 +1,6 @@
 package org.gof.creational.patterns4.builder.car.builder.api;
 
-import org.gof.creational.patterns4.builder.car.product.Car;
+import org.gof.creational.patterns4.builder.car.product.main.Car;
 
 public interface ICarBuilder {
 

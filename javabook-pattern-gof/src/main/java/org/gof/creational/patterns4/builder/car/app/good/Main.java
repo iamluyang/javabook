@@ -5,7 +5,7 @@ import org.gof.creational.patterns4.builder.car.builder.impl.CityCarBuilder;
 import org.gof.creational.patterns4.builder.car.builder.impl.SportCarBuilder;
 import org.gof.creational.patterns4.builder.car.builder.impl.SuvCarBuilder;
 import org.gof.creational.patterns4.builder.car.director.api.CarDirector;
-import org.gof.creational.patterns4.builder.car.product.Car;
+import org.gof.creational.patterns4.builder.car.product.main.Car;
 
 public class Main {
     public static void main(String[] args) {

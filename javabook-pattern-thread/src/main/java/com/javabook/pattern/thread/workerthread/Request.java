@@ -3,8 +3,11 @@ package com.javabook.pattern.thread.workerthread;
 import java.util.Random;
 
 public class Request {
-	private final String name; // ί���ߪ�
-	private final int number; // ������
+
+	private final String name;
+
+	private final int number;
+
 	private static final Random random = new Random();
 
 	public Request(String name, int number) {

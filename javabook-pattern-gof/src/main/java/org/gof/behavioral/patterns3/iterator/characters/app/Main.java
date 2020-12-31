@@ -1,13 +1,13 @@
 package org.gof.behavioral.patterns3.iterator.characters.app;
 
-import org.gof.behavioral.patterns3.iterator.characters.IterableCharacters;
+import org.gof.behavioral.patterns3.iterator.characters.StringIterable;
 
 import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
 
-        IterableCharacters iterable = new IterableCharacters("abcdef");
+        StringIterable iterable = new StringIterable("abcdef");
 
         Iterator<Character> iterator = iterable.iterator();
 

@@ -1,6 +1,6 @@
 package org.gof.behavioral.patterns10.visitor.validation.app;
 
-import org.gof.behavioral.patterns10.visitor.validation.app.elements.*;
+import org.gof.behavioral.patterns10.visitor.validation.app.elements.IValidator;
 import org.gof.behavioral.patterns10.visitor.validation.app.visitor.IValidatorAccept;
 import org.gof.behavioral.patterns10.visitor.validation.app.visitor.ValidatorRegister;
 import org.gof.behavioral.patterns10.visitor.validation.app.visitor.ValidatorVisitor;

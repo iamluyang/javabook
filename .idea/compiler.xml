@@ -9,6 +9,7 @@
         <module name="javabook-pattern-gof" />
         <module name="javabook-pattern-thread" />
         <module name="javabook-c" />
+        <module name="javabook-aop" />
         <module name="javabook-b" />
         <module name="javabook-concurrent" />
         <module name="javabook-io-socket" />
@@ -18,6 +19,7 @@
         <module name="javabook-reference" />
         <module name="javabook-jvm" />
         <module name="javabook-a" />
+        <module name="javabook.aop" />
         <module name="javabook-classloader" />
         <module name="javabook-collections" />
         <module name="javabook-exception" />
@@ -27,6 +29,7 @@
     <bytecodeTargetLevel>
       <module name="javabook" target="1.8" />
       <module name="javabook-a" target="1.8" />
+      <module name="javabook-aop" target="1.8" />
       <module name="javabook-b" target="1.8" />
       <module name="javabook-c" target="1.8" />
       <module name="javabook-classinit" target="1.8" />
@@ -43,6 +46,7 @@
       <module name="javabook-reference" target="1.8" />
       <module name="javabook-security" target="1.8" />
       <module name="javabook-thread" target="1.8" />
+      <module name="javabook.aop" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

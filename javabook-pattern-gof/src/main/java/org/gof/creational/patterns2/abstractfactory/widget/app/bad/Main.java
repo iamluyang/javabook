@@ -4,7 +4,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // changing business
         String osName = System.getProperty("os.name").toLowerCase();
 
         // os

@@ -37,6 +37,7 @@
     </dependency>
   </dependencies>
   <modules>
+    <module>javabook-aop</module>
     <module>javabook-a</module>
     <module>javabook-b</module>
     <module>javabook-c</module>

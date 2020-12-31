@@ -1,6 +1,7 @@
 package org.gof.creational.patterns6.singleton;
 
 public class DoubleCheckedLockingSingleton4 {
+
     private volatile static DoubleCheckedLockingSingleton4 singleton;
 
     private DoubleCheckedLockingSingleton4(){

@@ -65,7 +65,7 @@ public class InitClassBySerializChildClass {
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 
 		//ChildClass[] classInits = { new ChildClass(), new ChildClass() };
-		//InitClassBySerializDemo2.writeObjectsToFile(classInits, "data2.dat");
+		//InitClassBySerializChildClass.writeObjectsToFile(classInits, "data2.dat");
 		try {
 			
 			System.out.println("第1次加载反序列化ChildClass");

@@ -12,9 +12,9 @@ public class DoubleCheckLockingThread extends Thread {
 	
 	@Override
 	public void run() {
-		//while(true) {
+		while(true) {
 			instance = DoubleCheckLockingInstance.getInstance();
 			System.out.println(instance);
-		//}
+		}
 	}
 }

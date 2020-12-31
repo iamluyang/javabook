@@ -8,10 +8,10 @@ import org.gof.creational.patterns3.factorymethod.editor.creator.impl.TxtEditor;
 public class Main {
     public static void main(String[] args) {
 
-        // business
-        String fileName = "myfile.txt";
+        // product
+        String fileName = "*.txt";
 
-        // factory method
+        // factory
         Editor editor = null;
         if (fileName.endsWith(".txt")) {
             editor = new TxtEditor();
@@ -24,9 +24,12 @@ public class Main {
         }
 
         // do business
-        editor.open(fileName);
-        System.out.println(editor.getTitle());
-        editor.save();
-        editor.close();
+        editor.open("file1.txt");
+        editor.open("file2.txt");
+        editor.open("file3.txt");
+
+        System.out.println("最后一次打开的文件:" +editor.getTitle());
+        editor.saveAll();
+        editor.closeAll();
     }
 }

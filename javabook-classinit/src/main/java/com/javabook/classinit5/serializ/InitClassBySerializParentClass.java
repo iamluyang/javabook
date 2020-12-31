@@ -65,7 +65,7 @@ public class InitClassBySerializParentClass {
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 
 		//ParentClass[] classInits = { new ParentClass(), new ParentClass() };
-		//InitClassBySerializDemo1.writeObjectsToFile(classInits, "data1.dat");
+		//InitClassBySerializParentClass.writeObjectsToFile(classInits, "data1.dat");
 		try {
 			
 			System.out.println("第1次加载反序列化ParentClass");
