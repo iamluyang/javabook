@@ -23,6 +23,7 @@ public class MultiEditor extends Editor {
 
     // Factory method
     protected Document createDocument(String fileName) {
+    	
         String extension = FilenameUtils.getExtension(fileName);
         Class<? extends Document> documentClass = getRegisteredDocumentClass(extension);
 

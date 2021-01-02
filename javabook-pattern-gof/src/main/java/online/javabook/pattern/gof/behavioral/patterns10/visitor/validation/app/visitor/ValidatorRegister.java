@@ -16,8 +16,6 @@ public class ValidatorRegister {
         registerValidator(IsTrue.class, new IsTrueValidator());
         registerValidator(IsNotEmpty.class, new IsNotEmptyValidator());
         registerValidator(IsNotNull.class, new IsNotNullValidator());
-        registerValidator(IsEmail.class, new IsEmailValidator());
-        registerValidator(IsInetAddress.class, new IsInetAddressValidator());
         registerValidator(IsNumber.class, new IsNumberValidator());
     }
 

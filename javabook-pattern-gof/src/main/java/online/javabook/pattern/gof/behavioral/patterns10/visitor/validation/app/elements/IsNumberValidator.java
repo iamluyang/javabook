@@ -21,6 +21,6 @@ public class IsNumberValidator implements IValidator, IValidatorAccept {
 
     @Override
     public ValidatorResponse Accept(ValidatorVisitor validatorVisitor, Annotation attribute, String propertyName, Object propertyValue) {
-        return validatorVisitor.Visit(this, attribute, propertyName, propertyValue);
+        return validatorVisitor.visit(this, attribute, propertyName, propertyValue);
     }
 }

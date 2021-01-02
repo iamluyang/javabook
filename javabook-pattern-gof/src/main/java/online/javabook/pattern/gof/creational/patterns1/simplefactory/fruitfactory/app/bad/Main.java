@@ -1,6 +1,6 @@
 package online.javabook.pattern.gof.creational.patterns1.simplefactory.fruitfactory.app.bad;
 
-import online.javabook.pattern.gof.creational.patterns1.simplefactory.fruitfactory.consumer.FruitConsumer;
+import online.javabook.pattern.gof.creational.patterns1.simplefactory.fruitfactory.customer.FruitConsumer;
 import online.javabook.pattern.gof.creational.patterns1.simplefactory.fruitfactory.product.Apple;
 import online.javabook.pattern.gof.creational.patterns1.simplefactory.fruitfactory.product.Grape;
 import online.javabook.pattern.gof.creational.patterns1.simplefactory.fruitfactory.product.Orange;

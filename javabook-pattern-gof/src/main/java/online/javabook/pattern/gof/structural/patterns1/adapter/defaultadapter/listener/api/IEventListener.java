@@ -1,5 +1,7 @@
 package online.javabook.pattern.gof.structural.patterns1.adapter.defaultadapter.listener.api;
 
+import java.awt.Event;
+
 public interface IEventListener {
 
     public void onClick(Event e);

@@ -13,8 +13,6 @@ public class Main {
         user.setAge(44488);
         user.setTrue(true);
         user.setFalse(false);
-        user.setEmail("xd");
-        user.setIp("255.22.22.22444444");
 
         List<ValidatorResponse> responses = dataValidator.validate(user);
         for (ValidatorResponse response : responses) {

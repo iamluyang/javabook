@@ -861,7 +861,7 @@ private void readObject(java.io.ObjectInputStream s)
 		System.out.println(array[0]);
 		System.out.println(array[0]==a0);
 		
-		PriorityQueueDemo q = new PriorityQueueDemo();
+		PriorityQueueDemo<Integer> q = new PriorityQueueDemo<Integer>();
 		/*ArrayBlockingQueue, 
 		DelayQueue, 
 		LinkedBlockingDeque, 

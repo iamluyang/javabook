@@ -1,14 +1,13 @@
 package online.javabook.pattern.gof.behavioral.patterns2.command2.restful.register;
 
-import online.javabook.pattern.gof.behavioral.patterns2.command2.restful.commands.HttpMethod;
-import online.javabook.pattern.gof.behavioral.patterns2.command2.restful.commands.HttpRequest;
-import online.javabook.pattern.gof.behavioral.patterns2.command2.restful.commands.RestfulApi;
-import online.javabook.pattern.gof.behavioral.patterns2.command2.restful.commands.RestfulApiAnnotation;
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
+
+import online.javabook.pattern.gof.behavioral.patterns2.command2.restful.commands.HttpMethod;
+import online.javabook.pattern.gof.behavioral.patterns2.command2.restful.commands.HttpRequest;
+import online.javabook.pattern.gof.behavioral.patterns2.command2.restful.commands.RestfulApi;
 
 public class RestfulRegister {
 

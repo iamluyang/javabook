@@ -8,12 +8,6 @@ public class User {
     @IsNotEmpty(error = "name is empty", code = HttpStatusCode.BadRequest)
     private String name;
 
-    @IsInetAddress(error = "ip is not ip format", code = HttpStatusCode.BadRequest)
-    private String ip;
-
-    @IsEmail(error = "email is not email format", code = HttpStatusCode.BadRequest)
-    private String email;
-
     @IsTrue(error = "isTrue is not true", code = HttpStatusCode.BadRequest)
     private boolean isTrue;
 
@@ -29,22 +23,6 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
     }
 
     public boolean isTrue() {

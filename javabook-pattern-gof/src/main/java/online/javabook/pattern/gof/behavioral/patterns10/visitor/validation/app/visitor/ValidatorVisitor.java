@@ -7,31 +7,23 @@ import java.lang.annotation.Annotation;
 
 public class ValidatorVisitor {
 
-    public ValidatorResponse Visit(IsNotNullValidator validator, Annotation annotation, String propertyName, Object propertyValue) {
+    public ValidatorResponse visit(IsNotNullValidator validator, Annotation annotation, String propertyName, Object propertyValue) {
         return validator.isVerify(annotation, propertyName, propertyValue);
     }
 
-    public ValidatorResponse Visit(IsNotEmptyValidator validator, Annotation annotation, String propertyName, Object propertyValue) {
+    public ValidatorResponse visit(IsNotEmptyValidator validator, Annotation annotation, String propertyName, Object propertyValue) {
         return validator.isVerify(annotation, propertyName, propertyValue);
     }
 
-    public ValidatorResponse Visit(IsTrueValidator validator, Annotation annotation, String propertyName, Object propertyValue) {
+    public ValidatorResponse visit(IsTrueValidator validator, Annotation annotation, String propertyName, Object propertyValue) {
         return validator.isVerify(annotation, propertyName, propertyValue);
     }
 
-    public ValidatorResponse Visit(IsFalseValidator validator, Annotation annotation, String propertyName, Object propertyValue) {
+    public ValidatorResponse visit(IsFalseValidator validator, Annotation annotation, String propertyName, Object propertyValue) {
         return validator.isVerify(annotation, propertyName, propertyValue);
     }
 
-    public ValidatorResponse Visit(IsEmailValidator validator, Annotation annotation, String propertyName, Object propertyValue) {
-        return validator.isVerify(annotation, propertyName, propertyValue);
-    }
-
-    public ValidatorResponse Visit(IsInetAddressValidator validator, Annotation annotation, String propertyName, Object propertyValue) {
-        return validator.isVerify(annotation, propertyName, propertyValue);
-    }
-
-    public ValidatorResponse Visit(IsNumberValidator validator, Annotation annotation, String propertyName, Object propertyValue) {
+    public ValidatorResponse visit(IsNumberValidator validator, Annotation annotation, String propertyName, Object propertyValue) {
         return validator.isVerify(annotation, propertyName, propertyValue);
     }
 

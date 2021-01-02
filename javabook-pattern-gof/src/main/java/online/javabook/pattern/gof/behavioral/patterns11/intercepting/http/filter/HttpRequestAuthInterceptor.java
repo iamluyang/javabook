@@ -1,15 +1,13 @@
 package online.javabook.pattern.gof.behavioral.patterns11.intercepting.http.filter;
 
-import org.apache.commons.lang3.StringUtils;
-import org.apache.http.HttpException;
-import org.apache.http.HttpRequest;
+import javax.servlet.http.HttpServletRequest;
 
 public class HttpRequestAuthInterceptor implements IHttpRequestInterceptor {
     @Override
-    public void execute(HttpRequest request) throws HttpException {
-        String hasAuthorization = request.getFirstHeader("Authorization").getValue();
-        if (StringUtils.isEmpty(hasAuthorization)) {
-            throw new HttpException("Authorization is Null");
+    public void execute(HttpServletRequest request) throws Exception {
+        String hasAuthorization = request.getHeader("Authorization");
+        if (hasAuthorization == null) {
+            throw new Exception("Authorization is Null");
         }
     }
 }

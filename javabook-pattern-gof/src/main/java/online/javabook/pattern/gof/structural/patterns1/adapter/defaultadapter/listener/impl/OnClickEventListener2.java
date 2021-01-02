@@ -1,6 +1,6 @@
 package online.javabook.pattern.gof.structural.patterns1.adapter.defaultadapter.listener.impl;
 
-import online.javabook.pattern.gof.structural.patterns1.adapter.defaultadapter.listener.api.Event;
+import java.awt.Event;
 
 public class OnClickEventListener2 extends EventListenerDefaultAdapter {
 

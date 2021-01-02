@@ -2,7 +2,7 @@ package online.javabook.pattern.gof.behavioral.patterns2.command2.restful.contro
 
 import online.javabook.pattern.gof.behavioral.patterns2.command2.restful.commands.HttpMethod;
 import online.javabook.pattern.gof.behavioral.patterns2.command2.restful.commands.HttpRequest;
-import online.javabook.pattern.gof.behavioral.patterns2.command2.restful.commands.RestfulApiAnnotation;
+import online.javabook.pattern.gof.behavioral.patterns2.command2.restful.register.RestfulApiAnnotation;
 
 public class GroupController {
 

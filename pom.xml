@@ -37,23 +37,23 @@
     </dependency>
   </dependencies>
   <modules>
-    <module>javabook-aop</module>
     <module>javabook-a</module>
     <module>javabook-b</module>
     <module>javabook-c</module>
-    <module>javabook-classloader</module>
-    <module>javabook-collections</module>
-    <module>javabook-thread</module>
-    <module>javabook-security</module>
-    <module>javabook-exception</module>
+    <module>javabook-collections</module>    
     <module>javabook-concurrent</module>
     <module>javabook-io-bio</module>
     <module>javabook-io-socket</module>
-    <module>javabook-reference</module>
-    <module>javabook-classinit</module>
-    <module>javabook-pattern-thread</module>
-    <module>javabook-jvm</module>
+    <module>javabook-jvm-aop</module>    
+    <module>javabook-jvm-classinit</module>    
+    <module>javabook-jvm-classloader</module>
+    <module>javabook-jvm-exception</module>  
+    <module>javabook-jvm-garbage</module>
+    <module>javabook-jvm-reference</module>    
+    <module>javabook-jvm-security</module>
+    <module>javabook-jvm-thread</module>    
     <module>javabook-pattern-gof</module>
+    <module>javabook-pattern-thread</module>
   </modules>
 
   <repositories>
