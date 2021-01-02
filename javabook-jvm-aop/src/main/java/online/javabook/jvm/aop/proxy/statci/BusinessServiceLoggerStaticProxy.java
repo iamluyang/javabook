@@ -2,11 +2,11 @@ package online.javabook.jvm.aop.proxy.statci;
 
 import online.javabook.jvm.aop.proxy.IBusinessService;
 
-public class BusinessServiceLoggerProxy implements IBusinessService {
+public class BusinessServiceLoggerStaticProxy implements IBusinessService {
 
 	public IBusinessService businessService;
 
-	public BusinessServiceLoggerProxy(IBusinessService businessService) {
+	public BusinessServiceLoggerStaticProxy(IBusinessService businessService) {
 		this.businessService = businessService;
 	}
 
