@@ -24,4 +24,11 @@ public class Main {
             e.printStackTrace();
         }
     }
+
+    private static HttpServletRequest createHttpServletRequest() {
+    	HttpServletRequest httpRequest = new HttpServletRequestWrapper(httpRequest);
+    	httpRequest.
+        return httpRequest;
+    }
+
 }
