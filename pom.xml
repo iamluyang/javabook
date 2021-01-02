@@ -40,8 +40,8 @@
     <module>javabook-a</module>
     <module>javabook-b</module>
     <module>javabook-c</module>
-    <module>javabook-collections</module>    
-    <module>javabook-concurrent</module>
+    <module>javabook-ds-collections</module>
+    <module>javabook-ds-concurrent</module>
     <module>javabook-io-bio</module>
     <module>javabook-io-socket</module>
     <module>javabook-jvm-aop</module>    
