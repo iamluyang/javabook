@@ -19,16 +19,9 @@ public class Main {
         httpFilterChain.addFilter(new HttpRequestRbacInterceptor());
 
         try {
-            httpFilterChain.execute(createHttpServletRequest());
+            httpFilterChain.execute(null);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
-    private static HttpServletRequest createHttpServletRequest() {
-    	HttpServletRequest httpRequest = new HttpServletRequestWrapper(httpRequest);
-    	httpRequest.
-        return httpRequest;
-    }
-
 }
