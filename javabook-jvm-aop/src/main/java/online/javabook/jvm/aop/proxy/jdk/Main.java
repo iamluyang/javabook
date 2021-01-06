@@ -2,14 +2,17 @@ package online.javabook.jvm.aop.proxy.jdk;
 
 import online.javabook.jvm.aop.proxy.BusinessService;
 import online.javabook.jvm.aop.proxy.IBusinessService;
-import online.javabook.jvm.aop.proxy.statci.BusinessServiceLoggerStaticProxy;
 
 public class Main {
-    public static void main(String[] args) {
-        IBusinessService businessService = new BusinessService();
+    public static void main(String[] args) throws InstantiationException, IllegalAccessException {
         BusinessServiceLoggerJDKProxy businessServiceLoggerProxy = new BusinessServiceLoggerJDKProxy();
+        IBusinessService businessServiceProxy = businessServiceLoggerProxy.proxy(BusinessService.class);
 
-        IBusinessService businessServiceProxy = businessServiceLoggerProxy.proxy(businessService);
-        businessServiceProxy.doSomething();
+        businessServiceProxy.doSomething1();
+        System.out.println();
+        businessServiceProxy.doSomething2();
+
+        System.out.println();
+        System.out.println("businessServiceProxy.getClass().getName() -> " + businessServiceProxy.getClass().getName());
     }
 }

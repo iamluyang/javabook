@@ -2,8 +2,11 @@ package online.javabook.jvm.aop.proxy.cglib;
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
+import org.apache.log4j.Logger;
 
 public class BusinessServiceLoggerCglibProxy {
+
+	private static Logger logger = Logger.getLogger(BusinessServiceLoggerCglibProxy.class.getName());
 
 	public static <T> T proxy(Class<T> delegateClass) {
 		Enhancer enhancer = new Enhancer();
@@ -11,15 +14,15 @@ public class BusinessServiceLoggerCglibProxy {
 
 		enhancer.setCallback((MethodInterceptor) (obj, method, objects, proxy) -> {
 			try {
-				System.out.println("Begin invoke........." + method.getName());
+				logger.info("Begin invoke........." + method.getName());
 
 				Object result = proxy.invokeSuper(obj, objects);
 
-				System.out.println("Finish invoke........." + method.getName());
+				logger.info("Finish invoke........." + method.getName());
 
 				return result;
 			}catch (Exception exception){
-				System.out.println("Exception invoke........." + method.getName());
+				logger.error("Exception invoke........." + method.getName(), exception);
 				throw exception;
 			}
 		});

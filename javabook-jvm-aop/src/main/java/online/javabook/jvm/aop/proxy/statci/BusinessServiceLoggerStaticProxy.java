@@ -1,8 +1,12 @@
 package online.javabook.jvm.aop.proxy.statci;
 
 import online.javabook.jvm.aop.proxy.IBusinessService;
+import org.apache.log4j.Logger;
+
 
 public class BusinessServiceLoggerStaticProxy implements IBusinessService {
+
+	private Logger logger = Logger.getLogger(BusinessServiceLoggerStaticProxy.class.getName());
 
 	public IBusinessService businessService;
 
@@ -11,11 +15,28 @@ public class BusinessServiceLoggerStaticProxy implements IBusinessService {
 	}
 
 	@Override
-	public void doSomething() {
-		System.out.println("Log begin.........");
+	public void doSomething1() {
+		try {
+			logger.info("Begin invoke........." + "doSomething1");
 
-		businessService.doSomething();
+			businessService.doSomething1();
 
-		System.out.println("Log finish........");
+			logger.info("Finish invoke........." + "doSomething1");
+		}catch (Exception exception){
+			logger.error("Exception invoke........." + "doSomething1", exception);
+		}
+	}
+
+	@Override
+	public void doSomething2() {
+		try {
+			logger.info("Begin invoke........." + "doSomething2");
+
+			businessService.doSomething2();
+
+			logger.info("Finish invoke........." + "doSomething2");
+		}catch (Exception exception){
+			logger.error("Exception invoke........." + "doSomething2", exception);
+		}
 	}
 }
