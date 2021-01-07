@@ -5,8 +5,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
+@ComponentScan(basePackages = "online.javabook.jvm.aop.**")
 @EnableAspectJAutoProxy
-@ComponentScan
 public class AppConfig {
 
 }

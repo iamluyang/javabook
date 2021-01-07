@@ -1,7 +1,7 @@
 package online.javabook.jvm.aop.proxy.cglib;
 
-import online.javabook.jvm.aop.proxy.BusinessService;
-import online.javabook.jvm.aop.proxy.IBusinessService;
+import online.javabook.jvm.aop.service.BusinessService;
+import online.javabook.jvm.aop.service.IBusinessService;
 
 public class Main {
 	public static void main(String[] args) {

@@ -1,14 +1,13 @@
 package online.javabook.jvm.aop.proxy.aspectj;
 
-import online.javabook.jvm.aop.proxy.BusinessService;
-import org.springframework.context.ApplicationContext;
+import online.javabook.jvm.aop.service.IBusinessService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
     public static void main(String[] ags) {
 
-        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        BusinessService businessService = context.getBean(BusinessService.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        IBusinessService businessService = context.getBean(IBusinessService.class);
 
         businessService.doSomething1();
         System.out.println();
