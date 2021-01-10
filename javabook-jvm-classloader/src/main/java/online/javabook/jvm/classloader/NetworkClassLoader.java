@@ -7,7 +7,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
 
-import online.javabook.jvm.classloader.service.api.ISimpleService;
+import com.javabook.classloader.service.api.ISimpleService;
 
 /**
  * @author Summer Lu
@@ -109,6 +109,8 @@ public class NetworkClassLoader extends ClassLoader {
 			
 			System.out.println(	simpleServiceLowerCaseImplClass1.getName()+":"+simpleServiceLowerCaseImplClass1.getClassLoader() );
 			System.out.println(simpleServiceLowerCaseImpl1.calculate("Abc"));
+
+			System.out.println("simpleServiceLowerCaseImpl2.getClass().getClassLoader() -> " + simpleServiceLowerCaseImpl1.getClass().getClassLoader());
 
 			// ----------------------------------------------------------------------------------------------------
 			// SimpleServiceUpperCaseImpl

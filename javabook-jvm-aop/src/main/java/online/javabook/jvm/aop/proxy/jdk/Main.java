@@ -13,6 +13,7 @@ public class Main {
         businessServiceProxy.doSomething2();
 
         System.out.println();
+        System.out.println("businessServiceProxy.getClass().getName() -> " + new BusinessService().getClass().getName());
         System.out.println("businessServiceProxy.getClass().getName() -> " + businessServiceProxy.getClass().getName());
     }
 }

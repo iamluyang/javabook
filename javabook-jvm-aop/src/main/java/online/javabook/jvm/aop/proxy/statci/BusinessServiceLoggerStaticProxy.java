@@ -1,13 +1,12 @@
 package online.javabook.jvm.aop.proxy.statci;
 
 import online.javabook.jvm.aop.service.IBusinessService;
-import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 
 public class BusinessServiceLoggerStaticProxy implements IBusinessService {
 
-	private Logger logger = LogManager.getLogger(BusinessServiceLoggerStaticProxy.class.getName());
+	private Logger logger = Logger.getLogger(BusinessServiceLoggerStaticProxy.class.getName());
 
 	public IBusinessService businessService;
 

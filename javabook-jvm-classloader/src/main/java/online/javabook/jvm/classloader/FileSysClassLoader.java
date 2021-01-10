@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import online.javabook.jvm.classloader.service.api.ISimpleService;
+import com.javabook.classloader.service.api.ISimpleService;
 
 /**
  * @author Summer Lu
@@ -112,6 +112,8 @@ public class FileSysClassLoader extends ClassLoader {
 
 			ISimpleService simpleServiceLowerCaseImpl2 = (ISimpleService) simpleServiceLowerCaseImplClass2.newInstance();
 			System.out.println(simpleServiceLowerCaseImpl2.calculate("Abc"));
+
+			System.out.println("simpleServiceLowerCaseImpl2.getClass().getClassLoader() -> " + simpleServiceLowerCaseImpl2.getClass().getClassLoader());
 
 			// ----------------------------------------------------------------------------------------------------
 			// SimpleServiceUpperCaseImpl		

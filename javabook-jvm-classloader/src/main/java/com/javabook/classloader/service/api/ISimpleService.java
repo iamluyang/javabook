@@ -1,4 +1,4 @@
-package online.javabook.jvm.classloader.service.api;
+package com.javabook.classloader.service.api;
 
 /**
  * @author Summer Lu
