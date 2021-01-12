@@ -2,7 +2,7 @@ package online.javabook.jvm.thread.sync;
 
 /**
  * <ul>
- * <li>没有任何技术保障的实现，这是一个在多线程环境下不可靠的计数器
+ * <li>这是一个在多线程环境下不可靠的计数器
  * </ul>
  * 
  * @author Summer Lu

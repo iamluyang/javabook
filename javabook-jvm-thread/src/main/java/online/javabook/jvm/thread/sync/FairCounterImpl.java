@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * <ul>
  * 基于ReentrantLock计数器，这是一个在多线程环境下可靠的计数器
- * <li>公平给性能带来问题
+ * <li>公平可能会带来性能问题
  * </ul>
  * 
  * @author Summer Lu

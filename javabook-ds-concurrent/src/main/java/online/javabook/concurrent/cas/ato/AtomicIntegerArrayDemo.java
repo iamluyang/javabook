@@ -24,7 +24,7 @@ public final class AtomicIntegerArrayDemo {
 	}
 	
 	/**
-	 * @param intArray2
+	 * @param intArray
 	 */
 	public static <T> void debug(int[] intArray) {
 

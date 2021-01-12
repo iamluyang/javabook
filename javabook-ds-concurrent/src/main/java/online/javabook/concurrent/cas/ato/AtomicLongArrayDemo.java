@@ -25,7 +25,7 @@ public final class AtomicLongArrayDemo {
 	}
 	
 	/**
-	 * @param intArray2
+	 * @param longArray
 	 */
 	public static void debug(long[] longArray) {
 

@@ -26,10 +26,10 @@ public class JvmOutOfMemoryErrorOfHeapSpaceDemo {
 
 		List<byte[]> headMemorys = new LinkedList<byte[]>();
 		for(;;){			
-			byte[] _1MB = new byte[1024*1024*1];
+			byte[] _1MB = new byte[1024];
 			headMemorys.add(_1MB);
 			System.out.println("消耗堆内存:" + headMemorys.size() + "MB");
-			Thread.sleep(100);
+			//Thread.sleep(1);
 		}
 	}
 }
