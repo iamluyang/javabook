@@ -1,6 +1,6 @@
 package online.javabook.jvm.aop.proxy.statci;
 
-import online.javabook.jvm.aop.proxy.IBusinessService;
+import online.javabook.jvm.aop.service.IBusinessService;
 import org.apache.log4j.Logger;
 
 

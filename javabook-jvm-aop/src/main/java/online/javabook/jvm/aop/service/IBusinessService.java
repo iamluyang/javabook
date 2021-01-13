@@ -1,4 +1,4 @@
-package online.javabook.jvm.aop.proxy;
+package online.javabook.jvm.aop.service;
 
 public interface IBusinessService {
 

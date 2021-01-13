@@ -1,7 +1,7 @@
 package online.javabook.jvm.aop.proxy.cglib;
 
-import online.javabook.jvm.aop.proxy.BusinessService;
-import online.javabook.jvm.aop.proxy.IBusinessService;
+import online.javabook.jvm.aop.service.BusinessService;
+import online.javabook.jvm.aop.service.IBusinessService;
 
 public class Main {
 	public static void main(String[] args) {
@@ -13,6 +13,6 @@ public class Main {
 		businessServiceProxy.doSomething2();
 
 		System.out.println();
-		System.out.println("businessServiceProxy.getClass().getName()" + businessServiceProxy.getClass().getName());
+		System.out.println("businessServiceProxy.getClass().getName() -> " + businessServiceProxy.getClass().getName());
 	}
 }

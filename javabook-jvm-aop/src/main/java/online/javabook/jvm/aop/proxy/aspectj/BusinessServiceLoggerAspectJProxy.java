@@ -8,13 +8,13 @@ import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
-@Component
 @Aspect
+@Component
 public class BusinessServiceLoggerAspectJProxy {
 
 	private static Logger logger = Logger.getLogger(BusinessServiceLoggerAspectJProxy.class.getName());
 
-	@Pointcut("execution(* online.javabook.jvm.aop.proxy.BusinessService.*(..))")
+	@Pointcut("execution(* online.javabook.jvm.aop.service.BusinessService.*(..))")
 	public void log() {}
 
 	@Around("log()")
@@ -49,7 +49,8 @@ public class BusinessServiceLoggerAspectJProxy {
 		Object target = joinPoint.getTarget();
 		String methodName = joinPoint.getSignature().getName();
 		Object[] args = joinPoint.getArgs();
-		Logger.getLogger(target.getClass().getName()).info(String.format("%s %s.%s(%s)",
-				adviceType, target.getClass().getName(), methodName, Arrays.toString(args)));
+
+		String msg = String.format("%s %s.%s(%s)", adviceType, target.getClass().getName(), methodName, Arrays.toString(args));
+		logger.info(msg);
 	}
 }
