@@ -1,5 +1,6 @@
 package online.javabook.jvm.thread.sync.main;
 
+import online.javabook.jvm.thread.bug.cas.SynchronizedCASCounterImpl;
 import online.javabook.jvm.thread.sync.*;
 
 import java.util.concurrent.CountDownLatch;
@@ -18,14 +19,18 @@ public class CounterMain {
 	 */
 	public static void main(String[] args) throws InterruptedException {
 
-		//performance(new UnsafeCounterImpl(), 10, 100000);
+		System.out.printf("%-30s%20s%20s%20s\n", "Class", "Time(Nano)", "Actual value", "Expected value");
+
+		performance(new UnsafeThreadCounterImpl(), 10, 100000);
 		performance(new VolatileCounterImpl(), 10, 100000);
 
-		//performance(new AtomicCounterImpl(), 10, 100000);
-		//performance(new NoFairCounterImpl(), 10, 100000);
+		performance(new AtomicLongCounterImpl(), 10, 100000);
+		performance(new ReentrantNoFairLockCounterImpl(), 10, 100000);
 
-		//performance(new SynchrCounterImpl(), 10, 100000);
-		//performance(new FairCounterImpl(), 10, 100000);
+		performance(new SynchronizedCASCounterImpl(), 10, 100000);
+		performance(new SynchronizedCounterImpl(), 10, 100000);
+
+		performance(new ReentrantFairLockCounterImpl(), 10, 100000);
 	}
 
 	/**
@@ -51,7 +56,7 @@ public class CounterMain {
 		finishCountDown.await();
 		long finish = System.nanoTime();
 
-		System.out.println(counter.getClass().getSimpleName() + "\t\tTime:"	+ (finish - begin) + "\tNanos." + "\t\tCount : " + counter.get() + "/" + total);
+		System.out.printf("%-30s%20s%20s%20s\n", counter.getClass().getSimpleName(), (finish - begin), counter.get(), total);
 	}
 
 	static class Running implements Runnable {

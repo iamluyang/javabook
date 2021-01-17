@@ -11,7 +11,7 @@ package online.javabook.jvm.thread.sync;
  * @date 2015-1-27
  *
  */
-public final class SynchrCounterImpl implements ICounter {
+public final class SynchronizedCounterImpl implements ICounter {
 
 	/**
 	 * value

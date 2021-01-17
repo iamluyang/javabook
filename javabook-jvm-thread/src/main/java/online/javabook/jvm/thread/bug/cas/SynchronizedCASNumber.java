@@ -6,7 +6,7 @@ package online.javabook.jvm.thread.bug.cas;
  * @date 2014-8-22
  *
  */
-public class SynchroCAS {
+public class SynchronizedCASNumber {
 
 	/**
 	 * value

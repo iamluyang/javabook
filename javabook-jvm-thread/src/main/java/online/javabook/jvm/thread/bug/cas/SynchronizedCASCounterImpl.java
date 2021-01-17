@@ -1,22 +1,30 @@
 package online.javabook.jvm.thread.bug.cas;
 
+import online.javabook.jvm.thread.bug.cas.SynchronizedCASNumber;
+import online.javabook.jvm.thread.sync.ICounter;
+
 /**
  * @author Summer Lu
  * @email gmluyang@gmail.com
  * @date 2014-8-22
  * 
  */
-public class SynchroCASCounter {
+public class SynchronizedCASCounterImpl implements ICounter {
 
 	/**
 	 * casNumber
 	 */
-	private SynchroCAS number = new SynchroCAS();
+	private SynchronizedCASNumber number = new SynchronizedCASNumber();
+
+	@Override
+	public long get() {
+		return number.get();
+	}
 
 	/**
 	 * @return
 	 */
-	public int increment() {
+	public long increment() {
 
 		for (;;) {
 			int expect = number.get();
@@ -29,7 +37,7 @@ public class SynchroCASCounter {
 	/**
 	 * @return
 	 */
-	public int decrement() {
+	public long decrement() {
 
 		for (;;) {
 			int expect = number.get();

@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicLong;
  * @date 2015-1-27
  *
  */
-public final class AtomicCounterImpl implements ICounter {
+public final class AtomicLongCounterImpl implements ICounter {
 
 	/**
 	 * value

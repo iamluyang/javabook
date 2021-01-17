@@ -13,7 +13,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @date 2015-1-27
  *
  */
-public final class NoFairCounterImpl implements ICounter {
+public final class ReentrantNoFairLockCounterImpl implements ICounter {
 
 	/**
 	 * lock - 默认为不公平锁

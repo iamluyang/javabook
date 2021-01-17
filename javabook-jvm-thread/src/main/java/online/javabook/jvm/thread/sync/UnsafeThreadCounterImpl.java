@@ -10,7 +10,7 @@ package online.javabook.jvm.thread.sync;
  * @date 2015-1-27
  *
  */
-public final class UnsafeCounterImpl implements ICounter {
+public final class UnsafeThreadCounterImpl implements ICounter {
 
 	/**
 	 * value

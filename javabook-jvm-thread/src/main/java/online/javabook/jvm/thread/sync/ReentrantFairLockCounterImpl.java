@@ -14,7 +14,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @date 2015-1-27
  *
  */
-public final class FairCounterImpl implements ICounter {
+public final class ReentrantFairLockCounterImpl implements ICounter {
 
 	/**
 	 * lock - 强制设为公平锁
