@@ -21,6 +21,7 @@ public class SynchronizedCASNumber {
 	}
 
 	/**
+	 * synchronized关键字是为了保障这个方法的原子性，用来模拟底层的CAS接口的原子操作
 	 * @param expect
 	 * @param update
 	 * @return

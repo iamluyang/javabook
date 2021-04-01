@@ -1,6 +1,6 @@
 package online.javabook.jvm.thread.sync.main;
 
-import online.javabook.jvm.thread.bug.cas.SynchronizedCASCounterImpl;
+import online.javabook.jvm.thread.sync.SynchronizedCASCounterImpl;
 import online.javabook.jvm.thread.sync.*;
 
 import java.util.concurrent.CountDownLatch;
@@ -11,7 +11,7 @@ import java.util.concurrent.CountDownLatch;
  * @date 2015-1-27
  *
  */
-public class CounterMain {
+public class CounterPerformanceMain {
 
 	/**
 	 * @param args
@@ -21,16 +21,22 @@ public class CounterMain {
 
 		System.out.printf("%-30s%20s%20s%20s\n", "Class", "Time(Nano)", "Actual value", "Expected value");
 
-		performance(new UnsafeThreadCounterImpl(), 10, 100000);
+/*		performance(new UnsafeThreadCounterImpl(), 10, 100000);
 		performance(new VolatileCounterImpl(), 10, 100000);
 
 		performance(new AtomicLongCounterImpl(), 10, 100000);
-		performance(new ReentrantNoFairLockCounterImpl(), 10, 100000);
-
 		performance(new SynchronizedCASCounterImpl(), 10, 100000);
-		performance(new SynchronizedCounterImpl(), 10, 100000);
 
+		performance(new ReentrantNoFairLockCounterImpl(), 10, 100000);
 		performance(new ReentrantFairLockCounterImpl(), 10, 100000);
+
+		performance(new SynchronizedJavaCounterImpl(), 10, 100000);
+		performance(new SynchronizedLockCounterImpl(), 10, 100000);
+
+		performance(new SimpleAQSLockCounterImpl(), 10, 100000);*/
+
+		performance(new ReentrantNoFairLockCounterImpl(), 10, 100000);
+		performance(new SimpleCASLockCounterImpl(), 10, 100);
 	}
 
 	/**

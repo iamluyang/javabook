@@ -20,12 +20,12 @@ public interface ICounter {
 	 * 
 	 * @return
 	 */
-	public long increment();
+	public long increment() throws InterruptedException;
 
 	/**
 	 * 递减当前值
 	 * 
 	 * @return
 	 */
-	public long decrement();
+	public long decrement() throws InterruptedException;
 }

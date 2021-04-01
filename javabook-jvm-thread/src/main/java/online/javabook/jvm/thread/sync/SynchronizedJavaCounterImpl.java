@@ -2,7 +2,7 @@ package online.javabook.jvm.thread.sync;
 
 /**
  * <ul>
- * 基于线程同步的计数器，这是一个在多线程环境下可靠的计数器
+ * 基于Java synchronized语义的线程同步计数器，这是一个在多线程环境下可靠的计数器
  * <li>同步机制让性能略有损耗，但毕竟保障了线程安全
  * </ul>
  * 
@@ -11,7 +11,7 @@ package online.javabook.jvm.thread.sync;
  * @date 2015-1-27
  *
  */
-public final class SynchronizedCounterImpl implements ICounter {
+public final class SynchronizedJavaCounterImpl implements ICounter {
 
 	/**
 	 * value

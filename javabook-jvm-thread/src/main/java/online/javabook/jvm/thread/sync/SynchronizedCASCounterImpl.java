@@ -1,4 +1,4 @@
-package online.javabook.jvm.thread.bug.cas;
+package online.javabook.jvm.thread.sync;
 
 import online.javabook.jvm.thread.bug.cas.SynchronizedCASNumber;
 import online.javabook.jvm.thread.sync.ICounter;
