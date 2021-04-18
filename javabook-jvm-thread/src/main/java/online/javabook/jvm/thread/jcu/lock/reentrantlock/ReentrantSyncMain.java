@@ -1,6 +1,8 @@
 package online.javabook.jvm.thread.jcu.lock.reentrantlock;
 
 /**
+ * synchronized的可重入性
+ *
  * @author Summer Lu
  * @email gmluyang@gmail.com
  * @date 2015-1-27

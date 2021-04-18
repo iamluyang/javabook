@@ -1,9 +1,7 @@
 package online.javabook.jvm.thread.sync;
 
 /**
- * <ul>
- * <li>这是一个在多线程环境下不可靠的计数器
- * </ul>
+ * 这是一个在多线程环境下不可靠的计数器
  * 
  * @author Summer Lu
  * @email gmluyang@gmail.com

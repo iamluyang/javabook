@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * <ul>
- * 基于ReentrantLock计数器，这是一个在多线程环境下可靠的计数器
+ * 基于ReentrantLock的不公平锁，并且可以设置一个可控的执行延迟参数
  * </ul>
  * 
  * @author Summer Lu
@@ -18,9 +18,9 @@ import java.util.concurrent.locks.ReentrantLock;
 public final class ReentrantNoFairLockWithExecutionTimeCounterImpl implements ICounter {
 
 	/**
-	 * executionTime
+	 * number
 	 */
-	private int executionTime;
+	private int number;
 
 	/**
 	 * lock - 默认为不公平锁
@@ -29,10 +29,10 @@ public final class ReentrantNoFairLockWithExecutionTimeCounterImpl implements IC
 
 	/**
 	 *
-	 * @param millis
+	 * @param number
 	 */
-	public ReentrantNoFairLockWithExecutionTimeCounterImpl(int millis) {
-		this.executionTime = millis;
+	public ReentrantNoFairLockWithExecutionTimeCounterImpl(int number) {
+		this.number = number;
 	}
 
 	/**
@@ -73,9 +73,10 @@ public final class ReentrantNoFairLockWithExecutionTimeCounterImpl implements IC
 	 *
 	 */
 	private void slowly() {
-		try {
-			Thread.sleep(executionTime);
-		} catch (InterruptedException e) {
+		double y=1.0;
+		for(int i=0;i<=number;i++){
+			double π=3*Math.pow(2, i)*y;
+			y=Math.sqrt(2-Math.sqrt(4-y*y));
 		}
 	}
 }
