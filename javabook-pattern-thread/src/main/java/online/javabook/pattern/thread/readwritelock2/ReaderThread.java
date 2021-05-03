@@ -1,6 +1,5 @@
 package online.javabook.pattern.thread.readwritelock2;
 
-
 /**
  * 
  * @author Summer Lu
@@ -9,37 +8,28 @@ package online.javabook.pattern.thread.readwritelock2;
  *
  */
 public class ReaderThread extends Thread {
-	
+
 	/**
 	 * resource
 	 */
 	private final Resource resource;
 
 	/**
-	 * @param data
+	 *
+	 * @param resource
 	 */
 	public ReaderThread(Resource resource) {
 		this.resource = resource;
 	}
 
 	public void run() {
-		
-		long beg = System.currentTimeMillis();
-		
 		try {
 			while (true) {
-				char[] readbuf = resource.read();
-				System.out.println(Thread.currentThread().getName() + " reads " + String.valueOf(readbuf));
-				
-				if(readbuf[0]=='z' || readbuf[0]=='Z') {
-					long end = System.currentTimeMillis();
-					System.out.println(end - beg);
-					return;
-				}
+				char[] context = resource.read();
+				System.out.println(Thread.currentThread().getName() + " reads " + String.valueOf(context));
 			}
 		} catch (InterruptedException e) {
-			
-		}
 
+		}
 	}
 }

@@ -1,32 +1,28 @@
 package online.javabook.pattern.thread.readwritelock2;
 
-
 /**
- * 
+ *
  * @author Summer Lu
  * @email gmluyang@gmail.com
  * @date 2015年7月19日
  *
  */
 public class Resource {
-	
+
 	/**
 	 * buffer
 	 */
-	private final char[] buffer;
+	private final char[] context;
 
 	/**
 	 * lock
 	 */
-	private final ReadWriteLock lock = new ReadWriteLock();
+	private final SimpleReadWriteLock lock = new SimpleReadWriteLock();
 
-	/**
-	 * @param size
-	 */
-	public Resource(int size) {
-		this.buffer = new char[size];
-		for (int index = 0; index < buffer.length; index++) {
-			buffer[index] = '*';
+	public Resource() {
+		this.context = new char[10];
+		for (int index = 0; index < context.length; index++) {
+			context[index] = '*';
 		}
 	}
 
@@ -40,19 +36,19 @@ public class Resource {
 			return doRead();
 		} finally {
 			lock.readUnlock();
-		}	
+		}
 	}
 
 	/**
 	 * @return
 	 */
 	private char[] doRead() {
-		char[] newbuf = new char[buffer.length];
-		for (int i = 0; i < buffer.length; i++) {
-			newbuf[i] = buffer[i];
+		char[] newContext = new char[context.length];
+		for (int i = 0; i < context.length; i++) {
+			newContext[i] = context[i];
 		}
 		slowly();
-		return newbuf;
+		return newContext;
 	}
 
 	/**
@@ -72,14 +68,14 @@ public class Resource {
 	 * @param c
 	 */
 	private void doWrite(char c) {
-		for (int index = 0; index < buffer.length; index++) {
-			buffer[index] = c;
+		for (int index = 0; index < context.length; index++) {
+			context[index] = c;
 			slowly();
 		}
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	private void slowly() {
 		try {

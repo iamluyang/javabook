@@ -16,7 +16,7 @@ public class Main {
 		Fork fork = new Fork();
 
 		// knive
-		Knive knive = new Knive();
+		Knife knive = new Knife();
 
 		// runnning
 		Thread runnning = new RunningThread();
@@ -31,10 +31,10 @@ public class Main {
 		Thread daemon = new DaemonThread();
 
 		// dpeople1
-		Thread dpeople1 = new DeadLockThreadForkFirstPeople(fork, knive);
+		Thread dpeople1 = new ForkFirstDeadLockThread(fork, knive);
 
 		// dpeople2
-		Thread dpeople2 = new DeadLockThreadKniveFirstPeople(knive, fork);
+		Thread dpeople2 = new KnifeFirstDeadLockThread(knive, fork);
 
 		runnning.setName("My-runnning Thread");
 		sleeping.setName("My-sleeping Thread");

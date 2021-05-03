@@ -11,29 +11,30 @@ import java.util.Random;
  *
  */
 public class WriterThread extends Thread {
-	
+
 	/**
 	 * random
 	 */
 	private static final Random random = new Random();
-	
+
 	/**
 	 * resource
 	 */
 	private final Resource resource;
-	
-	/**
-	 * filler
-	 */
-	private final String filler;
 
 	/**
-	 * @param resource
-	 * @param filler
+	 * context
 	 */
-	public WriterThread(Resource resource, String filler) {
+	private final char context;
+
+	/**
+	 *
+	 * @param resource
+	 * @param context
+	 */
+	public WriterThread(Resource resource, char context) {
 		this.resource = resource;
-		this.filler   = filler;
+		this.context   = context;
 	}
 
 	/* (non-Javadoc)
@@ -41,24 +42,11 @@ public class WriterThread extends Thread {
 	 */
 	public void run() {
 		try {
-			for(int index=0; index<filler.length(); index++){
-				char c = nextchar(index);
-				resource.write(c);
+			while (true) {
+				resource.write(context);
 				Thread.sleep(random.nextInt(3000));
 			}
 		} catch (InterruptedException e) {
 		}
-	}
-
-	/**
-	 * @return
-	 */
-	private char nextchar(int index) {
-		char c = filler.charAt(index);
-		index++;
-		if (index >= filler.length()) {
-			index = 0;
-		}
-		return c;
 	}
 }

@@ -3,6 +3,8 @@ package online.javabook.jcu.ato;
 import online.javabook.jcu.unsafe.MyUnsafe;
 import sun.misc.Unsafe;
 
+import java.util.concurrent.atomic.AtomicLongArray;
+
 /**
  * @author Summer Lu
  * @email gmluyang@gmail.com
@@ -15,8 +17,6 @@ public final class AtomicLongArrayDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-
-		//AtomicLongArray atomicLongArray = new AtomicLongArray();
 
 		// longArray
 		long[] longArray = new long[]{0, 1, 2, 3, 4, 5};

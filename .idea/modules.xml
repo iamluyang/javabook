@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/javabook-a/javabook-a.iml" filepath="$PROJECT_DIR$/javabook-a/javabook-a.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-b/javabook-b.iml" filepath="$PROJECT_DIR$/javabook-b/javabook-b.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-c/javabook-c.iml" filepath="$PROJECT_DIR$/javabook-c/javabook-c.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javabook-ds-concurrent/javabook-concurrent.iml" filepath="$PROJECT_DIR$/javabook-ds-concurrent/javabook-concurrent.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-ds-collections/javabook-ds-collections.iml" filepath="$PROJECT_DIR$/javabook-ds-collections/javabook-ds-collections.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-ds-concurrent/javabook-ds-concurrent.iml" filepath="$PROJECT_DIR$/javabook-ds-concurrent/javabook-ds-concurrent.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-io-bio/javabook-io-bio.iml" filepath="$PROJECT_DIR$/javabook-io-bio/javabook-io-bio.iml" />

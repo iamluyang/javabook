@@ -11,9 +11,10 @@
         <module name="javabook-jvm-thread" />
         <module name="javabook-pattern-thread" />
         <module name="javabook-c" />
-        <module name="javabook-jvm-exception" />
-        <module name="javabook-jvm-reference" />
         <module name="javabook-b" />
+        <module name="javabook-concurrent" />
+        <module name="javabook-jvm-reference" />
+        <module name="javabook-jvm-exception" />
         <module name="javabook-io-socket" />
         <module name="javabook-ds-concurrent" />
         <module name="javabook-jvm-classinit" />
@@ -30,6 +31,7 @@
       <module name="javabook-a" target="1.8" />
       <module name="javabook-b" target="1.8" />
       <module name="javabook-c" target="1.8" />
+      <module name="javabook-concurrent" target="1.8" />
       <module name="javabook-ds-collections" target="1.8" />
       <module name="javabook-ds-concurrent" target="1.8" />
       <module name="javabook-io-bio" target="1.8" />

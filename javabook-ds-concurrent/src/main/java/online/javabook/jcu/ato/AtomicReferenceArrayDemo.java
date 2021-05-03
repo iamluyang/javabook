@@ -16,15 +16,20 @@ public final class AtomicReferenceArrayDemo {
 	 */
 	public static void main(String[] args) {
 
-		//AtomicReferenceArray atomicReferenceArray = new AtomicReferenceArray<>();
-
 		// referenceArray
-		Object[] referenceArray = new Object[]{new Integer(0), new Integer(1), new Integer(2), new Integer(3), new Integer(4), new Integer(5)};
+		Object[] referenceArray = new Object[]{
+				new String("apple"),
+				new String("banana"),
+				new String("orange"),
+				new String("berry"),
+				new String("grape"),
+				new String("pear")};
 		debug(referenceArray);
 	}
-	
+
 	/**
-	 * @param intArray2
+	 *
+	 * @param referenceArray
 	 */
 	public static void debug(Object[] referenceArray) {
         
