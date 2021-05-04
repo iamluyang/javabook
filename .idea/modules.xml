@@ -7,8 +7,8 @@
       <module fileurl="file://$PROJECT_DIR$/javabook-b/javabook-b.iml" filepath="$PROJECT_DIR$/javabook-b/javabook-b.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-c/javabook-c.iml" filepath="$PROJECT_DIR$/javabook-c/javabook-c.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-ds-concurrent/javabook-concurrent.iml" filepath="$PROJECT_DIR$/javabook-ds-concurrent/javabook-concurrent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javabook-distributed-transaction/javabook-distributed-transaction.iml" filepath="$PROJECT_DIR$/javabook-distributed-transaction/javabook-distributed-transaction.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-ds-collections/javabook-ds-collections.iml" filepath="$PROJECT_DIR$/javabook-ds-collections/javabook-ds-collections.iml" />
-      <module fileurl="file://$PROJECT_DIR$/javabook-ds-concurrent/javabook-ds-concurrent.iml" filepath="$PROJECT_DIR$/javabook-ds-concurrent/javabook-ds-concurrent.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-io-bio/javabook-io-bio.iml" filepath="$PROJECT_DIR$/javabook-io-bio/javabook-io-bio.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-io-socket/javabook-io-socket.iml" filepath="$PROJECT_DIR$/javabook-io-socket/javabook-io-socket.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-jvm-aop/javabook-jvm-aop.iml" filepath="$PROJECT_DIR$/javabook-jvm-aop/javabook-jvm-aop.iml" />
