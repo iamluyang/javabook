@@ -45,8 +45,6 @@ public class DistributedTransactionAspectJProxy {
 		// annotation
 		DistributedTransaction distributedTransaction = signature.getMethod().getAnnotation(DistributedTransaction.class);
 		String txName = method.toString();
-
-		// old/new args of method
 		Object[] oldArgs = proceedingJoinPoint.getArgs();
 
 		// get txStateTable
@@ -58,20 +56,24 @@ public class DistributedTransactionAspectJProxy {
 			txStateTable = new TxStateTable(txName, txId, TxState.INIT);
 			txStateTableThreadLocal.set(txStateTable);
 
-		// branch distributed transaction state
+			// branch distributed transaction state
 		} else {
 			Class[] branchArgTypes = method.getParameterTypes();
 			Object branchTarget = proceedingJoinPoint.getTarget();
-			Object[] branchNewArgs = getNewArgs(txName, method, oldArgs);
 
-			txStateTable.addBranchTxState(txName, txId, TxState.INIT, branchTarget, branchArgTypes, branchNewArgs, distributedTransaction);
+			Object[] newArgs = getNewArgs(txName, txId, method, oldArgs);
+			txStateTable.addBranchTxState(txName, txId, TxState.INIT, branchTarget, branchArgTypes, newArgs, distributedTransaction);
 		}
 
 		try {
 			// doTry
 			if(txStateTable.getTxException() == null) {
-				Object[] newArgs = getNewArgs(txName, method, oldArgs);
-				result = proceedingJoinPoint.proceed(newArgs);
+
+				Object[] args = oldArgs;
+				if(isBranchDistributedTransaction(txName)) {
+					args = getNewArgs(txName, txId, method, oldArgs);
+				}
+				result = proceedingJoinPoint.proceed(args);
 
 				// branch tx commit state
 				if(isBranchDistributedTransaction(txName)) {
@@ -102,7 +104,7 @@ public class DistributedTransactionAspectJProxy {
 				}
 				txStateTable.setMasterTxState(TxState.COMMIT);
 
-			// do branch tx rollback
+				// do branch tx rollback
 			} else if(txStateTable.isAnyBranchTxPrepRollBack()) {
 				for (TxState branchTxState : txStateTable.getBranchTxStates().values()) {
 
@@ -123,7 +125,7 @@ public class DistributedTransactionAspectJProxy {
 	// getDoTryArgs
 	// ------------------------------------------------------------------------------------
 
-	private Object[] getNewArgs(String txName, Method method, Object[] oldArgs) {
+	private Object[] getNewArgs(String txName, long txId, Method method, Object[] oldArgs) {
 
 		TxStateTable txStateTable = txStateTableThreadLocal.get();
 		TxState branchTxState = txStateTable.getBranchTxState(txName);
@@ -136,7 +138,7 @@ public class DistributedTransactionAspectJProxy {
 		for (int index = 0; index < parameterTypes.length; index++) {
 			if(parameterAnnotations[index].length > 0) {
 				for (Annotation parameterAnnotation : parameterAnnotations[index]) {
-					Object newArg = getNewArg(parameterAnnotation);
+					Object newArg = getNewArg(parameterAnnotation, txId);
 					newArgs.add(newArg);
 				}
 			}
@@ -148,14 +150,14 @@ public class DistributedTransactionAspectJProxy {
 		return newArgs.toArray();
 	}
 
-	private Object getNewArg(Annotation parameterAnnotation) {
+	private Object getNewArg(Annotation parameterAnnotation, long txId) {
 		if(parameterAnnotation != null) {
 			if(parameterAnnotation instanceof MasterTxId) {
 				TxStateTable txContext = txStateTableThreadLocal.get();
 				return txContext.getMasterTxId();
 			}
 			else if(parameterAnnotation instanceof BranchTxId) {
-				return snowflake.nextId();
+				return txId;
 			}
 		}
 		return null;
