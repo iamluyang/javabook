@@ -11,7 +11,7 @@ public class BranchServiceB implements IBranchServiceB {
     @DistributedTransaction(name = "serviceB", commit = "doCommit", rollback = "doRollback")
     public void doTry(@MasterTxId long mtxId, @BranchTxId long btxId, int pk, int amount) {
         System.out.println(this.getClass().getName()+".doTry(" + "@MasterTxId long " + mtxId + ", @BranchTxId long " + btxId + ", int pk " + pk + ", int amount " + amount + ")");
-        //throw new RuntimeException();
+        throw new RuntimeException();
     }
 
     @Override
