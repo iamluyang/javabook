@@ -14,12 +14,12 @@ public class BranchServiceB implements IBranchServiceB {
         //throw new RuntimeException();
     }
 
-    public boolean doCommit(@MasterTxId long mtxId, @BranchTxId long btxId, int pk, int amount) {
+    private boolean doCommit(@MasterTxId long mtxId, @BranchTxId long btxId, int pk, int amount) {
         System.out.println(this.getClass().getName()+".doCommit(" + "@MasterTxId long " + mtxId + ", @BranchTxId long " + btxId + ", int amount " + amount + ")");
         return false;
     }
 
-    public boolean doRollback(@MasterTxId long mtxId, @BranchTxId long btxId, int pk, int amount) {
+    private boolean doRollback(@MasterTxId long mtxId, @BranchTxId long btxId, int pk, int amount) {
         System.out.println(this.getClass().getName()+".doRollback(" + "@MasterTxId long " + mtxId + ", @BranchTxId long " + btxId + ", int amount " + amount + ")");
         return false;
     }

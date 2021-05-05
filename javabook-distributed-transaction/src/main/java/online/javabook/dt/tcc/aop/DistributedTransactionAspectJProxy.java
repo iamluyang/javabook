@@ -171,7 +171,8 @@ public class DistributedTransactionAspectJProxy {
 			throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
 
 		String methodName = txState.getDistributedTransaction().commit();
-		Method method = txState.getTxTarget().getClass().getMethod(methodName, txState.getTxArgTypes());
+		Method method = txState.getTxTarget().getClass().getDeclaredMethod(methodName, txState.getTxArgTypes());
+		method.setAccessible(true);
 		method.invoke(txState.getTxTarget(), txState.getTxArgValues());
 	}
 
