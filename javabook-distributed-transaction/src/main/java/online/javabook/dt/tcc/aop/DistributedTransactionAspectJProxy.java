@@ -36,7 +36,7 @@ public class DistributedTransactionAspectJProxy {
 
 	@Around("distributedTransaction()")
 	public Object distributedTransactionAround(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
-		Object result;
+		Object result = null;
 
 		// get method signature
 		MethodSignature signature = (MethodSignature)proceedingJoinPoint.getSignature();
@@ -46,49 +46,70 @@ public class DistributedTransactionAspectJProxy {
 		DistributedTransaction distributedTransaction = signature.getMethod().getAnnotation(DistributedTransaction.class);
 		String txName = method.toString();
 
-		// old args of method
+		// old/new args of method
 		Object[] oldArgs = proceedingJoinPoint.getArgs();
-		Object[] newArgs = doTryArgs(method, oldArgs);
 
-		// init txStateTable
+		// get txStateTable
 		TxStateTable txStateTable = txStateTableThreadLocal.get();
 
-		// master distributed transaction
+		// master distributed transaction state
 		long txId = snowflake.nextId();
 		if(txStateTable==null) {
 			txStateTable = new TxStateTable(txName, txId, TxState.INIT);
 			txStateTableThreadLocal.set(txStateTable);
 
-		// branch distributed transaction
-		}else{
-			Class[] parameterTypes = method.getParameterTypes();
-			txStateTable.addBranchTxState(txName, txId, TxState.INIT, proceedingJoinPoint.getTarget(), parameterTypes, newArgs, distributedTransaction);
+		// branch distributed transaction state
+		} else {
+			Class[] branchArgTypes = method.getParameterTypes();
+			Object branchTarget = proceedingJoinPoint.getTarget();
+			Object[] branchNewArgs = getNewArgs(txName, method, oldArgs);
+
+			txStateTable.addBranchTxState(txName, txId, TxState.INIT, branchTarget, branchArgTypes, branchNewArgs, distributedTransaction);
 		}
 
 		try {
 			// doTry
-			result = proceedingJoinPoint.proceed(newArgs);
+			if(txStateTable.getTxException() == null) {
+				Object[] newArgs = getNewArgs(txName, method, oldArgs);
+				result = proceedingJoinPoint.proceed(newArgs);
 
-			if(!isMasterDistributedTransaction(txName)) {
-				txStateTable.setBranchTxState(txName, TxState.PREP_COMMIT);
+				// branch tx commit state
+				if(isBranchDistributedTransaction(txName)) {
+					txStateTable.setBranchTxState(txName, TxState.PREP_COMMIT);
+				}
 			}
 		}catch (Exception exception) {
-			if(!isMasterDistributedTransaction(txName)) {
+
+			// branch tx exception
+			if(isBranchDistributedTransaction(txName)) {
 				txStateTable.setBranchTxState(txName, TxState.PREP_ROLLBACK);
+				txStateTable.setBranchTxException(txName, exception);
+				txStateTable.setTxException(exception);
+
+			} else if(isMasterDistributedTransaction(txName)) {
+				txStateTable.setTxException(exception);
 			}
-			result = exception;
 		}
 
-		// master tx
-		if(isMasterDistributedTransaction(txName)) {
+		// after master tx
+		if(!isBranchDistributedTransaction(txName)) {
+
+			// do branch tx commit
 			if(txStateTable.isAllBranchTxPrepCommit()) {
 				for (TxState branchTxState : txStateTable.getBranchTxStates().values()) {
 					doCommitMethod(branchTxState);
+					branchTxState.setTxState(TxState.COMMIT);
 				}
 				txStateTable.setMasterTxState(TxState.COMMIT);
+
+			// do branch tx rollback
 			} else if(txStateTable.isAnyBranchTxPrepRollBack()) {
 				for (TxState branchTxState : txStateTable.getBranchTxStates().values()) {
-					doRollbackMethod(branchTxState);
+
+					if(branchTxState.getTxException() == null && branchTxState.isPrepCommit()) {
+						doRollbackMethod(branchTxState);
+						branchTxState.setTxState(TxState.ROLLBACK);
+					}
 				}
 				txStateTable.setMasterTxState(TxState.ROLLBACK);
 			}
@@ -102,7 +123,11 @@ public class DistributedTransactionAspectJProxy {
 	// getDoTryArgs
 	// ------------------------------------------------------------------------------------
 
-	private Object[] doTryArgs(Method method, Object[] oldArgs) {
+	private Object[] getNewArgs(String txName, Method method, Object[] oldArgs) {
+
+		TxStateTable txStateTable = txStateTableThreadLocal.get();
+		TxState branchTxState = txStateTable.getBranchTxState(txName);
+		if(branchTxState!=null) return branchTxState.getTxArgValues();
 
 		List<Object> newArgs = new ArrayList<>(oldArgs.length);
 		Class[] parameterTypes = method.getParameterTypes();
@@ -111,7 +136,7 @@ public class DistributedTransactionAspectJProxy {
 		for (int index = 0; index < parameterTypes.length; index++) {
 			if(parameterAnnotations[index].length > 0) {
 				for (Annotation parameterAnnotation : parameterAnnotations[index]) {
-					Object newArg = getDoTryArg(method, parameterAnnotation);
+					Object newArg = getNewArg(parameterAnnotation);
 					newArgs.add(newArg);
 				}
 			}
@@ -123,23 +148,14 @@ public class DistributedTransactionAspectJProxy {
 		return newArgs.toArray();
 	}
 
-	private Object getDoTryArg(Method method, Annotation parameterAnnotation) {
-
+	private Object getNewArg(Annotation parameterAnnotation) {
 		if(parameterAnnotation != null) {
 			if(parameterAnnotation instanceof MasterTxId) {
 				TxStateTable txContext = txStateTableThreadLocal.get();
 				return txContext.getMasterTxId();
 			}
 			else if(parameterAnnotation instanceof BranchTxId) {
-				String signatureName = method.toString();
-				TxStateTable txStateTable = txStateTableThreadLocal.get();
-				TxState branchTxState = txStateTable.getBranchTxState(signatureName);
-				if(branchTxState == null) {
-					return snowflake.nextId();
-				}else{
-					return txStateTable.getBranchTxState(signatureName).getTxId();
-				}
-
+				return snowflake.nextId();
 			}
 		}
 		return null;
@@ -153,9 +169,8 @@ public class DistributedTransactionAspectJProxy {
 			throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
 
 		String methodName = txState.getDistributedTransaction().commit();
-		Method method = txState.getTxTarget().getClass().getMethod(methodName, txState.getTxParameterTypes());
-		method.invoke(txState.getTxTarget(), txState.getTxParameterValues());
-		txState.setTxState(TxState.COMMIT);
+		Method method = txState.getTxTarget().getClass().getMethod(methodName, txState.getTxArgTypes());
+		method.invoke(txState.getTxTarget(), txState.getTxArgValues());
 	}
 
 	// ------------------------------------------------------------------------------------
@@ -166,17 +181,23 @@ public class DistributedTransactionAspectJProxy {
 			throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
 
 		String methodName = txState.getDistributedTransaction().rollback();
-		Method method = txState.getTxTarget().getClass().getMethod(methodName, txState.getTxParameterTypes());
-		method.invoke(txState.getTxTarget(), txState.getTxParameterValues());
-		txState.setTxState(TxState.ROLLBACK);
+		Method method = txState.getTxTarget().getClass().getMethod(methodName, txState.getTxArgTypes());
+		method.invoke(txState.getTxTarget(), txState.getTxArgValues());
 	}
 
 	// ------------------------------------------------------------------------------------
 	// Utils
 	// ------------------------------------------------------------------------------------
 
-	private boolean isMasterDistributedTransaction(String methodId) {
-		if(txStateTableThreadLocal.get().getMasterTxName().equals(methodId)) {
+	private boolean isMasterDistributedTransaction(String txName) {
+		if(txStateTableThreadLocal.get().getMasterTxName().equals(txName)) {
+			return true;
+		}
+		return false;
+	}
+
+	private boolean isBranchDistributedTransaction(String txName) {
+		if(!txStateTableThreadLocal.get().getMasterTxName().equals(txName)) {
 			return true;
 		}
 		return false;

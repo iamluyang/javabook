@@ -12,6 +12,8 @@ public class TxStateTable {
 
     private long masterTxState;
 
+    private Exception txException;
+
     private HashMap<String, TxState> branchTxStates = new HashMap<String, TxState>(2);
 
     public TxStateTable(String masterTxName, long masterTxId, long masterTxState) {
@@ -40,16 +42,28 @@ public class TxStateTable {
         this.masterTxState = masterTxState;
     }
 
+    public Exception getTxException() {
+        return txException;
+    }
+
+    public void setTxException(Exception txException) {
+        this.txException = txException;
+    }
+
     public TxState getBranchTxState(String branchMethodId) {
         return branchTxStates.get(branchMethodId);
     }
 
-    public void setBranchTxState(String branchMethodId, short txState) {
-        branchTxStates.get(branchMethodId).setTxState(txState);
+    public void setBranchTxState(String branchTxName, short txState) {
+        branchTxStates.get(branchTxName).setTxState(txState);
     }
 
-    public void addBranchTxState(String txName, long txId, short txStatus, Object txTarget, Class[] txParameterTypes, Object[] txParameterValues, DistributedTransaction distributedTransaction) {
-        branchTxStates.put(txName, new TxState(txName, txId, txStatus, txTarget, txParameterTypes, txParameterValues, distributedTransaction));
+    public void setBranchTxException(String branchTxName, Exception exception) {
+        branchTxStates.get(branchTxName).setTxException(exception);
+    }
+
+    public void addBranchTxState(String branchTxName, long txId, short txStatus, Object txTarget, Class[] txArgTypes, Object[] txArgValues, DistributedTransaction distributedTransaction) {
+        branchTxStates.put(branchTxName, new TxState(branchTxName, txId, txStatus, txTarget, txArgTypes, txArgValues, distributedTransaction));
     }
 
     public boolean isAllBranchTxPrepCommit() {

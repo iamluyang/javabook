@@ -15,7 +15,9 @@ public class MasterService implements IMasterService {
 
     @DistributedTransaction
     public void doBusiness(int pk, int amount) {
-        branchServiceA.doBusiness(0, 0, pk, amount);
-        branchServiceB.doBusiness(0, 0, pk, amount);
+        System.out.println("Begin:doTry");
+        branchServiceA.doTry(0, 0, pk, amount);
+        branchServiceB.doTry(0, 0, pk, amount);
+        System.out.println("Commit/Rollback");
     }
 }

@@ -18,19 +18,21 @@ public class TxState {
 
     private Object txTarget;
 
-    private Class[] txParameterTypes;
+    private Class[] txArgTypes;
 
-    private Object[] txParameterValues;
+    private Object[] txArgValues;
+
+    private Exception txException;
 
     private DistributedTransaction distributedTransaction;
 
-    public TxState(String txName, long txId, short txState, Object txTarget, Class[] txParameterTypes, Object[] txParameterValues, DistributedTransaction dt) {
+    public TxState(String txName, long txId, short txState, Object txTarget, Class[] txArgTypes, Object[] txArgValues, DistributedTransaction dt) {
         this.txName = txName;
         this.txId = txId;
         this.txState = txState;
         this.txTarget = txTarget;
-        this.txParameterTypes = txParameterTypes;
-        this.txParameterValues = txParameterValues;
+        this.txArgTypes = txArgTypes;
+        this.txArgValues = txArgValues;
         this.distributedTransaction = dt;
     }
 
@@ -58,20 +60,28 @@ public class TxState {
         this.txTarget = txTarget;
     }
 
-    public Class[] getTxParameterTypes() {
-        return txParameterTypes;
+    public Class[] getTxArgTypes() {
+        return txArgTypes;
     }
 
-    public void setTxParameterTypes(Class[] txParameterTypes) {
-        this.txParameterTypes = txParameterTypes;
+    public void setTxArgTypes(Class[] txArgTypes) {
+        this.txArgTypes = txArgTypes;
     }
 
-    public Object[] getTxParameterValues() {
-        return txParameterValues;
+    public Object[] getTxArgValues() {
+        return txArgValues;
     }
 
-    public void setTxParameterValues(Object[] txParameterValues) {
-        this.txParameterValues = txParameterValues;
+    public void setTxArgValues(Object[] txArgValues) {
+        this.txArgValues = txArgValues;
+    }
+
+    public Exception getTxException() {
+        return txException;
+    }
+
+    public void setTxException(Exception txException) {
+        this.txException = txException;
     }
 
     public DistributedTransaction getDistributedTransaction() {

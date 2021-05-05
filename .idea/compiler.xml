@@ -12,7 +12,6 @@
         <module name="javabook-pattern-thread" />
         <module name="javabook-c" />
         <module name="javabook-b" />
-        <module name="javabook-concurrent" />
         <module name="javabook-jvm-reference" />
         <module name="javabook-jvm-exception" />
         <module name="javabook-io-socket" />

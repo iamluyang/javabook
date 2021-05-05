@@ -9,8 +9,9 @@ import org.springframework.stereotype.Service;
 public class BranchServiceB implements IBranchServiceB {
 
     @DistributedTransaction(name = "serviceB", commit = "doCommit", rollback = "doRollback")
-    public void doBusiness(@MasterTxId long mtxId, @BranchTxId long btxId, int pk, int amount) {
-        System.out.println(this.getClass().getName()+".doBusiness(" + "@MasterTxId long " + mtxId + ", @BranchTxId long " + btxId + ", int pk " + pk + ", int amount " + amount + ")");
+    public void doTry(@MasterTxId long mtxId, @BranchTxId long btxId, int pk, int amount) {
+        System.out.println(this.getClass().getName()+".doTry(" + "@MasterTxId long " + mtxId + ", @BranchTxId long " + btxId + ", int pk " + pk + ", int amount " + amount + ")");
+        //throw new RuntimeException();
     }
 
     @Override

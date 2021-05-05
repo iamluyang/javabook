@@ -9,6 +9,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/javabook-distributed transaction/pom.xml" />
+        <option value="$PROJECT_DIR$/javabook-ds-concurrent/pom.xml" />
       </set>
     </option>
   </component>
