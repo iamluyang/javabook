@@ -55,6 +55,14 @@
     <module>javabook-pattern-gof</module>
     <module>javabook-pattern-thread</module>
     <module>javabook-distributed-transaction</module>
+    <module>javabook-distributed-rcp-core-api</module>
+    <module>javabook-distributed-rcp-core-impl</module>
+    <module>javabook-distributed-rcp-center-api</module>
+    <module>javabook-distributed-rcp-center-impl</module>
+    <module>javabook-distributed-rcp-proxy-api</module>
+    <module>javabook-distributed-rcp-proxy-impl</module>
+    <module>javabook-distributed-rcp-app-provider</module>
+    <module>javabook-distributed-rcp-app-customer</module>
   </modules>
 
   <repositories>
