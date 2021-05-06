@@ -8,8 +8,4 @@ public interface IBranchServiceB {
 
     @DistributedTransaction(name = "serviceB", commit = "doCommit", rollback = "doRollback")
     void doTry(@MasterTxId long mtxId, @BranchTxId long btxId, int pk, int amount);
-
-    boolean doCommit(@MasterTxId long mtxId, @BranchTxId long btxId, int pk, int amount);
-
-    boolean doRollback(@MasterTxId long mtxId, @BranchTxId long btxId, int pk, int amount);
 }
