@@ -114,9 +114,11 @@ public class DistributedTransactionAspectJProxy {
 					}
 				}
 				txStateTable.setMasterTxState(TxState.ROLLBACK);
+
+				throw txStateTable.getTxException();
 			}
 
-			System.out.println(txStateTable);
+			//System.out.println(txStateTable);
 		}
 		return result;
 	}
@@ -184,7 +186,8 @@ public class DistributedTransactionAspectJProxy {
 			throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
 
 		String methodName = txState.getDistributedTransaction().rollback();
-		Method method = txState.getTxTarget().getClass().getMethod(methodName, txState.getTxArgTypes());
+		Method method = txState.getTxTarget().getClass().getDeclaredMethod(methodName, txState.getTxArgTypes());
+		method.setAccessible(true);
 		method.invoke(txState.getTxTarget(), txState.getTxArgValues());
 	}
 
