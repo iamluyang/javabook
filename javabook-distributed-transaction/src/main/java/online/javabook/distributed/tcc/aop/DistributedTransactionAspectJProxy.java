@@ -105,7 +105,7 @@ public class DistributedTransactionAspectJProxy {
 				}
 				txStateTable.setMasterTxState(TxState.COMMIT);
 
-				// do branch tx rollback
+			// do branch tx rollback
 			} else if(txStateTable.isAnyBranchTxPrepRollBack()) {
 				for (TxState branchTxState : txStateTable.getBranchTxStates().values()) {
 
@@ -118,6 +118,11 @@ public class DistributedTransactionAspectJProxy {
 			}
 
 			System.out.println(txStateTable);
+
+			if(txStateTable.getTxException()!=null) {
+				Exception txException = txStateTable.getTxException();
+				throw txException;
+			}
 		}
 		return result;
 	}
@@ -185,7 +190,8 @@ public class DistributedTransactionAspectJProxy {
 			throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
 
 		String methodName = txState.getDistributedTransaction().rollback();
-		Method method = txState.getTxTarget().getClass().getMethod(methodName, txState.getTxArgTypes());
+		Method method = txState.getTxTarget().getClass().getDeclaredMethod(methodName, txState.getTxArgTypes());
+		method.setAccessible(true);
 		method.invoke(txState.getTxTarget(), txState.getTxArgValues());
 	}
 
