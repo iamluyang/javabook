@@ -44,14 +44,15 @@ public class DistributedTransactionAspectJProxy {
 
 		// annotation
 		DistributedTransaction distributedTransaction = signature.getMethod().getAnnotation(DistributedTransaction.class);
-		String txName = method.toString();
+		long txId = snowflake.nextId();
+		String txName = txId + "";
 		Object[] oldArgs = proceedingJoinPoint.getArgs();
 
 		// get txStateTable
 		TxStateTable txStateTable = txStateTableThreadLocal.get();
 
 		// master distributed transaction state
-		long txId = snowflake.nextId();
+
 		if(txStateTable==null) {
 			txStateTable = new TxStateTable(txName, txId, TxState.INIT);
 			txStateTableThreadLocal.set(txStateTable);
