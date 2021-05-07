@@ -1,15 +1,15 @@
 package online.javabook.distributed.rpc.core.api.bloom.impl;
 
+import online.javabook.distributed.rpc.core.api.bloom.api.Key;
+import online.javabook.distributed.rpc.core.api.bloom.api.Writable;
+import online.javabook.distributed.rpc.core.api.bloom.hash.Hash;
+import online.javabook.distributed.rpc.core.api.bloom.hash.HashFunction;
+
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
-
-import online.javabook.distributed.rpc.core.api.bloom.api.Key;
-import online.javabook.distributed.rpc.core.api.bloom.api.Writable;
-import online.javabook.distributed.rpc.core.api.bloom.hash.Hash;
-import online.javabook.distributed.rpc.core.api.bloom.hash.HashFunction;
 
 /**
  * Defines the general behavior of a filter.

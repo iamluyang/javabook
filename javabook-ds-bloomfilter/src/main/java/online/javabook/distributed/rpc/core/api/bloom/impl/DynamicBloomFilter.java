@@ -1,11 +1,11 @@
 package online.javabook.distributed.rpc.core.api.bloom.impl;
 
+import online.javabook.distributed.rpc.core.api.bloom.api.Key;
+import online.javabook.distributed.rpc.core.api.bloom.hash.Hash;
+
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
-
-import online.javabook.distributed.rpc.core.api.bloom.api.Key;
-import online.javabook.distributed.rpc.core.api.bloom.hash.Hash;
 
 
 /**

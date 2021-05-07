@@ -23,6 +23,7 @@
         <module name="javabook-distributed-rpc-proxy-api" />
         <module name="javabook-pattern-thread" />
         <module name="javabook-jvm-reference" />
+        <module name="javabook-ds-bloomfilter" />
         <module name="javabook-io-socket" />
         <module name="javabook-ds-concurrent" />
         <module name="javabook-jvm-aop" />
@@ -50,6 +51,7 @@
       <module name="javabook-distributed-rpc-server-api" target="1.8" />
       <module name="javabook-distributed-rpc-server-impl" target="1.8" />
       <module name="javabook-distributed-transaction" target="1.8" />
+      <module name="javabook-ds-bloomfilter" target="1.8" />
       <module name="javabook-ds-collections" target="1.8" />
       <module name="javabook-ds-concurrent" target="1.8" />
       <module name="javabook-io-bio" target="1.8" />

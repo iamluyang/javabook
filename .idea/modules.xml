@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/javabook-distributed-rpc-server-api/javabook-distributed-rpc-server-api.iml" filepath="$PROJECT_DIR$/javabook-distributed-rpc-server-api/javabook-distributed-rpc-server-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-distributed-rpc-server-impl/javabook-distributed-rpc-server-impl.iml" filepath="$PROJECT_DIR$/javabook-distributed-rpc-server-impl/javabook-distributed-rpc-server-impl.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-distributed-transaction/javabook-distributed-transaction.iml" filepath="$PROJECT_DIR$/javabook-distributed-transaction/javabook-distributed-transaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javabook-ds-bloomfilter/javabook-ds-bloomfilter.iml" filepath="$PROJECT_DIR$/javabook-ds-bloomfilter/javabook-ds-bloomfilter.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-ds-collections/javabook-ds-collections.iml" filepath="$PROJECT_DIR$/javabook-ds-collections/javabook-ds-collections.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-ds-concurrent/javabook-ds-concurrent.iml" filepath="$PROJECT_DIR$/javabook-ds-concurrent/javabook-ds-concurrent.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-io-bio/javabook-io-bio.iml" filepath="$PROJECT_DIR$/javabook-io-bio/javabook-io-bio.iml" />

@@ -7,7 +7,7 @@
     <artifactId>javabook</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-    <artifactId>javabook-collections</artifactId>
+    <artifactId>javabook-ds-collections</artifactId>
     <name>javabook-collections</name>
     <url>http://maven.apache.org</url>
     <properties>
@@ -19,11 +19,6 @@
             <artifactId>junit</artifactId>
             <version>3.8.1</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-        	<groupId>javabook</groupId>
-        	<artifactId>javabook-c</artifactId>
-        	<version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>

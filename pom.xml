@@ -40,6 +40,17 @@
     <module>javabook-a</module>
     <module>javabook-b</module>
     <module>javabook-c</module>
+    <module>javabook-distributed-rpc-core-api</module>
+    <module>javabook-distributed-rpc-core-impl</module>
+    <module>javabook-distributed-rpc-server-api</module>
+    <module>javabook-distributed-rpc-server-impl</module>
+    <module>javabook-distributed-rpc-proxy-api</module>
+    <module>javabook-distributed-rpc-proxy-impl</module>
+    <module>javabook-distributed-rpc-app-provider</module>
+    <module>javabook-distributed-rpc-app-customer</module>
+    <module>javabook-distributed-rpc-app-register</module>
+    <module>javabook-distributed-transaction</module>
+    <module>javabook-ds-bloomfilter</module>
     <module>javabook-ds-collections</module>
     <module>javabook-ds-concurrent</module>
     <module>javabook-io-bio</module>
@@ -54,16 +65,6 @@
     <module>javabook-jvm-thread</module>    
     <module>javabook-pattern-gof</module>
     <module>javabook-pattern-thread</module>
-    <module>javabook-distributed-transaction</module>
-    <module>javabook-distributed-rpc-core-api</module>
-    <module>javabook-distributed-rpc-core-impl</module>
-    <module>javabook-distributed-rpc-server-api</module>
-    <module>javabook-distributed-rpc-server-impl</module>
-    <module>javabook-distributed-rpc-proxy-api</module>
-    <module>javabook-distributed-rpc-proxy-impl</module>
-    <module>javabook-distributed-rpc-app-provider</module>
-    <module>javabook-distributed-rpc-app-customer</module>
-    <module>javabook-distributed-rpc-app-register</module>
   </modules>
 
   <repositories>

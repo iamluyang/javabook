@@ -1,10 +1,10 @@
 package online.javabook.distributed.rpc.core.api.bloom.api;
 
+import online.javabook.distributed.rpc.core.api.bloom.impl.Filter;
+
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
-
-import online.javabook.distributed.rpc.core.api.bloom.impl.Filter;
 
 
 /**
