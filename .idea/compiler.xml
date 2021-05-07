@@ -6,32 +6,33 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="javabook-distributed-rpc-proxy-impl" />
         <module name="javabook-pattern-gof" />
         <module name="javabook-jvm-classloader" />
-        <module name="javabook-distributed-rcp-core-impl" />
+        <module name="javabook-distributed-rpc-app-register" />
         <module name="javabook-jvm-thread" />
         <module name="javabook-c" />
         <module name="javabook-b" />
         <module name="javabook-jvm-exception" />
-        <module name="javabook-distributed-rcp-center-api" />
-        <module name="javabook-distributed-rcp-center-impl" />
+        <module name="javabook-distributed-rpc-core-api" />
         <module name="javabook-jvm-classinit" />
+        <module name="javabook-distributed-rpc-app-provider" />
+        <module name="javabook-distributed-rpc-server-api" />
         <module name="javabook-jvm-security" />
-        <module name="javabook-distributed-rcp-app-customer" />
+        <module name="javabook-distributed-rpc-core-impl" />
+        <module name="javabook-distributed-rpc-proxy-api" />
         <module name="javabook-pattern-thread" />
-        <module name="javabook-distributed-rcp-proxy-impl" />
         <module name="javabook-jvm-reference" />
-        <module name="javabook-distributed-rcp-core-api" />
         <module name="javabook-io-socket" />
         <module name="javabook-ds-concurrent" />
         <module name="javabook-jvm-aop" />
         <module name="javabook-ds-collections" />
         <module name="javabook-a" />
         <module name="javabook-jvm-garbage" />
-        <module name="javabook-distributed-rcp-proxy-api" />
+        <module name="javabook-distributed-rpc-app-customer" />
         <module name="javabook-distributed-transaction" />
+        <module name="javabook-distributed-rpc-server-impl" />
         <module name="javabook-io-bio" />
-        <module name="javabook-distributed-rcp-app-provider" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -39,14 +40,15 @@
       <module name="javabook-a" target="1.8" />
       <module name="javabook-b" target="1.8" />
       <module name="javabook-c" target="1.8" />
-      <module name="javabook-distributed-rcp-app-customer" target="1.8" />
-      <module name="javabook-distributed-rcp-app-provider" target="1.8" />
-      <module name="javabook-distributed-rcp-center-api" target="1.8" />
-      <module name="javabook-distributed-rcp-center-impl" target="1.8" />
-      <module name="javabook-distributed-rcp-core-api" target="1.8" />
-      <module name="javabook-distributed-rcp-core-impl" target="1.8" />
-      <module name="javabook-distributed-rcp-proxy-api" target="1.8" />
-      <module name="javabook-distributed-rcp-proxy-impl" target="1.8" />
+      <module name="javabook-distributed-rpc-app-customer" target="1.8" />
+      <module name="javabook-distributed-rpc-app-provider" target="1.8" />
+      <module name="javabook-distributed-rpc-app-register" target="1.8" />
+      <module name="javabook-distributed-rpc-core-api" target="1.8" />
+      <module name="javabook-distributed-rpc-core-impl" target="1.8" />
+      <module name="javabook-distributed-rpc-proxy-api" target="1.8" />
+      <module name="javabook-distributed-rpc-proxy-impl" target="1.8" />
+      <module name="javabook-distributed-rpc-server-api" target="1.8" />
+      <module name="javabook-distributed-rpc-server-impl" target="1.8" />
       <module name="javabook-distributed-transaction" target="1.8" />
       <module name="javabook-ds-collections" target="1.8" />
       <module name="javabook-ds-concurrent" target="1.8" />
