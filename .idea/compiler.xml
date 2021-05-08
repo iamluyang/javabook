@@ -23,6 +23,7 @@
         <module name="javabook-distributed-rpc-proxy-api" />
         <module name="javabook-pattern-thread" />
         <module name="javabook-jvm-reference" />
+        <module name="javabook-algo-leetcode" />
         <module name="javabook-ds-bloomfilter" />
         <module name="javabook-io-socket" />
         <module name="javabook-ds-concurrent" />
@@ -39,6 +40,7 @@
     <bytecodeTargetLevel>
       <module name="javabook" target="1.8" />
       <module name="javabook-a" target="1.8" />
+      <module name="javabook-algo-leetcode" target="1.8" />
       <module name="javabook-b" target="1.8" />
       <module name="javabook-c" target="1.8" />
       <module name="javabook-distributed-rpc-app-customer" target="1.8" />

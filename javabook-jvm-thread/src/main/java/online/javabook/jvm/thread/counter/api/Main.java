@@ -1,5 +1,16 @@
 package online.javabook.jvm.thread.counter.api;
 
+import online.javabook.jvm.thread.counter.impl.bad.UnsafeThreadCounterImpl;
+import online.javabook.jvm.thread.counter.impl.bad.UnsafeVolatileCounterImpl;
+import online.javabook.jvm.thread.counter.impl.cas.CASSynchronizedCounterImpl;
+import online.javabook.jvm.thread.counter.impl.cas.CASUnsafeCounterImpl;
+import online.javabook.jvm.thread.counter.impl.jcu.JCUAQSLockCounterImpl;
+import online.javabook.jvm.thread.counter.impl.jcu.JCUAtomicLongCounterImpl;
+import online.javabook.jvm.thread.counter.impl.jcu.JCUReentrantFairLockCounterImpl;
+import online.javabook.jvm.thread.counter.impl.jcu.JCUReentrantNoFairLockCounterImpl;
+import online.javabook.jvm.thread.counter.impl.sync.JavaSynchronizedDisplayLockCounterImpl;
+import online.javabook.jvm.thread.counter.impl.sync.JavaSynchronizedKeywordLockCounterImpl;
+import online.javabook.jvm.thread.counter.impl.sync.JavaSynchronizedQueueLockCounterImpl;
 import online.javabook.jvm.thread.counter.impl.taomp.*;
 
 public class Main {
@@ -9,30 +20,35 @@ public class Main {
      */
     public static void main(String[] args) throws InterruptedException, NoSuchFieldException {
 
-        System.out.printf("%-60s%30s%30s%30s%30s\n", "Class", "Time(Nano)", "Threads", "Actual value", "Expected value");
+        System.out.printf("%-40s%20s%20s%20s%20s\n", "Class", "Time(Nano)", "Threads", "Actual value", "Expected value");
 
-        int total = 128;
-        for (int i = 1; i <= 1;) {
+        int total = 12800000;
+        int initThreads = 128;
+        int lastThreads = 128;
+        for (int i = initThreads; i <= lastThreads;) {
             int unit = total / i;
-            //CounterPerformance.performance(new JCUReentrantNoFairLockCounterImpl(), i, unit);
-/*            CounterPerformance.performance(new UnsafeThreadCounterImpl(), i, unit);
-            CounterPerformance.performance(new UnsafeVolatileCounterImpl(), i, unit);
-            CounterPerformance.performance(new JavaSynchronizedKeywordLockCounterImpl(), i, unit);
-            CounterPerformance.performance(new JavaSynchronizedDisplayLockCounterImpl(), i, unit);
-            CounterPerformance.performance(new JavaSynchronizedQueueLockCounterImpl(), i, unit);
-            CounterPerformance.performance(new JCUAtomicLongCounterImpl(), i, unit);
-            CounterPerformance.performance(new JCUAQSLockCounterImpl(), i, unit);
-            CounterPerformance.performance(new JCUReentrantNoFairLockCounterImpl(), i, unit);
-            CounterPerformance.performance(new JCUReentrantFairLockCounterImpl(), i, unit);
-            CounterPerformance.performance(new CASSyncCounterImpl(), i, unit);
-            CounterPerformance.performance(new CASUnsafeCounterImpl(), i, unit);
-            CounterPerformance.performance(new TaompTASLockCounterImpl(), i, unit);
-            CounterPerformance.performance(new TaompTTASLockCounterImpl(), i, unit);
-            CounterPerformance.performance(new TaompBackoffLockCounterImpl(), i, unit);
-            CounterPerformance.performance(new TaompALockCounterImpl(), i, unit);
-            CounterPerformance.performance(new TaompMCSLockCounterImpl(), i, unit);
-            CounterPerformance.performance(new TaompTOLockCounterImpl(), i, unit);*/
-            Performance.performance(new TaompCLHLockCounterImpl(), i, unit);
+            Performance.performance(new UnsafeThreadCounterImpl(), i, unit);
+            Performance.performance(new UnsafeVolatileCounterImpl(), i, unit);
+
+            Performance.performance(new CASUnsafeCounterImpl(), i, unit);
+            Performance.performance(new CASSynchronizedCounterImpl(), i, unit);
+
+            Performance.performance(new JCUAQSLockCounterImpl(), i, unit);
+            //Performance.performance(new JCUAtomicLongCounterImpl(), i, unit);
+            //Performance.performance(new JCUReentrantFairLockCounterImpl(), i, unit);
+            //Performance.performance(new JCUReentrantNoFairLockCounterImpl(), i, unit);
+
+            //Performance.performance(new JavaSynchronizedDisplayLockCounterImpl(), i, unit);
+            //Performance.performance(new JavaSynchronizedKeywordLockCounterImpl(), i, unit);
+            //Performance.performance(new JavaSynchronizedQueueLockCounterImpl(), i, unit);
+
+            /*Performance.performance(new TaompTASLockCounterImpl(), i, unit);
+            Performance.performance(new TaompTTASLockCounterImpl(), i, unit);
+            Performance.performance(new TaompBackoffLockCounterImpl(), i, unit);
+            Performance.performance(new TaompALockCounterImpl(), i, unit);
+            Performance.performance(new TaompMCSLockCounterImpl(), i, unit);
+            Performance.performance(new TaompTOLockCounterImpl(), i, unit);
+            Performance.performance(new TaompCLHLockCounterImpl(), i, unit);*/
 
             i = i * 2;
         }

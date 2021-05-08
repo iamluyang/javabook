@@ -2,6 +2,8 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/javabook-a/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-algo-leetcode/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-algo-leetcode/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-b/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-c/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-app-customer/src/main/java" charset="UTF-8" />

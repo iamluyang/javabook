@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/javabook.iml" filepath="$PROJECT_DIR$/javabook.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-a/javabook-a.iml" filepath="$PROJECT_DIR$/javabook-a/javabook-a.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javabook-algo-leetcode/javabook-algo-leetcode.iml" filepath="$PROJECT_DIR$/javabook-algo-leetcode/javabook-algo-leetcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-b/javabook-b.iml" filepath="$PROJECT_DIR$/javabook-b/javabook-b.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-c/javabook-c.iml" filepath="$PROJECT_DIR$/javabook-c/javabook-c.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-distributed-rpc-app-customer/javabook-distributed-rpc-app-customer.iml" filepath="$PROJECT_DIR$/javabook-distributed-rpc-app-customer/javabook-distributed-rpc-app-customer.iml" />

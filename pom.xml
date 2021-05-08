@@ -65,6 +65,7 @@
     <module>javabook-jvm-thread</module>    
     <module>javabook-pattern-gof</module>
     <module>javabook-pattern-thread</module>
+    <module>javabook-algo-leetcode</module>
   </modules>
 
   <repositories>

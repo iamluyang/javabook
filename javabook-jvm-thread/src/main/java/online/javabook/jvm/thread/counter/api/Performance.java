@@ -34,7 +34,7 @@ public class Performance {
 		finishCountDown.await();
 		long finish = System.currentTimeMillis();
 
-		System.out.printf("%-60s%30s%30s%30s%30s\n", counter.getClass().getSimpleName(), (finish - begin), totalThreads, counter.get(), total);
+		System.out.printf("%-40s%20s%20s%20s%20s\n", counter.getClass().getSimpleName(), (finish - begin), totalThreads, counter.get(), total);
 	}
 
 	static class Running implements Runnable {
