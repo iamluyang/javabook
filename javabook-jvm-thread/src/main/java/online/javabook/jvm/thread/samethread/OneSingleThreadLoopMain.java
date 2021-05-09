@@ -3,16 +3,18 @@ package online.javabook.jvm.thread.samethread;
 public class OneSingleThreadLoopMain {
     public static void main(String[] args) throws InterruptedException {
 
-        for (int i = 0; i <= 8; i++) {
+        System.out.printf("%20s%20s%20s\n", "Tasks", "Threads", "Time(Mill)");
+        int maxTasks = 10000 * 10000;
+        for (int minTasks = 1; minTasks <= maxTasks;) {
 
-            int total = (int) Math.pow(10, i);
             long start = System.currentTimeMillis();
-            for (int j = 0; j < total; j++){
-                new SlowTask().run();
+            for (int j = 0; j < minTasks; j++){
+                new QuickTask().run();
             }
 
             long finish = System.currentTimeMillis();
-            System.out.println("OneSingleThreadLoopMain -> 运行 SlowTask " + total + "次，花费时间: " + (finish - start) + " milliseconds");
+            System.out.printf("%20s%20s%20s\n", minTasks, 1, finish - start);
+            minTasks = minTasks * 10;
         }
     }
 }

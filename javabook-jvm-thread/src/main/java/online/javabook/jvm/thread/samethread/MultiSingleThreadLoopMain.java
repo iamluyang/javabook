@@ -1,31 +1,35 @@
 package online.javabook.jvm.thread.samethread;
 
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class MultiSingleThreadLoopMain {
     public static void main(String[] args) throws InterruptedException {
 
-        int threadCount = 2;
-        for (int i = 0; i <=8 ; i++) {
+        System.out.printf("%20s%20s%20s\n", "Tasks", "Threads", "Time(Mill)");
+        int maxTasks = 10000 * 10000;
+        int maxThreads = Runtime.getRuntime().availableProcessors();
+        for (int minThreads = 1; minThreads <= maxThreads; ) {
 
-            CountDownLatch startCountDown = new CountDownLatch(threadCount);
-            CountDownLatch finishCountDown = new CountDownLatch(threadCount);
+            CountDownLatch startCountDown = new CountDownLatch(minThreads);
+            CountDownLatch finishCountDown = new CountDownLatch(minThreads);
+            int tasksPreThread = maxTasks / minThreads;
 
-            int finalI = i;
             Runnable runnable = new Runnable() {
+
+                private int tasks = tasksPreThread;
+
                 @Override
                 public void run() {
-                    int total = (int) Math.pow(10, finalI) / threadCount;
-
                     startCountDown.countDown();
-                    for (int j = 0; j < total; j++){
+                    for (int j = 0; j < tasks; j++) {
                         new QuickTask().run();
                     }
                     finishCountDown.countDown();
                 }
             };
 
-            for (int j = 0; j < threadCount; j++) {
+            for (int j = 0; j < minThreads; j++) {
                 new Thread(runnable).start();
             }
 
@@ -35,8 +39,8 @@ public class MultiSingleThreadLoopMain {
             finishCountDown.await();
             long finish = System.currentTimeMillis();
 
-            int total = (int) Math.pow(10, i);
-            System.out.println("TwoSingleThreadLoopMain -> 运行 QuickTask " + total + "次，花费时间: " + (finish - start) + " milliseconds");
+            System.out.printf("%20s%20s%20s\n", maxTasks, minThreads, finish - start);
+            minThreads = minThreads * 2;
         }
     }
 }

@@ -1,29 +1,29 @@
 package online.javabook.jvm.thread.samethread;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 public class MultiThreadConcurrencyMain {
     public static void main(String[] args) throws InterruptedException {
 
-        int threadCount = 8;
-        ExecutorService executorService = Executors.newFixedThreadPool(threadCount);
+        System.out.printf("%20s%20s%20s\n", "Tasks", "Threads", "Time(Mill)");
 
-        for (int i = 0; i <= 8; i++) {
-            int total = (int) Math.pow(10, i);
+        int maxTasks = 10000 * 10000;
+        int maxThreads = Runtime.getRuntime().availableProcessors();
+
+        for (int minThreads = 1; minThreads <= maxThreads; ) {
+            ExecutorService executorService = Executors.newFixedThreadPool(maxThreads);
             long start = System.currentTimeMillis();
-            for (int j = 0; j < total; j++){
-                executorService.execute(new MediumTask());
+            for (int j = 0; j < maxTasks; j++){
+                executorService.execute(new QuickTask());
             }
 
             executorService.shutdown();
-            executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.SECONDS);
+            //executorService.awaitTermination(30, TimeUnit.SECONDS);
 
             long finish = System.currentTimeMillis();
-            System.out.println("MultiThreadConcurrencyMain -> 运行 MediumTask " + total + "次，花费时间: " + (finish - start) + " milliseconds");
+            System.out.printf("%20s%20s%20s\n", maxTasks, minThreads, finish - start);
 
-            executorService = Executors.newFixedThreadPool(threadCount);
+            minThreads = minThreads * 2;
         }
     }
 }

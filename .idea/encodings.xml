@@ -3,31 +3,19 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/javabook-a/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-algo-leetcode/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-algo-leetcode/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-b/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-c/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-app-customer/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-app-customer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-app-provider/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-app-provider/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-app-register/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-app-register/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-core-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-core-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-core-impl/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-core-impl/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-proxy-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-proxy-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-proxy-impl/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-proxy-impl/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-server-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-server-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-server-impl/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-server-impl/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-distributed-transaction/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-distributed-transaction/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-ds-bloomfilter/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-ds-bloomfilter/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-ds-collections/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-ds-concurrent/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-io-bio/src/main/java" charset="UTF-8" />
@@ -44,5 +32,6 @@
     <file url="file://$PROJECT_DIR$/javabook-jvm-thread/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-pattern-gof/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-pattern-thread/src/main/java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
