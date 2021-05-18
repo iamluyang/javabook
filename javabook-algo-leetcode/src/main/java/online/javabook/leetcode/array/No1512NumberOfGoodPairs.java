@@ -39,7 +39,7 @@ public class No1512NumberOfGoodPairs {
         return result;
     }
 
-    // references count by array
+    // tip - references count by array
     public static int numIdenticalPairs3(int[] nums) {
         int result = 0;
         int count[] = new int[101];
