@@ -37,19 +37,16 @@
     </dependency>
   </dependencies>
   <modules>
-    <module>javabook-a</module>
-    <module>javabook-b</module>
-    <module>javabook-c</module>
-    <module>javabook-distributed-rpc-core-api</module>
-    <module>javabook-distributed-rpc-core-impl</module>
-    <module>javabook-distributed-rpc-server-api</module>
-    <module>javabook-distributed-rpc-server-impl</module>
-    <module>javabook-distributed-rpc-proxy-api</module>
-    <module>javabook-distributed-rpc-proxy-impl</module>
-    <module>javabook-distributed-rpc-app-provider</module>
-    <module>javabook-distributed-rpc-app-customer</module>
-    <module>javabook-distributed-rpc-app-register</module>
-    <module>javabook-distributed-transaction</module>
+    <module>javabook-design-rpc-core-api</module>
+    <module>javabook-design-rpc-core-impl</module>
+    <module>javabook-design-rpc-server-api</module>
+    <module>javabook-design-rpc-server-impl</module>
+    <module>javabook-design-rpc-proxy-api</module>
+    <module>javabook-design-rpc-proxy-impl</module>
+    <module>javabook-design-rpc-app-provider</module>
+    <module>javabook-design-rpc-app-customer</module>
+    <module>javabook-design-rpc-app-register</module>
+    <module>javabook-design-transaction</module>
     <module>javabook-ds-bloomfilter</module>
     <module>javabook-ds-collections</module>
     <module>javabook-ds-concurrent</module>
@@ -58,6 +55,9 @@
     <module>javabook-jvm-aop</module>    
     <module>javabook-jvm-classinit</module>    
     <module>javabook-jvm-classloader</module>
+    <module>javabook-jvm-classloader-a</module>
+    <module>javabook-jvm-classloader-b</module>
+    <module>javabook-jvm-classloader-c</module>
     <module>javabook-jvm-exception</module>  
     <module>javabook-jvm-garbage</module>
     <module>javabook-jvm-reference</module>    
@@ -66,6 +66,12 @@
     <module>javabook-pattern-gof</module>
     <module>javabook-pattern-thread</module>
     <module>javabook-algo-leetcode</module>
+    <module>javabook-io-nio</module>
+    <module>javabook-design-sliding-windows</module>
+    <module>javabook-design-cache</module>
+    <module>javabook-jvm-magic</module>
+    <module>javabook-io-perforamce</module>
+      <module>javabook-design-nio-server</module>
   </modules>
 
   <repositories>

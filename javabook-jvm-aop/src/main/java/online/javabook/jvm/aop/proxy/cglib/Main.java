@@ -14,5 +14,7 @@ public class Main {
 
 		System.out.println();
 		System.out.println("businessServiceProxy.getClass().getName() -> " + businessServiceProxy.getClass().getName());
+		System.out.println("businessServiceProxy.getClass().getSuperclass() -> " + businessServiceProxy.getClass().getSuperclass());
+		System.out.println("businessServiceProxy.getClass().getInterfaces()[0] -> " + businessServiceProxy.getClass().getInterfaces()[0]);
 	}
 }
