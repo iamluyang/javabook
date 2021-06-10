@@ -1,5 +1,7 @@
 package online.javabook.io.bio.readerwriter.reader;
 
+import java.io.DataInput;
+
 /**
  * InputStreamReader
  * CharArrayReader
@@ -12,4 +14,7 @@ package online.javabook.io.bio.readerwriter.reader;
  * StringReader
  */
 public class ReadMain {
+    public static void main(String[] args) {
+
+    }
 }

@@ -1,17 +1,14 @@
 package online.javabook.gof.behavioral.patterns4.mediator.listener.impl;
 
-import online.javabook.gof.behavioral.patterns4.mediator.listener.api.DeviceColleagueEvent;
-import online.javabook.gof.behavioral.patterns4.mediator.listener.api.IDeviceColleagueListener;
+import online.javabook.gof.behavioral.patterns4.mediator.api.IMediator;
+import online.javabook.gof.behavioral.patterns4.mediator.colleague.impl.MemoryDeviceColleague;
+import online.javabook.gof.behavioral.patterns4.mediator.listener.api.DefaultDeviceColleagueListener;
+import online.javabook.gof.behavioral.patterns4.mediator.listener.api.DeviceColleagueReadEvent;
 
-public class DiskDeviceColleagueListener implements IDeviceColleagueListener {
-
-    @Override
-    public void doIORead(DeviceColleagueEvent event) {
-        System.out.println(this.getClass().getName()+":"+"doIORead");
-    }
+public class DiskDeviceColleagueListener extends DefaultDeviceColleagueListener {
 
     @Override
-    public void doIOWrite(DeviceColleagueEvent event) {
-        System.out.println(this.getClass().getName()+":"+"doIOWrite");
+    public void doDiskRead(IMediator mediator, DeviceColleagueReadEvent event) {
+        mediator.notifyDeviceColleagues(new DeviceColleagueReadEvent(event.getData(), MemoryDeviceColleague.class));
     }
 }

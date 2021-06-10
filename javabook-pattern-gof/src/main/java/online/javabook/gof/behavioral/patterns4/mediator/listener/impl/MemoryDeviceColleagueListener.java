@@ -1,17 +1,23 @@
 package online.javabook.gof.behavioral.patterns4.mediator.listener.impl;
 
-import online.javabook.gof.behavioral.patterns4.mediator.listener.api.DeviceColleagueEvent;
-import online.javabook.gof.behavioral.patterns4.mediator.listener.api.IDeviceColleagueListener;
+import online.javabook.gof.behavioral.patterns4.mediator.api.IMediator;
+import online.javabook.gof.behavioral.patterns4.mediator.colleague.impl.CpuDeviceColleague;
+import online.javabook.gof.behavioral.patterns4.mediator.colleague.impl.DiskDeviceColleague;
+import online.javabook.gof.behavioral.patterns4.mediator.colleague.impl.MemoryDeviceColleague;
+import online.javabook.gof.behavioral.patterns4.mediator.listener.api.DefaultDeviceColleagueListener;
+import online.javabook.gof.behavioral.patterns4.mediator.listener.api.DeviceColleagueReadEvent;
+import online.javabook.gof.behavioral.patterns4.mediator.listener.api.DeviceColleagueWriteEvent;
 
-public class MemoryDeviceColleagueListener implements IDeviceColleagueListener {
+public class MemoryDeviceColleagueListener extends DefaultDeviceColleagueListener {
 
     @Override
-    public void doIORead(DeviceColleagueEvent event) {
-        System.out.println(this.getClass().getName()+":"+"doIORead");
+    public void doMemoryRead(IMediator mediator, DeviceColleagueReadEvent event) {
+        mediator.notifyDeviceColleagues(new DeviceColleagueReadEvent(event.getData(), CpuDeviceColleague.class));
     }
 
     @Override
-    public void doIOWrite(DeviceColleagueEvent event) {
-        System.out.println(this.getClass().getName()+":"+"doIOWrite");
+    public void doMemoryWrite(IMediator mediator, DeviceColleagueWriteEvent event) {
+        mediator.notifyDeviceColleagues(new DeviceColleagueWriteEvent(event.getData(), DiskDeviceColleague.class));
     }
+
 }

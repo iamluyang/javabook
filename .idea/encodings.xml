@@ -2,7 +2,6 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/javabook-algo-leetcode/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-algo-leetcode/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-design-cache/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-design-cache/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-design-nio-server/src/main/java" charset="UTF-8" />
@@ -26,6 +25,14 @@
     <file url="file://$PROJECT_DIR$/javabook-design-rpc-server-impl/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-design-rpc-server-impl/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-design-sliding-windows/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-design-spi-base/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-design-spi-base/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-design-spi-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-design-spi-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-design-spi-impl1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-design-spi-impl1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-design-spi-impl2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-design-spi-impl2/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-design-transaction/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-design-transaction/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-ds-bloomfilter/src/main/java" charset="UTF-8" />
@@ -42,6 +49,7 @@
     <file url="file://$PROJECT_DIR$/javabook-jvm-aop/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-jvm-classinit/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-jvm-classloader-a/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-jvm-classloader-a/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-jvm-classloader-b/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-jvm-classloader-c/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-jvm-classloader/src/main/java" charset="UTF-8" />

@@ -20,6 +20,7 @@
         <module name="javabook-jvm-classinit" />
         <module name="javabook-design-rpc-app-provider" />
         <module name="javabook-jvm-security" />
+        <module name="javabook-design-spi-client" />
         <module name="javabook-pattern-thread" />
         <module name="javabook-jvm-reference" />
         <module name="javabook-algo-leetcode" />
@@ -31,8 +32,10 @@
         <module name="javabook-ds-concurrent" />
         <module name="javabook-jvm-classloader-b" />
         <module name="javabook-io-nio" />
+        <module name="javabook-design-spi-impl2" />
         <module name="javabook-jvm-aop" />
         <module name="javabook-ds-collections" />
+        <module name="javabook-design-spi-impl1" />
         <module name="javabook-jvm-garbage" />
         <module name="javabook-design-rpc-app-register" />
         <module name="javabook-design-rpc-server-impl" />
@@ -40,6 +43,7 @@
         <module name="javabook-design-rpc-app-customer" />
         <module name="javabook-io-bio" />
         <module name="javabook-jvm-magic" />
+        <module name="javabook-design-spi-base" />
         <module name="javabook-design-rpc-core-api" />
       </profile>
     </annotationProcessing>
@@ -61,6 +65,10 @@
       <module name="javabook-design-rpc-server-api" target="1.8" />
       <module name="javabook-design-rpc-server-impl" target="1.8" />
       <module name="javabook-design-sliding-windows" target="8" />
+      <module name="javabook-design-spi-base" target="1.8" />
+      <module name="javabook-design-spi-client" target="1.8" />
+      <module name="javabook-design-spi-impl1" target="1.8" />
+      <module name="javabook-design-spi-impl2" target="1.8" />
       <module name="javabook-design-transaction" target="1.8" />
       <module name="javabook-distributed-transaction" target="1.8" />
       <module name="javabook-ds-bloomfilter" target="1.8" />

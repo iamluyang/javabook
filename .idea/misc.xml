@@ -8,9 +8,6 @@
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/javabook-jvm-classloader-a/pom.xml" />
-        <option value="$PROJECT_DIR$/javabook-jvm-classloader-b/pom.xml" />
-        <option value="$PROJECT_DIR$/javabook-jvm-classloader-c/pom.xml" />
         <option value="$PROJECT_DIR$/javavbook-io-perforamce/pom.xml" />
       </set>
     </option>

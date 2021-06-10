@@ -2,20 +2,22 @@ package online.javabook.gof.behavioral.patterns4.mediator.colleague.impl;
 
 import online.javabook.gof.behavioral.patterns4.mediator.api.IMediator;
 import online.javabook.gof.behavioral.patterns4.mediator.colleague.api.DeviceColleague;
-import online.javabook.gof.behavioral.patterns4.mediator.listener.api.DeviceColleagueEvent;
+import online.javabook.gof.behavioral.patterns4.mediator.listener.api.DeviceColleagueReadEvent;
+import online.javabook.gof.behavioral.patterns4.mediator.listener.api.DeviceColleagueWriteEvent;
 
 public class CpuDeviceColleague extends DeviceColleague {
 
     @Override
-    public void executeIORead(IMediator mediator, DeviceColleagueEvent event) {
-        System.out.println("read data from cpu");
-        String data = "read data from cpu";
+    public String doRead(IMediator mediator, DeviceColleagueReadEvent event) {
+        String data = "call cpu read data" + "<-" + event.getData();
+        System.out.println(data);
+        return data;
     }
 
     @Override
-    public void executeIOWrite(IMediator mediator, DeviceColleagueEvent event) {
-        System.out.println("write data to cpu");
-        String data = "write data to cpu";
-        mediator.notifyIOWriteToColleague(new DeviceColleagueEvent(data), MemoryDeviceColleague.class);
+    public String doWrite(IMediator mediator, DeviceColleagueWriteEvent event) {
+        String data = event.getData() + "->" + "call cpu write data";
+        System.out.println(data);
+        return data;
     }
 }

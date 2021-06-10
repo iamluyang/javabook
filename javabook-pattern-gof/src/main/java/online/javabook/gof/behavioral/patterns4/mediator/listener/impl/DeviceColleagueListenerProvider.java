@@ -1,6 +1,8 @@
 package online.javabook.gof.behavioral.patterns4.mediator.listener.impl;
 
-import online.javabook.gof.behavioral.patterns4.mediator.listener.api.DeviceColleagueEvent;
+import online.javabook.gof.behavioral.patterns4.mediator.api.IMediator;
+import online.javabook.gof.behavioral.patterns4.mediator.listener.api.DeviceColleagueReadEvent;
+import online.javabook.gof.behavioral.patterns4.mediator.listener.api.DeviceColleagueWriteEvent;
 import online.javabook.gof.behavioral.patterns4.mediator.listener.api.IDeviceColleagueListener;
 import online.javabook.gof.behavioral.patterns4.mediator.listener.api.IDeviceColleagueListenerProvider;
 
@@ -9,29 +11,65 @@ import java.util.List;
 
 public class DeviceColleagueListenerProvider implements IDeviceColleagueListenerProvider {
 
-    private List<IDeviceColleagueListener> serviceBusListeners = new ArrayList<>();
+    private IMediator mediator;
 
-    public List<IDeviceColleagueListener> getServiceBusListeners() {
-        return serviceBusListeners;
+    private List<IDeviceColleagueListener> deviceColleagueListeners = new ArrayList<>();
+
+    public DeviceColleagueListenerProvider(IMediator mediator) {
+        this.mediator = mediator;
     }
 
-    public void registerServiceBusListener(IDeviceColleagueListener serviceBusListener) {
-        this.serviceBusListeners.add(serviceBusListener);
+    public List<IDeviceColleagueListener> getDeviceColleagueListeners() {
+        return deviceColleagueListeners;
     }
 
-    public void unregisterServiceBusListener(IDeviceColleagueListener serviceBusListener) {
-        this.serviceBusListeners.remove(serviceBusListener);
+    public void registerDeviceColleagueListener(IDeviceColleagueListener deviceColleagueListener) {
+        this.deviceColleagueListeners.add(deviceColleagueListener);
     }
 
-    public void doIORead(String data) {
-        for (IDeviceColleagueListener serviceBusListener : serviceBusListeners) {
-            serviceBusListener.doIORead(new DeviceColleagueEvent(data));
+    public void unregisterDeviceColleagueListener(IDeviceColleagueListener deviceColleagueListener) {
+        this.deviceColleagueListeners.remove(deviceColleagueListener);
+    }
+
+    @Override
+    public void doCpuRead(DeviceColleagueReadEvent event) {
+        for (IDeviceColleagueListener deviceColleagueListener : deviceColleagueListeners) {
+            deviceColleagueListener.doCpuRead(mediator, event);
         }
     }
 
-    public void doIOWrite(String data) {
-        for (IDeviceColleagueListener serviceBusListener : serviceBusListeners) {
-            serviceBusListener.doIOWrite(new DeviceColleagueEvent(data));
+    @Override
+    public void doCpuWrite(DeviceColleagueWriteEvent event) {
+        for (IDeviceColleagueListener deviceColleagueListener : deviceColleagueListeners) {
+            deviceColleagueListener.doCpuWrite(mediator, event);
+        }
+    }
+
+    @Override
+    public void doMemoryRead(DeviceColleagueReadEvent event) {
+        for (IDeviceColleagueListener deviceColleagueListener : deviceColleagueListeners) {
+            deviceColleagueListener.doMemoryRead(mediator, event);
+        }
+    }
+
+    @Override
+    public void doMemoryWrite(DeviceColleagueWriteEvent event) {
+        for (IDeviceColleagueListener deviceColleagueListener : deviceColleagueListeners) {
+            deviceColleagueListener.doMemoryWrite(mediator, event);
+        }
+    }
+
+    @Override
+    public void doDiskRead(DeviceColleagueReadEvent event) {
+        for (IDeviceColleagueListener deviceColleagueListener : deviceColleagueListeners) {
+            deviceColleagueListener.doDiskRead(mediator, event);
+        }
+    }
+
+    @Override
+    public void doDiskWrite(DeviceColleagueWriteEvent event) {
+        for (IDeviceColleagueListener deviceColleagueListener : deviceColleagueListeners) {
+            deviceColleagueListener.doDiskWrite(mediator, event);
         }
     }
 }

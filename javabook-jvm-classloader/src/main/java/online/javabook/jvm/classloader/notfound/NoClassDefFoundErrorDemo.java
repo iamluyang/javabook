@@ -1,6 +1,6 @@
 package online.javabook.jvm.classloader.notfound;
 
-//import com.javabook.classloader.found.MyClass2;
+import online.javabook.a.ClassA;
 
 /**
  * @author Summer Lu
@@ -12,7 +12,10 @@ public class NoClassDefFoundErrorDemo {
 
 	public static void main(String[] args) {
 		try{
-			//MyClass2 class2 = new MyClass2();
+			ClassA a = new ClassA();
+			Class clazz = Class.forName("online.javabook.a.ClassA");
+
+			System.out.println(clazz);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -1,6 +1,5 @@
 package online.javabook.gof.structural.patterns1.adapter.objectadapter.plug.app.bad;
 
-import online.javabook.gof.structural.patterns1.adapter.objectadapter.plug.adpter.China2PinPlugToUsa3PinPlugAdapter;
 import online.javabook.gof.structural.patterns1.adapter.objectadapter.plug.api.IChina2PinPlug;
 import online.javabook.gof.structural.patterns1.adapter.objectadapter.plug.api.IUsa3PinPlug;
 import online.javabook.gof.structural.patterns1.adapter.objectadapter.plug.impl.China2PinPlug;

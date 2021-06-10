@@ -1,10 +1,12 @@
 package online.javabook.gof.behavioral.patterns4.mediator.app;
 
 import online.javabook.gof.behavioral.patterns4.mediator.api.IMediator;
-import online.javabook.gof.behavioral.patterns4.mediator.colleague.api.DeviceColleague;
-import online.javabook.gof.behavioral.patterns4.mediator.colleague.impl.*;
+import online.javabook.gof.behavioral.patterns4.mediator.colleague.impl.CpuDeviceColleague;
+import online.javabook.gof.behavioral.patterns4.mediator.colleague.impl.DiskDeviceColleague;
+import online.javabook.gof.behavioral.patterns4.mediator.colleague.impl.MemoryDeviceColleague;
 import online.javabook.gof.behavioral.patterns4.mediator.impl.ComputerMediator;
-import online.javabook.gof.behavioral.patterns4.mediator.listener.api.DeviceColleagueEvent;
+import online.javabook.gof.behavioral.patterns4.mediator.listener.api.DeviceColleagueReadEvent;
+import online.javabook.gof.behavioral.patterns4.mediator.listener.api.DeviceColleagueWriteEvent;
 import online.javabook.gof.behavioral.patterns4.mediator.listener.impl.CpuDeviceColleagueListener;
 import online.javabook.gof.behavioral.patterns4.mediator.listener.impl.DiskDeviceColleagueListener;
 import online.javabook.gof.behavioral.patterns4.mediator.listener.impl.MemoryDeviceColleagueListener;
@@ -14,25 +16,22 @@ public class Main {
         IMediator mediator = new ComputerMediator();
 
         // colleagues
-        DeviceColleague cpuDeviceColleague = new CpuDeviceColleague();
-        cpuDeviceColleague.registerDeviceColleagueListener(new CpuDeviceColleagueListener());
+        mediator.registerDeviceColleague(new CpuDeviceColleague());
+        mediator.registerDeviceColleague(new MemoryDeviceColleague());
+        mediator.registerDeviceColleague(new DiskDeviceColleague());
 
-        DeviceColleague memoryDeviceColleague = new MemoryDeviceColleague();
-        memoryDeviceColleague.registerDeviceColleagueListener(new MemoryDeviceColleagueListener());
-
-        DeviceColleague diskDeviceColleague = new DiskDeviceColleague();
-        diskDeviceColleague.registerDeviceColleagueListener(new DiskDeviceColleagueListener());
-
-        mediator.registerColleague(cpuDeviceColleague);
-        mediator.registerColleague(memoryDeviceColleague);
-        mediator.registerColleague(diskDeviceColleague);
+        // listeners
+        mediator.registerDeviceColleagueListener(new MemoryDeviceColleagueListener());
+        mediator.registerDeviceColleagueListener(new CpuDeviceColleagueListener());
+        mediator.registerDeviceColleagueListener(new DiskDeviceColleagueListener());
 
         // mediator
-        DeviceColleague disk = mediator.getColleague(DiskDeviceColleague.class);
-        disk.executeIORead(mediator, new DeviceColleagueEvent("read"));
+        mediator.notifyDeviceColleagues(new DeviceColleagueReadEvent("rrr", DiskDeviceColleague.class));
+
+        System.out.println("--------------------------------");
 
         // write
-        DeviceColleague cpu = mediator.getColleague(CpuDeviceColleague.class);
-        cpu.executeIOWrite(mediator, new DeviceColleagueEvent("write"));
+        mediator.notifyDeviceColleagues(new DeviceColleagueWriteEvent("www", CpuDeviceColleague.class));
+
     }
 }

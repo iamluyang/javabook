@@ -1,8 +1,8 @@
 package online.javabook.gof.creational.patterns4.builder.car.app.bad;
 
+import online.javabook.gof.creational.patterns4.builder.car.product.main.Car;
 import online.javabook.gof.creational.patterns4.builder.car.product.part.Frame;
 import online.javabook.gof.creational.patterns4.builder.car.product.part.*;
-import online.javabook.gof.creational.patterns4.builder.car.product.main.Car;
 
 import java.awt.*;
 

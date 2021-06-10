@@ -1,4 +1,4 @@
-package org.gof.structural.patterns4.decorator.app.bad;
+package online.javabook.gof.structural.patterns4.decorator.app.bad;
 
 import online.javabook.gof.structural.patterns4.decorator.coffee.impl.MilkCoffee;
 import online.javabook.gof.structural.patterns4.decorator.coffee.impl.SaltCoffee;

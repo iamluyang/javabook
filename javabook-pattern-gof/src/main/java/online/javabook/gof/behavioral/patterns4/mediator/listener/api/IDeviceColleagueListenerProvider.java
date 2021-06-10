@@ -4,13 +4,21 @@ import java.util.List;
 
 public interface IDeviceColleagueListenerProvider {
 
-    List<IDeviceColleagueListener> getServiceBusListeners();
+    List<IDeviceColleagueListener> getDeviceColleagueListeners();
 
-    void registerServiceBusListener(IDeviceColleagueListener serviceBusListener);
+    void registerDeviceColleagueListener(IDeviceColleagueListener serviceBusListener);
 
-    void unregisterServiceBusListener(IDeviceColleagueListener serviceBusListener);
+    void unregisterDeviceColleagueListener(IDeviceColleagueListener serviceBusListener);
 
-    void doIORead(String data);
+    void doCpuRead(DeviceColleagueReadEvent event);
 
-    void doIOWrite(String data);
+    void doCpuWrite(DeviceColleagueWriteEvent event);
+
+    void doMemoryRead(DeviceColleagueReadEvent event);
+
+    void doMemoryWrite(DeviceColleagueWriteEvent event);
+
+    void doDiskRead(DeviceColleagueReadEvent event);
+
+    void doDiskWrite(DeviceColleagueWriteEvent event);
 }

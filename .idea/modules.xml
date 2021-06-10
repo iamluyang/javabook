@@ -16,6 +16,10 @@
       <module fileurl="file://$PROJECT_DIR$/javabook-design-rpc-server-api/javabook-design-rpc-server-api.iml" filepath="$PROJECT_DIR$/javabook-design-rpc-server-api/javabook-design-rpc-server-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-design-rpc-server-impl/javabook-design-rpc-server-impl.iml" filepath="$PROJECT_DIR$/javabook-design-rpc-server-impl/javabook-design-rpc-server-impl.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-design-sliding-windows/javabook-design-sliding-windows.iml" filepath="$PROJECT_DIR$/javabook-design-sliding-windows/javabook-design-sliding-windows.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javabook-design-spi-base/javabook-design-spi-base.iml" filepath="$PROJECT_DIR$/javabook-design-spi-base/javabook-design-spi-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javabook-design-spi-client/javabook-design-spi-client.iml" filepath="$PROJECT_DIR$/javabook-design-spi-client/javabook-design-spi-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javabook-design-spi-impl1/javabook-design-spi-impl1.iml" filepath="$PROJECT_DIR$/javabook-design-spi-impl1/javabook-design-spi-impl1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javabook-design-spi-impl2/javabook-design-spi-impl2.iml" filepath="$PROJECT_DIR$/javabook-design-spi-impl2/javabook-design-spi-impl2.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-design-transaction/javabook-design-transaction.iml" filepath="$PROJECT_DIR$/javabook-design-transaction/javabook-design-transaction.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-ds-bloomfilter/javabook-ds-bloomfilter.iml" filepath="$PROJECT_DIR$/javabook-ds-bloomfilter/javabook-ds-bloomfilter.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-ds-collections/javabook-ds-collections.iml" filepath="$PROJECT_DIR$/javabook-ds-collections/javabook-ds-collections.iml" />
@@ -27,9 +31,9 @@
       <module fileurl="file://$PROJECT_DIR$/javabook-jvm-aop/javabook-jvm-aop.iml" filepath="$PROJECT_DIR$/javabook-jvm-aop/javabook-jvm-aop.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-jvm-classinit/javabook-jvm-classinit.iml" filepath="$PROJECT_DIR$/javabook-jvm-classinit/javabook-jvm-classinit.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-jvm-classloader/javabook-jvm-classloader.iml" filepath="$PROJECT_DIR$/javabook-jvm-classloader/javabook-jvm-classloader.iml" />
-      <module fileurl="file://$PROJECT_DIR$/javabook-a/javabook-jvm-classloader-a.iml" filepath="$PROJECT_DIR$/javabook-a/javabook-jvm-classloader-a.iml" />
-      <module fileurl="file://$PROJECT_DIR$/javabook-b/javabook-jvm-classloader-b.iml" filepath="$PROJECT_DIR$/javabook-b/javabook-jvm-classloader-b.iml" />
-      <module fileurl="file://$PROJECT_DIR$/javabook-c/javabook-jvm-classloader-c.iml" filepath="$PROJECT_DIR$/javabook-c/javabook-jvm-classloader-c.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javabook-jvm-classloader-a/javabook-jvm-classloader-a.iml" filepath="$PROJECT_DIR$/javabook-jvm-classloader-a/javabook-jvm-classloader-a.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javabook-jvm-classloader-b/javabook-jvm-classloader-b.iml" filepath="$PROJECT_DIR$/javabook-jvm-classloader-b/javabook-jvm-classloader-b.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javabook-jvm-classloader-c/javabook-jvm-classloader-c.iml" filepath="$PROJECT_DIR$/javabook-jvm-classloader-c/javabook-jvm-classloader-c.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-jvm-exception/javabook-jvm-exception.iml" filepath="$PROJECT_DIR$/javabook-jvm-exception/javabook-jvm-exception.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-jvm-garbage/javabook-jvm-garbage.iml" filepath="$PROJECT_DIR$/javabook-jvm-garbage/javabook-jvm-garbage.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabook-jvm-magic/javabook-jvm-magic.iml" filepath="$PROJECT_DIR$/javabook-jvm-magic/javabook-jvm-magic.iml" />

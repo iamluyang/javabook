@@ -37,20 +37,30 @@
     </dependency>
   </dependencies>
   <modules>
+    <module>javabook-algo-leetcode</module>
+    <module>javabook-design-cache</module>
+    <module>javabook-design-nio-server</module>
+    <module>javabook-design-rpc-app-customer</module>
+    <module>javabook-design-rpc-app-provider</module>
+    <module>javabook-design-rpc-app-register</module>
     <module>javabook-design-rpc-core-api</module>
     <module>javabook-design-rpc-core-impl</module>
-    <module>javabook-design-rpc-server-api</module>
-    <module>javabook-design-rpc-server-impl</module>
     <module>javabook-design-rpc-proxy-api</module>
     <module>javabook-design-rpc-proxy-impl</module>
-    <module>javabook-design-rpc-app-provider</module>
-    <module>javabook-design-rpc-app-customer</module>
-    <module>javabook-design-rpc-app-register</module>
+    <module>javabook-design-rpc-server-api</module>
+    <module>javabook-design-rpc-server-impl</module>
+    <module>javabook-design-sliding-windows</module>
+    <module>javabook-design-spi-base</module>
+    <module>javabook-design-spi-client</module>
+    <module>javabook-design-spi-impl1</module>
+    <module>javabook-design-spi-impl2</module>
     <module>javabook-design-transaction</module>
     <module>javabook-ds-bloomfilter</module>
     <module>javabook-ds-collections</module>
     <module>javabook-ds-concurrent</module>
     <module>javabook-io-bio</module>
+    <module>javabook-io-nio</module>
+    <module>javabook-io-perforamce</module>
     <module>javabook-io-socket</module>
     <module>javabook-jvm-aop</module>    
     <module>javabook-jvm-classinit</module>    
@@ -60,18 +70,12 @@
     <module>javabook-jvm-classloader-c</module>
     <module>javabook-jvm-exception</module>  
     <module>javabook-jvm-garbage</module>
+    <module>javabook-jvm-magic</module>
     <module>javabook-jvm-reference</module>    
     <module>javabook-jvm-security</module>
     <module>javabook-jvm-thread</module>    
     <module>javabook-pattern-gof</module>
     <module>javabook-pattern-thread</module>
-    <module>javabook-algo-leetcode</module>
-    <module>javabook-io-nio</module>
-    <module>javabook-design-sliding-windows</module>
-    <module>javabook-design-cache</module>
-    <module>javabook-jvm-magic</module>
-    <module>javabook-io-perforamce</module>
-      <module>javabook-design-nio-server</module>
   </modules>
 
   <repositories>

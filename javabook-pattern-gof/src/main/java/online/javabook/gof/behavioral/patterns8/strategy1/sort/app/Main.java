@@ -1,7 +1,7 @@
 package online.javabook.gof.behavioral.patterns8.strategy1.sort.app;
 
-import online.javabook.gof.behavioral.patterns8.strategy1.sort.strategy.ParallelSort;
 import online.javabook.gof.behavioral.patterns8.strategy1.sort.strategy.DefaultSort;
+import online.javabook.gof.behavioral.patterns8.strategy1.sort.strategy.ParallelSort;
 import online.javabook.gof.behavioral.patterns8.strategy1.sort.strategy.Table;
 
 public class Main {

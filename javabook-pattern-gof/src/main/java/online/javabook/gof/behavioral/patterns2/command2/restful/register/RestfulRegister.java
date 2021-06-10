@@ -1,8 +1,8 @@
 package online.javabook.gof.behavioral.patterns2.command2.restful.register;
 
 import online.javabook.gof.behavioral.patterns2.command2.restful.commands.HttpMethod;
-import online.javabook.gof.behavioral.patterns2.command2.restful.commands.RestfulInstance;
 import online.javabook.gof.behavioral.patterns2.command2.restful.commands.RestfulAnnotation;
+import online.javabook.gof.behavioral.patterns2.command2.restful.commands.RestfulInstance;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

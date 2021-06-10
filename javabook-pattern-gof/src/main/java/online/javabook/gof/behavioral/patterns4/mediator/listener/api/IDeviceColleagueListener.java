@@ -1,8 +1,18 @@
 package online.javabook.gof.behavioral.patterns4.mediator.listener.api;
 
+import online.javabook.gof.behavioral.patterns4.mediator.api.IMediator;
+
 public interface IDeviceColleagueListener {
 
-    void doIORead(DeviceColleagueEvent event);
+    void doCpuRead(IMediator mediator, DeviceColleagueReadEvent event);
 
-    void doIOWrite(DeviceColleagueEvent event);
+    void doCpuWrite(IMediator mediator, DeviceColleagueWriteEvent event);
+
+    void doMemoryRead(IMediator mediator, DeviceColleagueReadEvent event);
+
+    void doMemoryWrite(IMediator mediator, DeviceColleagueWriteEvent event);
+
+    void doDiskRead(IMediator mediator, DeviceColleagueReadEvent event);
+
+    void doDiskWrite(IMediator mediator, DeviceColleagueWriteEvent event);
 }
