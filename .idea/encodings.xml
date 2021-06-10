@@ -1,63 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/javabook-a/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-algo-leetcode/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-cache/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-cache/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-nio-server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-nio-server/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-rpc-app-customer/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-rpc-app-customer/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-rpc-app-provider/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-rpc-app-provider/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-rpc-app-register/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-rpc-app-register/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-rpc-core-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-rpc-core-api/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-rpc-core-impl/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-rpc-core-impl/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-rpc-proxy-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-rpc-proxy-api/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-rpc-proxy-impl/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-rpc-proxy-impl/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-rpc-server-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-rpc-server-api/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-rpc-server-impl/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-rpc-server-impl/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-sliding-windows/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-spi-base/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-spi-base/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-spi-client/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-spi-client/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-spi-impl1/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-spi-impl1/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-spi-impl2/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-spi-impl2/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-transaction/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-design-transaction/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-algo-leetcode/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-b/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-c/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-app-customer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-app-customer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-app-provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-app-provider/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-app-register/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-app-register/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-core-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-core-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-core-impl/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-core-impl/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-proxy-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-proxy-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-proxy-impl/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-proxy-impl/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-server-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-server-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-server-impl/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-rpc-server-impl/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-transaction/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javabook-distributed-transaction/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-ds-bloomfilter/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-ds-bloomfilter/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-ds-collections/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-ds-concurrent/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-io-bio/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-io-nio/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-io-nio/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-io-perforamce/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-io-perforamce/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-io-socket/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-jvm-aop/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-jvm-aop/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-jvm-classinit/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-jvm-classloader-a/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-jvm-classloader-a/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-jvm-classloader-b/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-jvm-classloader-c/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-jvm-classloader/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-jvm-exception/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-jvm-garbage/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-jvm-garbage/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-jvm-magic/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javabook-jvm-magic/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-jvm-reference/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-jvm-security/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabook-jvm-thread/src/main/java" charset="UTF-8" />
