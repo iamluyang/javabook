@@ -1,0 +1,6 @@
+A AL1 1
+A AL1 2
+A AL2 3
+B BL1 1
+C CL1 1
+C CL2 2

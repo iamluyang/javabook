@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/javabook.algo/javabook.algo.ratelimiter/pom.xml" />
+        <option value="$PROJECT_DIR$/javabook.algo/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/apache/pom.xml" />
+        <option value="$PROJECT_DIR$/javabook.algorithms.timewindow/pom.xml" />
+        <option value="$PROJECT_DIR$/javabook.apache.flink/pom.xml" />
+        <option value="$PROJECT_DIR$/javabook.jdk/javabook.jdk.taomp/pom.xml" />
+        <option value="$PROJECT_DIR$/javabook.jvm.objectinit/pom.xml" />
+        <option value="$PROJECT_DIR$/javabook.jvm/javabook.jvm.classloader3/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

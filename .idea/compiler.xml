@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="javabook.algo.sorting" />
+        <module name="javabook.jvm.classloader1" />
+        <module name="javabook.jvm.classloader2" />
+        <module name="javabook.jvm.stack" />
+        <module name="javabook.middleware.2pc" />
+        <module name="javabook.jdk.jcu" />
+        <module name="javabook.jdk.socket" />
+        <module name="javabook.jdk.magic" />
+        <module name="javabook.algo.searching" />
+        <module name="javabook.jvm.aop" />
+        <module name="javabook.design.spi.imple1" />
+        <module name="javabook.design.spi.imple2" />
+        <module name="javabook.jdk.perforamce" />
+        <module name="javabook.middleware.rpc.core.api" />
+        <module name="javabook.jvm.tuning" />
+        <module name="javabook.algo.dsa" />
+        <module name="javabook.algo.demo" />
+        <module name="javabook.algo.leetcode" />
+        <module name="javabook.apache.flink" />
+        <module name="javabook.middleware.rpc.app.customer" />
+        <module name="javabook.jvm.classinit" />
+        <module name="javabook.middleware.rpc.proxy.impl" />
+        <module name="javabook.middleware.rpc.app.register" />
+        <module name="javabook.algo.ratelimiter" />
+        <module name="javabook.middleware.rpc.server.api" />
+        <module name="javabook.jvm.gc" />
+        <module name="javabook.middleware.rpc.server.impl" />
+        <module name="javabook.jvm.tools" />
+        <module name="javabook.jdk.nio" />
+        <module name="javabook.middleware.rpc.core.impl" />
+        <module name="javabook.jdk.java8" />
+        <module name="javabook.design.spi.base" />
+        <module name="javabook.algo.taomp" />
+        <module name="javabook.jvm.security" />
+        <module name="javabook.middleware.rpc.app.provider" />
+        <module name="javabook.algo.bloomfilter" />
+        <module name="javabook.alog.bloomfilter" />
+        <module name="javabook.jdk.bio" />
+        <module name="javabook.jvm.objectinit" />
+        <module name="javabook.alog.leetcode" />
+        <module name="javabook.jdk.collection" />
+        <module name="javabook.design.thread" />
+        <module name="javabook.design.spi.client" />
+        <module name="javabook.jboss.netty" />
+        <module name="javabook.jdk.exception" />
+        <module name="javabook.design.gof" />
+        <module name="javabook.jvm.thread" />
+        <module name="javabook.jvm.refrence" />
+        <module name="javabook.jvm.classloader" />
+        <module name="javabook.jvm.bytecode" />
+        <module name="javabook.jvm.string" />
+        <module name="javabook.middleware.rpc.proxy.api" />
+        <module name="javabook.jvm.core" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="apache" target="8" />
+      <module name="apache.flink" target="8" />
+      <module name="java.jvm.thread" target="8" />
+      <module name="javabook.jdk.taomp" target="8" />
+      <module name="javabook.jvm.classloader3" target="8" />
+      <module name="untitled" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

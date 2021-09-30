@@ -1,0 +1,1 @@
+Premain-class: online.javabook.jvm.core.objectsize.InstrumentationAgent
