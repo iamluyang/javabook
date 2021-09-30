@@ -1,8 +1,5 @@
 package online.javabook.jvm.classloader.notfound;
 
-import online.javabook.jvm.classload1.MyClassA;
-import online.javabook.jvm.classload1.MyClassB;
-
 /**
  * @author Summer Lu
  * @email gmluyang@gmail.com
