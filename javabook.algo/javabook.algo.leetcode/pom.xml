@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>javabook.alog.leetcode</artifactId>
+    <artifactId>javabook.algo.leetcode</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

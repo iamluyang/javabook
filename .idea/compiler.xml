@@ -42,10 +42,8 @@
         <module name="javabook.jvm.security" />
         <module name="javabook.middleware.rpc.app.provider" />
         <module name="javabook.algo.bloomfilter" />
-        <module name="javabook.alog.bloomfilter" />
         <module name="javabook.jdk.bio" />
         <module name="javabook.jvm.objectinit" />
-        <module name="javabook.alog.leetcode" />
         <module name="javabook.jdk.collection" />
         <module name="javabook.design.thread" />
         <module name="javabook.design.spi.client" />
@@ -65,6 +63,8 @@
       <module name="apache" target="8" />
       <module name="apache.flink" target="8" />
       <module name="java.jvm.thread" target="8" />
+      <module name="javabook.alog.bloomfilter" target="8" />
+      <module name="javabook.alog.leetcode" target="8" />
       <module name="javabook.jdk.taomp" target="8" />
       <module name="javabook.jvm.classloader3" target="8" />
       <module name="untitled" target="8" />
